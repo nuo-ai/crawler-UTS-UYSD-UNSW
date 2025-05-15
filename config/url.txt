@@ -1,0 +1,24 @@
+# Domain房源搜索URL配置
+# 每行一个URL，以#开头的行将被忽略
+# 示例URL（悉尼市中心租房）：
+https://www.domain.com.au/rent/?suburb=zetland-nsw-2017,waterloo-nsw-2017,rosebery-nsw-2018,mascot-nsw-2020&ptype=apartment&price=700-900&excludedeposittaken=1&ssubs=0
+https://www.domain.com.au/rent/?suburb=macquarie-park-nsw-2113,marsfield-nsw-2122,north-ryde-nsw-2113,epping-nsw-2121,eastwood-nsw-2122,cheltenham-nsw-2119,north-epping-nsw-2121,denistone-nsw-2114,denistone-east-nsw-2112,denistone-west-nsw-2114,west-ryde-nsw-2114&ptype=apartment&price=700-900&excludedeposittaken=1&ssubs=0
+https://www.domain.com.au/rent/?suburb=kensington-nsw-2033,randwick-nsw-2031,coogee-nsw-2034,maroubra-nsw-2035,daceyville-nsw-2032,moore-park-nsw-2021,centennial-park-nsw-2021,camperdown-nsw-2050,forest-lodge-nsw-2037,annandale-nsw-2038&ptype=apartment&price=700-900&excludedeposittaken=1&ssubs=0
+https://www.domain.com.au/rent/?suburb=stanmore-nsw-2048,enmore-nsw-2042,erskineville-nsw-2043,darlington-nsw-2008,paddington-nsw-2021,pyrmont-nsw-2009&ptype=apartment&price=700-900&excludedeposittaken=1&ssubs=0
+https://www.domain.com.au/rent/?suburb=sydney-nsw-2000,glebe-nsw-2037,campbelltown-nsw-2560,ultimo-nsw-2007,haymarket-nsw-2000,chippendale-nsw-2008,surry-hills-nsw-2010,newtown-nsw-2042,eveleigh-nsw-2015&ptype=apartment&excludedeposittaken=1&ssubs=0
+https://www.domain.com.au/rent/?suburb=redfern-nsw-2016,waterloo-nsw-2017,alexandria-nsw-2015,st-peters-nsw-2044,beaconsfield-nsw-2015,rosebery-nsw-2018,mascot-nsw-2020,eastlakes-nsw-2018&ptype=apartment&excludedeposittaken=1&ssubs=0
+https://www.domain.com.au/rent/?suburb=kingsford-nsw-2032,millers-point-nsw-2000,darling-harbour-nsw-2000,burwood-nsw-2134,ashfield-nsw-2131,strathfield-nsw-2135,wolli-creek-nsw-2205,rhodes-nsw-2138&ptype=apartment&excludedeposittaken=1&ssubs=0
+
+# 其他示例：
+# https://www.domain.com.au/rent/?suburb=melbourne-vic-3000
+# https://www.domain.com.au/rent/?suburb=brisbane-city-qld-4000
+# https://www.domain.com.au/rent/?suburb=adelaide-sa-5000
+# https://www.domain.com.au/rent/?suburb=perth-wa-6000
+
+# 支持的搜索参数：
+# suburb: 区域名称
+# price: 价格范围，如 price=0-500
+# bedrooms: 卧室数量，如 bedrooms=2-any
+# bathrooms: 浴室数量，如 bathrooms=1-any
+# carspaces: 车位数量，如 carspaces=1-any
+# property-type: 房产类型，如 property-type=apartment,house

@@ -1,0 +1,40 @@
+# 功能开关
+features:
+  enable_advanced_features: true   # 启用高级特征提取
+  enable_data_cleaning: true      # 启用数据清洗
+  enable_batch_write: true        # 启用批量写入
+
+# 网络设置
+network:
+  max_retries: 3                  # 最大重试次数
+  backoff_factor: 0.3            # 重试退避因子
+  timeout: 30                    # 请求超时时间(秒)
+  retry_statuses:               # 需要重试的HTTP状态码
+    - 500
+    - 502
+    - 503
+    - 504
+
+# 性能设置
+performance:
+  max_workers: 5                # 最大并发线程数
+  requests_per_second: 1.0      # 每秒请求限制
+  batch_size: 20               # 批量写入大小（降低以减少内存压力）
+
+# 请求头设置
+headers:
+  accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8"
+  accept-language: "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7"
+  accept-encoding: "gzip, deflate, br"
+  user-agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0"
+  connection: "keep-alive"
+  cache-control: "no-cache"
+  pragma: "no-cache"
+  sec-ch-ua: '"Chromium";v="132", "Not_A Brand";v="24"'
+  sec-ch-ua-mobile: "?0"
+  sec-ch-ua-platform: '"Windows"'
+  sec-fetch-dest: "document"
+  sec-fetch-mode: "navigate"
+  sec-fetch-site: "none"
+  sec-fetch-user: "?1"
+  upgrade-insecure-requests: "1"
