@@ -73,6 +73,12 @@ def format_feature_to_emoji(value):
         return "✔️"
     return "❌"
 
+def format_furnishing_status(value):
+    """Formats furnishing status string into an emoji."""
+    if isinstance(value, str) and value.lower() == 'furnished':
+        return "✔️"
+    return "❌"
+
 def main():
     """Main function to generate the Canva-ready Excel sheet."""
     print("--- Canva Sheet Generator (Text-Only) ---")
@@ -110,9 +116,15 @@ def main():
     
     headers = list(source_columns.keys())
     
+    # Explicitly define and order feature columns
     feature_columns_source = sorted([col for col in df.columns if col.startswith('has_')])
+    # Add furnishing_status if it exists and is not already included
+    if 'furnishing_status' in df.columns and 'furnishing_status' not in feature_columns_source:
+        feature_columns_source.append('furnishing_status')
+
     for feature_col in feature_columns_source:
-        feature_name = feature_name_map.get(feature_col, feature_col.replace('has_', '').replace('_', ' ').title())
+        # Use original column name as header, per user request
+        feature_name = feature_col
         headers.append(feature_name)
 
     for i in range(1, MAX_IMAGES_PER_PROPERTY + 1):
@@ -122,8 +134,9 @@ def main():
 
     # --- 4. Process Each Property ---
     print(f"Found {len(df)} properties to process.")
-    for index, row in df.iterrows():
-        print(f"  - Processing property {index + 1}/{len(df)}: {row.get(source_columns['Address'], 'N/A')}")
+    for i, index in enumerate(df.index):
+        row = df.loc[index]
+        print(f"  - Processing property {i + 1}/{len(df)}: {row.get(source_columns['Address'], 'N/A')}")
         
         processed_row = {h: '' for h in headers}
 
@@ -137,8 +150,14 @@ def main():
                 processed_row[header] = row.get(source_col, '')
 
         for feature_col in feature_columns_source:
-            feature_name = feature_name_map.get(feature_col, feature_col.replace('has_', '').replace('_', ' ').title())
-            processed_row[feature_name] = format_feature_to_emoji(row.get(feature_col))
+            # Use original column name as the key
+            feature_name = feature_col
+            
+            # Use the appropriate formatter
+            if feature_col == 'furnishing_status':
+                processed_row[feature_name] = format_furnishing_status(row.get(feature_col))
+            else:
+                processed_row[feature_name] = format_feature_to_emoji(row.get(feature_col))
 
         final_row_data = [processed_row.get(h, '') for h in headers]
         ws.append(final_row_data)

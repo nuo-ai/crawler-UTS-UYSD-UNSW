@@ -13,7 +13,7 @@ import time
 import logging
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional, Union, Tuple, Set
+from typing import Dict, List, Optional, Union, Tuple, Set, Any
 from dataclasses import dataclass, field
 from functools import wraps
 import threading
@@ -27,7 +27,7 @@ import pandas as pd
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-from lxml import etree
+from lxml import etree # type: ignore
 
 # =============================================================================
 # 项目路径配置
@@ -87,7 +87,37 @@ def load_config() -> dict:
     with open(config_path, 'r', encoding='utf-8') as f:
         return yaml.safe_load(f)
 
+def load_furniture_keywords() -> Optional[dict]:
+    """加载家具关键词配置文件"""
+    keywords_path = CONFIG_DIR / 'examples_and_unused' / 'furniture_keywords.yaml'
+    if not keywords_path.exists():
+        logger.warning(f"Furniture keywords file not found: {keywords_path}. Using fallback keywords.")
+        return None
+    
+    try:
+        with open(keywords_path, 'r', encoding='utf-8') as f:
+            return yaml.safe_load(f)
+    except Exception as e:
+        logger.error(f"Failed to load furniture keywords: {e}. Using fallback keywords.")
+        return None
+
+def load_aircon_keywords() -> Optional[dict]:
+    """加载空调关键词配置文件"""
+    keywords_path = CONFIG_DIR / 'examples_and_unused' / 'aircon_keywords.yaml'
+    if not keywords_path.exists():
+        logger.warning(f"Aircon keywords file not found: {keywords_path}. Using fallback keywords.")
+        return None
+    
+    try:
+        with open(keywords_path, 'r', encoding='utf-8') as f:
+            return yaml.safe_load(f)
+    except Exception as e:
+        logger.error(f"Failed to load aircon keywords: {e}. Using fallback keywords.")
+        return None
+
 CONFIG = load_config()
+FURNITURE_KEYWORDS = load_furniture_keywords()
+AIRCON_KEYWORDS = load_aircon_keywords()
 
 # =============================================================================
 # 辅助函数 - 从URL提取区域名称
@@ -134,17 +164,29 @@ def extract_region_from_url(url: str) -> str:
 # =============================================================================
 @dataclass
 class PropertyFeatures:
-    has_air_conditioning: bool = False; is_furnished: bool = False
+    furnishing_status: str = 'unfurnished'  # Replaces is_furnished. Can be 'furnished', 'unfurnished', or 'optional'.
+    air_conditioning_type: str = 'none' # Replaces has_air_conditioning. Can be 'none', 'ducted', 'split_system', etc.
+    has_air_conditioning: bool = False
     has_balcony: bool = False; has_dishwasher: bool = False
     has_laundry: bool = False; has_built_in_wardrobe: bool = False
     has_gym: bool = False; has_pool: bool = False
     has_parking: bool = False; allows_pets: bool = False
     has_security_system: bool = False; has_storage: bool = False
     has_study_room: bool = False; has_garden: bool = False
-    def to_dict(self) -> Dict[str, bool]: return {k: v for k, v in self.__dict__.items() if not k.startswith('_')}
+    def to_dict(self) -> Dict[str, Union[bool, str]]: return {k: v for k, v in self.__dict__.items() if not k.startswith('_')}
     def merge(self, other: 'PropertyFeatures') -> None:
+        # Custom merge logic for the new furnishing_status
+        if self.furnishing_status == 'unfurnished':
+            self.furnishing_status = other.furnishing_status
+        
+        # Custom merge logic for the new air_conditioning_type
+        if self.air_conditioning_type == 'none':
+            self.air_conditioning_type = other.air_conditioning_type
+
         for fld in self.__dataclass_fields__:
-            if not getattr(self, fld): setattr(self, fld, getattr(other, fld))
+            if fld not in ['furnishing_status', 'air_conditioning_type']:
+                if not getattr(self, fld):
+                    setattr(self, fld, getattr(other, fld))
 
 @dataclass
 class PropertyData:
@@ -155,14 +197,14 @@ class PropertyData:
     bedroom_display: str = ""  # 专门用于前端显示的卧室数（如 "Studio", "1", "2"）
     available_date: str = ""
     inspection_times: List[str] = field(default_factory=list)
-    agency_name: str = ""; agent_name: str = ""; agent_phone: str = ""; agent_email: str = ""
+    agency_name: str = ""; agent_name: str = ""; cover_image: str = ""; agent_phone: str = ""; agent_email: str = ""
     property_headline: str = ""; property_description: str = ""
     features: PropertyFeatures = field(default_factory=PropertyFeatures)
     latitude: float = 0.0; longitude: float = 0.0
     images: str = ""; property_features: str = "" # Storing as JSON strings
     agent_profile_url: str = ""; agent_logo_url: str = ""
     enquiry_form_action: str = ""
-    def to_dict(self) -> Dict[str, any]:
+    def to_dict(self) -> Dict[str, Any]:
         result = {}
         for field_name, field_value in self.__dict__.items():
             if field_name == 'features': result.update(field_value.to_dict())
@@ -171,177 +213,135 @@ class PropertyData:
         return result
 
 EXPECTED_COLUMNS = [
-    'listing_id', 'property_url', 'address', 'suburb', 'state', 'postcode', 
-    'property_type', 'rent_pw', 'bond', 'bedrooms', 'bathrooms', 'parking_spaces', 
-    'bedroom_display', 'available_date', 'inspection_times', 'agency_name', 'agent_name', 'agent_phone', 
-    'agent_email', 'property_headline', 'property_description', 
-    'has_air_conditioning', 'is_furnished', 'has_balcony', 'has_dishwasher', 
-    'has_laundry', 'has_built_in_wardrobe', 'has_gym', 'has_pool', 'has_parking', 
-    'allows_pets', 'has_security_system', 'has_storage', 'has_study_room', 'has_garden', 
-    'latitude', 'longitude', 'images', 'property_features', 'agent_profile_url', 
+    'listing_id', 'property_url', 'address', 'suburb', 'state', 'postcode',
+    'property_type', 'rent_pw', 'bond', 'bedrooms', 'bathrooms', 'parking_spaces',
+    'bedroom_display', 'available_date', 'inspection_times', 'agency_name', 'agent_name', 'cover_image', 'agent_phone',
+    'agent_email', 'property_headline', 'property_description',
+    'furnishing_status', 'has_air_conditioning', 'air_conditioning_type', 'has_balcony', 'has_dishwasher',
+    'has_laundry', 'has_built_in_wardrobe', 'has_gym', 'has_pool', 'has_parking',
+    'allows_pets', 'has_security_system', 'has_storage', 'has_study_room', 'has_garden',
+    'latitude', 'longitude', 'images', 'property_features', 'agent_profile_url',
     'agent_logo_url', 'enquiry_form_action', 'image_1', 'image_2', 'image_3', 'image_4'
 ]
 
 # =============================================================================
-# 特征提取, 数据清洗 & 验证 (Unchanged from v1)
+# 特征提取, 数据清洗 & 验证 (MODIFIED for furniture and AC detection)
 # =============================================================================
 class FeatureExtractor:
     def __init__(self):
-        self.patterns = {"air_conditioning": [r"air.?con", r"cooling", r"climate control", r"空调", r"冷气"],"furnished": [r"furnished", r"furniture included", r"fully equipped", r"带家具", r"家具齐全"],"balcony": [r"balcony", r"terrace", "deck", r"阳台"], "dishwasher": [r"dishwasher", r"洗碗机"],"laundry": [r"laundry", r"washer", r"dryer", r"洗衣", r"烘干机"],"built_in_wardrobe": [r"built.{0,3}in", r"wardrobe", r"wardrobes", r"衣柜"], "gym": [r"gym", r"fitness", r"健身"],"pool": [r"pool", r"swimming", r"游泳池"],"parking": [r"parking", r"garage", r"car space", r"停车"],"pets": [r"pets?\s+allow", r"pet.?friendly", r"允许宠物", r"宠物友好"],"security": [r"security", r"intercom", r"安保", r"门禁"],"storage": [r"storage", r"储物"], "study": [r"study", r"home office", r"书房", r"学习区"],"garden": [r"garden", r"yard", r"花园", r"院子"]}
+        self.patterns = {
+            "balcony": [r"balcony", r"terrace", "deck", r"阳台"],
+            "dishwasher": [r"dishwasher", r"洗碗机"],
+            "laundry": [r"laundry", r"washer", r"dryer", r"洗衣", r"烘干机"],
+            "built_in_wardrobe": [r"built.{0,3}in", r"wardrobe", r"wardrobes", r"衣柜"],
+            "gym": [r"gym", r"fitness", r"健身"],
+            "pool": [r"pool", r"swimming", r"游泳池"],
+            "parking": [r"parking", r"garage", r"car space", r"停车"],
+            "pets": [r"pets?\s+allow", r"pet.?friendly", r"允许宠物", r"宠物友好"],
+            "security": [r"security", r"intercom", r"安保", r"门禁"],
+            "storage": [r"storage", r"储物"],
+            "study": [r"study", r"home office", r"书房", r"学习区"],
+            "garden": [r"garden", r"yard", r"花园", r"院子"]
+        }
         self.compiled_patterns = {ft: [re.compile(p, re.IGNORECASE) for p in ps] for ft, ps in self.patterns.items()}
+
+        # Load and process all furniture keywords once during initialization
+        self._positive_keywords = set()
+        self._negative_keywords = set()
+        self._optional_keywords = set()
+        if FURNITURE_KEYWORDS:
+            for key, keyword_set in [('positive_keywords', self._positive_keywords), 
+                                     ('negative_keywords', self._negative_keywords), 
+                                     ('optional_keywords', self._optional_keywords)]:
+                config = FURNITURE_KEYWORDS.get(key, {})
+                if config:
+                    for category_keywords in config.values():
+                        keyword_set.update(kw.lower() for kw in category_keywords)
+            
+            logger.info(f"Loaded {len(self._positive_keywords)} positive, {len(self._negative_keywords)} negative, and {len(self._optional_keywords)} optional furniture keywords.")
+        else:
+            logger.warning("Furniture keywords configuration not found or empty. Furnished detection will be degraded.")
+
+        # Load and process all aircon keywords
+        self._aircon_keywords: Dict[str, Set[str]] = {}
+        self._aircon_keyword_order: List[str] = []
+        if AIRCON_KEYWORDS:
+            self._aircon_keyword_order = [
+                'negative_keywords', 'ducted_keywords', 'reverse_cycle_keywords', 
+                'split_system_keywords', 'general_keywords', 'other_keywords'
+            ]
+            for key in self._aircon_keyword_order:
+                config = AIRCON_KEYWORDS.get(key, {})
+                if config:
+                    self._aircon_keywords[key] = set()
+                    for category_keywords in config.values():
+                        self._aircon_keywords[key].update(kw.lower() for kw in category_keywords)
+            logger.info(f"Loaded {sum(len(s) for s in self._aircon_keywords.values())} air conditioning keywords across {len(self._aircon_keywords)} categories.")
+        else:
+            logger.warning("Aircon keywords configuration not found or empty. AC detection will be degraded.")
+
+    def _get_furnishing_status(self, text: str) -> str:
+        """
+        Robustly determines furnishing status using pre-loaded keyword sets.
+        Logic: Negative > Optional > Positive.
+        """
+        if not text: return 'unfurnished'
+        text_lower = text.lower()
+        if any(keyword in text_lower for keyword in self._negative_keywords): return 'unfurnished'
+        if any(keyword in text_lower for keyword in self._optional_keywords): return 'optional'
+        if any(keyword in text_lower for keyword in self._positive_keywords): return 'furnished'
+        return 'unfurnished'
+
+    def _get_air_conditioning_type(self, text: str) -> str:
+        """
+        Determines air conditioning type based on a prioritized keyword search.
+        """
+        if not text or not self._aircon_keywords: return 'none'
+        text_lower = text.lower()
+
+        for key in self._aircon_keyword_order:
+            if key in self._aircon_keywords:
+                # Using an explicit loop for robustness to avoid potential issues with generator expressions
+                for keyword in self._aircon_keywords[key]:
+                    if keyword in text_lower:
+                        if key == 'negative_keywords':
+                            return 'none'
+                        # Return on first match based on priority
+                        return key.replace('_keywords', '')
+        
+        return 'none'
+
     def extract(self, json_data: dict, description: str, feature_list: List[str]) -> PropertyFeatures:
-        features = self._extract_from_json(json_data)
-        if CONFIG['features']['enable_advanced_features']:
-            text_features = self._extract_from_text(description); features.merge(text_features)
-        if CONFIG['features'].get('from_property_features_list', False):
-            list_features = self._extract_from_list(feature_list); features.merge(list_features)
-            # 使用精确字符串匹配进一步补充特征识别
-            precise_features = self._extract_from_property_features_list(feature_list); features.merge(precise_features)
-        return features
-    def _extract_from_list(self, list_of_features: List[str]) -> PropertyFeatures:
         features = PropertyFeatures()
-        if not list_of_features: return features
+
+        # Combine all text sources into one blob for efficient checking
+        text_blob = description.lower()
+        text_blob += " " + " ".join(f.lower() for f in feature_list)
         
-        text_blob = " ".join(list_of_features).lower()
-        
+        s_features_set = {f.get("name", "").lower() for f in json_data.get("structuredFeatures", [])}
+        text_blob += " " + " ".join(s_features_set)
+
+        # Centralized feature extraction for regex-based patterns
         for f_name, patterns in self.compiled_patterns.items():
-            a_f_name = "allows_pets" if f_name=="pets" else "is_furnished" if f_name=="furnished" else f"has_{f_name}"
+            a_f_name = "allows_pets" if f_name == "pets" else f"has_{f_name}"
             if hasattr(features, a_f_name):
                 if any(p.search(text_blob) for p in patterns):
                     setattr(features, a_f_name, True)
-        return features
-    
-    def _extract_from_property_features_list(self, property_features_list: List[str]) -> PropertyFeatures:
-        """
-        专门从property_features列表中提取结构化字段
-        使用精确字符串匹配，涵盖更多边缘情况和变体
-        """
-        features = PropertyFeatures()
-        if not property_features_list: 
-            return features
-            
-        # 将列表转换为小写并标准化（去除标点符号影响）
-        features_normalized = []
-        for feature in property_features_list:
-            normalized = re.sub(r'[^\w\s]', ' ', feature.lower().strip())  # 替换标点为空格
-            normalized = re.sub(r'\s+', ' ', normalized).strip()  # 合并多个空格
-            features_normalized.append(normalized)
         
-        # 全面的特征匹配逻辑
-        for feature_text in features_normalized:
-            
-            # 衣柜相关 - 更全面的匹配
-            if any(keyword in feature_text for keyword in [
-                "built in wardrobe", "built in wardrobes", "builtin wardrobe", 
-                "wardrobe", "wardrobes", "robe", "robes", "walk in robe"
-            ]):
-                features.has_built_in_wardrobe = True
-            
-            # 宠物相关 - 包含连字符变体
-            elif any(keyword in feature_text for keyword in [
-                "pets allowed", "pet allowed", "pet friendly", "pet ok", 
-                "pets ok", "pet welcome", "pets welcome", "animal friendly"
-            ]):
-                features.allows_pets = True
-            
-            # 花园相关
-            elif any(keyword in feature_text for keyword in [
-                "garden", "yard", "courtyard", "outdoor space", "patio area"
-            ]):
-                features.has_garden = True
-            
-            # 储物相关
-            elif any(keyword in feature_text for keyword in [
-                "storage", "store room", "storeroom", "storage room", 
-                "storage space", "storage area", "storage cupboard"
-            ]):
-                features.has_storage = True
-            
-            # 阳台相关
-            elif any(keyword in feature_text for keyword in [
-                "balcony", "terrace", "deck", "outdoor area", "alfresco"
-            ]):
-                features.has_balcony = True
-            
-            # 空调相关 - 澳洲常见术语
-            elif any(keyword in feature_text for keyword in [
-                "air conditioning", "air con", "aircon", "air conditioner",
-                "ducted air", "split system", "reverse cycle", "cooling",
-                "climate control", "evaporative cooling"
-            ]):
-                features.has_air_conditioning = True
-            
-            # 洗碗机
-            elif any(keyword in feature_text for keyword in [
-                "dishwasher", "dish washer"
-            ]):
-                features.has_dishwasher = True
-            
-            # 健身房相关
-            elif any(keyword in feature_text for keyword in [
-                "gym", "fitness", "gymnasium", "fitness centre", "fitness center",
-                "fitness room", "exercise room"
-            ]):
-                features.has_gym = True
-            
-            # 泳池相关
-            elif any(keyword in feature_text for keyword in [
-                "pool", "swimming", "spa", "swimming pool", "inground pool",
-                "above ground pool"
-            ]):
-                features.has_pool = True
-            
-            # 停车相关 - 更全面匹配
-            elif any(keyword in feature_text for keyword in [
-                "parking", "garage", "car space", "car park", "carpark",
-                "car accommodation", "off street parking", "secure parking",
-                "underground parking", "basement parking", "carport"
-            ]):
-                features.has_parking = True
-            
-            # 洗衣相关
-            elif any(keyword in feature_text for keyword in [
-                "laundry", "washing machine", "washer", "dryer", 
-                "internal laundry", "separate laundry", "laundry room"
-            ]):
-                features.has_laundry = True
-            
-            # 安保相关
-            elif any(keyword in feature_text for keyword in [
-                "security", "intercom", "secure", "alarm", "security system",
-                "video intercom", "security entrance", "secure entry",
-                "security door", "alarm system"
-            ]):
-                features.has_security_system = True
-            
-            # 书房相关 - 包含澳洲常见术语
-            elif any(keyword in feature_text for keyword in [
-                "study", "office", "home office", "study room", "study area",
-                "study nook", "study space", "den", "work from home",
-                "computer room"
-            ]):
-                features.has_study_room = True
-            
-            # 家具相关 - 更全面
-            elif any(keyword in feature_text for keyword in [
-                "furnished", "furniture included", "fully furnished", 
-                "part furnished", "partially furnished", "unfurnished"
-            ]):
-                # 注意：只有明确表示有家具的才设为True
-                if not any(neg in feature_text for neg in ["unfurnished", "no furniture"]):
-                    features.is_furnished = True
-                
-        return features
-    def _extract_from_json(self, json_data: dict) -> PropertyFeatures:
-        features = PropertyFeatures()
-        s_features = {f.get("name", "").lower() for f in json_data.get("structuredFeatures", [])}
-        features.has_air_conditioning = any("air conditioning" in n or "cooling" in n for n in s_features); features.is_furnished = any("furnished" in n for n in s_features); features.has_balcony = any("balcony" in n or "terrace" in n for n in s_features); features.has_dishwasher = any("dishwasher" in n for n in s_features); features.has_laundry = any("laundry" in n or "washing machine" in n for n in s_features); features.allows_pets = any("pet" in n for n in s_features)
-        return features
-    def _extract_from_text(self, text: str) -> PropertyFeatures:
-        features = PropertyFeatures(); text_l = text.lower()
-        for f_name, patterns in self.compiled_patterns.items():
-            a_f_name = "allows_pets" if f_name=="pets" else "is_furnished" if f_name=="furnished" else f"has_{f_name}"
-            if hasattr(features, a_f_name): setattr(features, a_f_name, any(p.search(text_l) for p in patterns))
+        # Use the new, tri-state furnishing status check
+        features.furnishing_status = self._get_furnishing_status(text_blob)
+        
+        # Use the new, detailed air conditioning type check
+        features.air_conditioning_type = self._get_air_conditioning_type(text_blob)
+        if features.air_conditioning_type != 'none':
+            features.has_air_conditioning = True
+
+        # More specific keyword checks can be added here for higher accuracy if needed
+        if any(keyword in text_blob for keyword in ["built in wardrobe", "builtin wardrobe", "robe", "walk in robe"]):
+            features.has_built_in_wardrobe = True
+        if any(keyword in text_blob for keyword in ["secure parking", "underground parking", "carport"]):
+            features.has_parking = True
+        
         return features
 
 class DataCleaner:
@@ -653,6 +653,9 @@ class DomainCrawler:
             
             img_urls_raw = [img.get("url", "") for img in root_q.get("largeMedia", []) if img.get("url")]
             images_json = json.dumps(img_urls_raw)
+            
+            # 提取封面图片（第一张图片）
+            cover_image_val = img_urls_raw[0] if img_urls_raw else ""
 
             property_features_json = json.dumps(prop_feat_list)
 
@@ -727,6 +730,7 @@ class DomainCrawler:
                 inspection_times=self._extract_inspection_times(house_document),
                 agency_name=(root_q.get("agency", {}) or {}).get("name", ""),
                 agent_name=agent_p.get("fullName", ""), 
+                cover_image=cover_image_val,
                 agent_phone=agent_phone_val, 
                 agent_email=agent_p.get("email", ""),
                 agent_profile_url=agent_p.get("profileUrl", ""),
@@ -888,12 +892,12 @@ class DomainCrawler:
                 logger.info("创建示例配置文件 (url.txt)...")
                 with open(default_url_file, "w", encoding="utf-8") as f:
                     f.write("# URL list, one per line\nhttps://www.domain.com.au/rent/?suburb=sydney-nsw-2000\n")
-                logger.info(f"示例配置文件已创建: {default_url_file}. 请填充后运行."); return None
+                logger.info(f"示例配置文件已创建: {default_url_file}. 请填充后运行."); return []
 
             with open(url_cfg_path, "r", encoding="utf-8") as f:
                 urls = [ln.strip() for ln in f if ln.strip() and not ln.startswith("#")]
             
-            if not urls: logger.error(f"配置文件 {url_cfg_path} 中无有效URL."); return None
+            if not urls: logger.error(f"配置文件 {url_cfg_path} 中无有效URL."); return []
             
             logger.info(f"找到{len(urls)}个URL待处理 (来源: {'temp_urls.txt' if using_temp_urls else 'url.txt'}): {urls}")
             inter_url_delay_min = CONFIG['performance'].get('inter_url_delay_min', 3.0)
@@ -902,19 +906,12 @@ class DomainCrawler:
             for i_url, url in enumerate(urls, 1):
                 try:
                     logger.info(f"开始处理 ({i_url}/{len(urls)}): {url}")
-                    total_count = 0  # ADDED: Track total count for this URL
                     
-                    if using_temp_urls:
-                        # URLs from temp_urls.txt are assumed to be direct detail links
-                        logger.info(f"Processing as direct detail URL (from temp_urls.txt): {url}")
-                        if self.crawl_detail(url):
-                            total_count = 1  # Single property processed
-                    else:
-                        # URLs from url.txt are assumed to be search pages
-                        logger.info(f"Processing as search URL (from url.txt): {url}")
-                        total_count = self.search(url, using_temp_urls)  # MODIFIED: Get total count
+                    # CORRECTED LOGIC: All URLs are processed as search URLs for consistency.
+                    logger.info(f"Processing as search URL (from {'temp_urls.txt' if using_temp_urls else 'url.txt'}): {url}")
+                    total_count = self.search(url, using_temp_urls)
                     
-                    # ADDED: Extract region name and flush data for this URL
+                    # Extract region name and flush data for this URL
                     region_name = extract_region_from_url(url)
                     logger.info(f"完成处理URL: {url}，开始保存数据 (区域: {region_name}, 房源数: {total_count})")
                     
