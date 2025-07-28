@@ -1,59 +1,67 @@
-# Domain.com.au Property Scraper (v6)
+# Domain.com.au 房产爬虫 (v6)
 
-This project contains a powerful and stable Python script (`v6_reverted.py`) for scraping residential rental property data from Domain.com.au. It is designed to be robust, configurable, and easy to use.
+本项目包含一个功能强大且稳定的 Python 脚本 (`v6_reverted.py`)，用于从 Domain.com.au 抓取住宅租赁房产数据。它被设计为健壮、可配置且易于使用。
 
-## Key Features
+## 关于我
 
-- **Stable & Robust**: Built upon a proven, stable codebase to ensure reliable scraping.
-- **Rich Data Extraction**: Captures a wide range of data points, including property details, pricing, agent information, and a comprehensive list of features.
-- **Dynamic Feature Management**: The standout feature of this version. You can define which property features to scrape (e.g., "Balcony", "Dishwasher", "Pet Friendly") by simply editing a configuration file, without touching any Python code.
-- **Excel Output**: Generates a clean, timestamped `.xlsx` file for each scraped URL, ready for analysis.
-- **Configurable**: Scraper behavior (network settings, delays) can be fine-tuned via `config/crawler_config.yaml`.
+你好！我是一名热衷于数据和自动化的开发者。这个项目是我为了解决从 Domain.com.au 手动收集租房信息的繁琐过程而创建的。我希望这个工具能帮助你更高效地找到理想的住所。
 
-## Setup
+如果你有任何建议或问题，欢迎随时与我联系！
 
-Ensure you have Python 3.x and pip installed.
+---
 
-To install all necessary Python libraries, run:
+## 主要特点
+
+- **稳定与健壮**: 基于经过验证的稳定代码库构建，确保可靠的抓取。
+- **丰富的数据提取**: 捕获广泛的数据点，包括房产详情、定价、中介信息以及全面的功能列表。
+- **动态功能管理**: 这是此版本的突出特点。您只需编辑一个配置文件，即可定义要抓取的房产功能（例如，“阳台”、“洗碗机”、“宠物友好”），而无需接触任何 Python 代码。
+- **Excel 输出**: 为每个抓取的 URL 生成一个干净、带时间戳的 `.xlsx` 文件，可随时进行分析。
+- **可配置**: 爬虫行为（网络设置、延迟）可通过 `config/crawler_config.yaml` 进行微调。
+
+## 安装
+
+确保您已安装 Python 3.x 和 pip。
+
+要安装所有必需的 Python 库，请运行：
 ```bash
 pip install pandas requests lxml PyYAML openpyxl
 ```
 
-## How to Run
+## 如何运行
 
-1.  **Configure URLs**: Edit the `config/url.txt` file. Add one or more Domain.com.au search result URLs, one per line. For a quick test, you can use `config/temp_urls.txt` which, if it contains any URLs, will be used instead of `url.txt`.
+1.  **配置 URL**: 编辑 `config/url.txt` 文件。添加一个或多个 Domain.com.au 搜索结果 URL，每行一个。为了快速测试，您可以使用 `config/temp_urls.txt`，如果其中包含任何 URL，则将使用它而不是 `url.txt`。
 
-2.  **Run the Script**: Execute the main script from your terminal:
+2.  **运行脚本**: 从您的终端执行主脚本：
     ```bash
     python v6_reverted.py
     ```
 
-3.  **Find Your Data**: The script will process each URL and save the results as a separate `.xlsx` file in the `output/` directory. The filename will be timestamped and include the region name (e.g., `20250728_212216_Forest_Lodge_14properties.xlsx`).
+3.  **查找您的数据**: 脚本将处理每个 URL，并将结果另存为 `output/` 目录中的单独 `.xlsx` 文件。文件名将带有时间戳并包含区域名称（例如，`20250728_212216_Forest_Lodge_14properties.xlsx`）。
 
-## Dynamic Feature Management
+## 动态功能管理
 
-This script's most powerful feature is its ability to be customized without editing code. You can control exactly which property features are detected and added as columns to the final Excel file.
+该脚本最强大的功能是其无需编辑代码即可进行自定义的能力。您可以精确控制检测哪些房产功能并将其作为列添加到最终的 Excel 文件中。
 
-This is all managed in the **`config/features_config.yaml`** file.
+这一切都在 **`config/features_config.yaml`** 文件中进行管理。
 
-### How it Works
+### 工作原理
 
-The script reads the `features_config.yaml` file at startup. For each feature defined in the file, it will:
-1.  Dynamically add a corresponding boolean (TRUE/FALSE) column to the output Excel file.
-2.  Scan the property's description and feature list for the keywords you've specified.
-3.  If any keyword is found, the value in the corresponding column for that property will be set to `TRUE`.
+脚本在启动时读取 `features_config.yaml` 文件。对于文件中定义的每个功能，它将：
+1.  动态地向输出的 Excel 文件中添加一个相应的布尔值（TRUE/FALSE）列。
+2.  扫描房产的描述和功能列表，查找您指定的关键字。
+3.  如果找到任何关键字，该房产对应列中的值将被设置为 `TRUE`。
 
-### `features_config.yaml` Structure
+### `features_config.yaml` 结构
 
-The file is a list of features. Each feature has three parts:
+该文件是一个功能列表。每个功能有三个部分：
 
--   `name`: The Chinese name for the feature (for reference).
--   `column_name`: The name of the column in the output Excel file. **Must be a valid Python variable name** (e.g., `has_dishwasher`, no spaces).
--   `keywords`: A list of keywords to search for in the property description. The search is case-insensitive.
+-   `name`: 功能的中文名称（供参考）。
+-   `column_name`: 输出 Excel 文件中的列名。**必须是有效的 Python 变量名**（例如，`has_dishwasher`，无空格）。
+-   `keywords`: 在房产描述中搜索的关键字列表。搜索不区分大小写。
 
-### Example: Adding a "Pet Friendly" Feature
+### 示例：添加“宠物友好”功能
 
-To add a feature that checks if pets are allowed, you would add the following to `config/features_config.yaml`:
+要添加一个检查是否允许宠物的功能，您需要将以下内容添加到 `config/features_config.yaml` 中：
 
 ```yaml
 - name: 允许宠物
@@ -65,4 +73,4 @@ To add a feature that checks if pets are allowed, you would add the following to
     - "允许宠物"
 ```
 
-After adding this and re-running the script, your output Excel file will now contain a new column named `allows_pets`, which will be `TRUE` for any property whose description contains one of the specified keywords.
+添加此内容并重新运行脚本后，您的输出 Excel 文件现在将包含一个名为 `allows_pets` 的新列，对于描述中包含任何指定关键字的房产，该列的值将为 `TRUE`。
