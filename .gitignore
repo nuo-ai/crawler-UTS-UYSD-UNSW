@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-selfcheck.json
+
+# Output & Logs
+/output/
+/logs/
+/temp_images/
+*.xlsx
+*.csv
+*.json
+
+# OS-specific
+.DS_Store
+desktop.ini
+
+# Ignore specific config files that might contain sensitive info or are user-specific
+# We keep the main config files in git, but ignore local overrides.
+# e.g., config/local_override.yaml
+
+# Ignore progress files
+progress.json
+progress_temp.json
+
+# Ignore comparison results
+comparison_result.txt
