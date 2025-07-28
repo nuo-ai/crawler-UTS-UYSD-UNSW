@@ -74,3 +74,53 @@ pip install pandas requests lxml PyYAML openpyxl
 ```
 
 添加此内容并重新运行脚本后，您的输出 Excel 文件现在将包含一个名为 `allows_pets` 的新列，对于描述中包含任何指定关键字的房产，该列的值将为 `TRUE`。
+
+---
+
+## 配置文件详解
+
+本项目有两个主要的配置文件来控制其行为，均位于 `config/` 目录下。
+
+### 1. `crawler_config.yaml` - 爬虫核心行为配置
+
+这个文件控制着爬虫的运行方式、网络设置和性能。
+
+-   **`features`**: 功能开关
+    -   `enable_advanced_features`: `true` - 启用高级特征提取（目前始终开启）。
+    -   `enable_data_cleaning`: `true` - 对提取的数据进行清洗（例如，移除HTML标签）。
+    -   `enable_batch_write`: `true` - 启用分批写入Excel，以减少内存使用。
+
+-   **`output`**: 输出设置
+    -   `mode`: `'hybrid'` - 控制输出模式。
+        -   `'per_url'`: 每个URL生成一个独立的Excel文件。
+        -   `'single_file'`: 所有URL的结果合并到一个Excel文件中。
+        -   `'hybrid'`: 同时执行以上两种模式。
+    -   `single_file_prefix`: `'Combined'` - 在 `single_file` 或 `hybrid` 模式下，合并文件的文件名前缀。
+
+-   **`network`**: 网络设置
+    -   `max_retries`: `3` - 页面请求失败时的最大重试次数。
+    -   `backoff_factor`: `0.3` - 重试之间的等待时间因子。
+    -   `timeout`: `30` - 单个请求的超时时间（秒）。
+    -   `retry_statuses`: `[500, 502, 503, 504]` - 遇到这些HTTP状态码时会触发重试。
+
+-   **`performance`**: 性能设置
+    -   `max_workers`: `5` - 控制同时下载多少个页面的并发线程数。
+    -   `requests_per_second`: `1.0` - 限制每秒的请求频率，以避免对服务器造成过大压力。
+    -   `batch_size`: `20` - 当 `enable_batch_write` 开启时，每收集到20条房产数据就写入一次文件。
+
+-   **`headers`**: 请求头
+    -   这部分内容模拟了真实的浏览器请求，以避免被网站屏蔽。通常不需要修改。
+
+### 2. `features_config.yaml` - 动态特征提取配置
+
+这个文件的作用已在 **“动态功能管理”** 章节中详细解释。您可以通过编辑此文件来添加、删除或修改您希望从房产描述中提取的任何特征。
+
+### 其他配置文件说明
+
+您可能在 `config/` 目录下看到其他 `.yaml` 文件，例如：
+-   `crawler_config_full.yaml`
+-   `crawler_config_mini.yaml`
+-   `aircon_keywords.yaml`
+-   `furniture_keywords.yaml`
+
+**请注意：** 这些文件在当前的 `v6_reverted.py` 脚本中 **并未被使用**。它们是为其他版本的脚本或为未来功能规划的示例文件，您可以安全地忽略它们，或将它们作为创建自己配置的参考。
