@@ -4,6 +4,11 @@ features:
   enable_data_cleaning: true      # 启用数据清洗
   enable_batch_write: true        # 启用批量写入
 
+# 输出设置
+output:
+  mode: 'hybrid'                  # 输出模式: 'per_url' - 每个URL一个文件, 'single_file' - 所有URL合并为一个文件, 'hybrid' - 既生成独立文件又生成合并文件
+  single_file_prefix: 'Combined'  # 单文件模式和混合模式的合并文件前缀
+
 # 网络设置
 network:
   max_retries: 3                  # 最大重试次数

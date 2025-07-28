@@ -1,0 +1,84 @@
+# Features Configuration for Property Crawler
+# This file defines all the features to be extracted and displayed in the frontend
+# 
+# Structure:
+# - name: Display name (will be shown in frontend, use Chinese for target audience)
+# - column_name: Column name in the output Excel file
+# - keywords: List of keywords to search for in property descriptions
+
+features:
+  # --- 核心生活设施 ---
+  - name: "带家具"
+    column_name: "is_furnished"
+    keywords: ["furnished"]
+  
+  - name: "空调"
+    column_name: "has_air_conditioning"
+    keywords: ["air conditioning", "air-conditioner", "air con", "ducted cooling", "split system", "reverse cycle"]
+  
+  - name: "内置衣柜"
+    column_name: "has_wardrobes"
+    keywords: ["wardrobe", "built in", "walk in robe"]
+  
+  - name: "内部洗衣房"
+    column_name: "has_laundry"
+    keywords: ["laundry", "washer", "dryer"]
+  
+  - name: "洗碗机"
+    column_name: "has_dishwasher"
+    keywords: ["dishwasher"]
+  
+  - name: "停车位"
+    column_name: "has_parking"
+    keywords: ["parking", "garage", "car space", "carport"]
+  
+  - name: "燃气灶"
+    column_name: "has_gas_cooking"
+    keywords: ["gas", "gas appliances", "gas cooktop"]
+  
+  - name: "暖气"
+    column_name: "has_heating"
+    keywords: ["heating", "ducted heating"]
+
+  # --- 建筑与社区设施 ---
+  - name: "安保门禁"
+    column_name: "has_intercom"
+    keywords: ["intercom", "security access", "security building"]
+  
+  - name: "电梯"
+    column_name: "has_lift"
+    keywords: ["lift", "elevator"]
+  
+  - name: "健身房"
+    column_name: "has_gym"
+    keywords: ["gym", "fitness"]
+  
+  - name: "游泳池"
+    column_name: "has_pool"
+    keywords: ["pool", "swimming", "lap pool"]
+  
+  - name: "垃圾处理"
+    column_name: "has_garbage_disposal"
+    keywords: ["garbage chute", "rubbish chute", "waste disposal", "bin room"]
+
+  # --- 空间与视野 ---
+  - name: "书房"
+    column_name: "has_study"
+    keywords: ["study", "home office"]
+  
+  - name: "阳台"
+    column_name: "has_balcony"
+    keywords: ["balcony", "deck", "terrace", "patio"]
+  
+  - name: "城市景观"
+    column_name: "has_city_view"
+    keywords: ["city view", "district view", "area view", "harbour bridge view", "opera house view"]
+  
+  - name: "水景"
+    column_name: "has_water_view"
+    keywords: ["water view", "ocean view", "river view", "harbour view", "beach front", "water front"]
+
+  # --- 其他 ---
+  - name: "允许养宠物"
+    column_name: "allows_pets"
+    keywords: ["pets allowed", "pet friendly"]

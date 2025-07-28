@@ -1,0 +1,3 @@
+Comparing C:\Users\nuoai\Desktop\crawler-UTS-UYSD-UNSW\dist\output\data\0727\20250727_141050_Zetland_161properties.xlsx and C:\Users\nuoai\Desktop\crawler-UTS-UYSD-UNSW\dist\output\20250727_212602_Zetland_161properties.xlsx
+
+Shape mismatch: (161, 53) vs (161, 48)

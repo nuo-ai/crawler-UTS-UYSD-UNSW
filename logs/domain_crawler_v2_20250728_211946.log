@@ -1,0 +1,19 @@
+2025-07-28 21:19:46 - domain_crawler_v2 - INFO - 加载动态特征配置文件...
+2025-07-28 21:19:46 - domain_crawler_v2 - INFO - 开始运行房源信息采集程序 (v2)...
+2025-07-28 21:19:46 - domain_crawler_v2 - INFO - 检测到临时URL文件: C:\Users\nuoai\Desktop\crawler-UTS-UYSD-UNSW\dist\config\temp_urls.txt，将使用此文件中的URL。
+2025-07-28 21:19:46 - domain_crawler_v2 - INFO - 找到1个URL待处理 (来源: temp_urls.txt): ['https://www.domain.com.au/rent/forest-lodge-nsw-2037/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc']
+2025-07-28 21:19:46 - domain_crawler_v2 - INFO - 开始处理 (1/1): https://www.domain.com.au/rent/forest-lodge-nsw-2037/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc
+2025-07-28 21:19:46 - domain_crawler_v2 - INFO - Processing as direct detail URL (from temp_urls.txt): https://www.domain.com.au/rent/forest-lodge-nsw-2037/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc
+2025-07-28 21:19:46 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/rent/forest-lodge-nsw-2037/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc
+2025-07-28 21:19:46 - domain_crawler_v2 - ERROR - 抓取详情页失败: https://www.domain.com.au/rent/forest-lodge-nsw-2037/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc
+Traceback (most recent call last):
+  File "C:\Users\nuoai\Desktop\crawler-UTS-UYSD-UNSW\dist\v6_reverted.py", line 623, in crawl_detail
+    root_q = comp_props.get("rootGraphQuery", {}).get("listingByIdV2", {}) or {}
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-07-28 21:19:46 - domain_crawler_v2 - INFO - 完成处理URL: https://www.domain.com.au/rent/forest-lodge-nsw-2037/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc，开始保存数据 (区域: Forest, 房源数: 0)
+2025-07-28 21:19:46 - domain_crawler_v2 - INFO - 缓冲区中无数据可刷新至XLSX。
+2025-07-28 21:19:46 - domain_crawler_v2 - WARNING - URL https://www.domain.com.au/rent/forest-lodge-nsw-2037/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc 没有数据保存或保存失败
+2025-07-28 21:19:46 - domain_crawler_v2 - INFO - 所有URL处理完毕，共生成 0 个输出文件
+2025-07-28 21:19:46 - domain_crawler_v2 - INFO - 爬虫任务完成。
+2025-07-28 21:19:46 - domain_crawler_v2 - INFO - 房源信息采集程序 (v2) 结束。

@@ -1,0 +1,348 @@
+2025-07-28 21:16:03 - domain_crawler_v2 - INFO - 加载动态特征配置文件...
+2025-07-28 21:16:03 - domain_crawler_v2 - INFO - 开始运行房源信息采集程序 (v2)...
+2025-07-28 21:16:03 - domain_crawler_v2 - INFO - 未找到或临时URL文件为空，将使用默认URL文件: C:\Users\nuoai\Desktop\crawler-UTS-UYSD-UNSW\dist\config\url.txt
+2025-07-28 21:16:03 - domain_crawler_v2 - INFO - 已删除旧的进度文件: C:\Users\nuoai\Desktop\crawler-UTS-UYSD-UNSW\dist\progress.json (针对默认URL)。
+2025-07-28 21:16:03 - domain_crawler_v2 - INFO - 找到1个URL待处理 (来源: url.txt): ['https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc']
+2025-07-28 21:16:03 - domain_crawler_v2 - INFO - 开始处理 (1/1): https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc
+2025-07-28 21:16:03 - domain_crawler_v2 - INFO - Processing as search URL (from url.txt): https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc
+2025-07-28 21:16:03 - domain_crawler_v2 - INFO - 正在抓取第1页: https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc&page=1
+2025-07-28 21:16:04 - domain_crawler_v2 - INFO - 第1页找到20个房源
+2025-07-28 21:16:04 - domain_crawler_v2 - INFO - 处理第1/20个房源: https://www.domain.com.au/4020-185-211-broadway-ultimo-nsw-2007-17668515
+2025-07-28 21:16:04 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/4020-185-211-broadway-ultimo-nsw-2007-17668515
+2025-07-28 21:16:05 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/4020-185-211-broadway-ultimo-nsw-2007-17668515: https://www.2apply.com.au/domain/24979/17668515?address=4020%2F185-211%20Broadway%2C%20Ultimo&type=rental&times=%5B%5D
+2025-07-28 21:16:05 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-18 转换为 'Available Now'
+2025-07-28 21:16:05 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17668515 for URL: https://www.domain.com.au/4020-185-211-broadway-ultimo-nsw-2007-17668515
+2025-07-28 21:16:07 - domain_crawler_v2 - INFO - 处理第2/20个房源: https://www.domain.com.au/4121-185-211-broadway-ultimo-nsw-2007-17623578
+2025-07-28 21:16:07 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/4121-185-211-broadway-ultimo-nsw-2007-17623578
+2025-07-28 21:16:07 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/4121-185-211-broadway-ultimo-nsw-2007-17623578: https://api.snug.com/v1/partner/handoff/team/12113/listing/c36d3b31-ff49-403e-aca7-9b5445ff2465/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F4121-185-211-broadway-ultimo-nsw-2007-17623578&add_unitnum=4121&add_streetnum=185-211&add_streettype=BROADWAY&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:16:07 - domain_crawler_v2 - DEBUG - 检测到Studio关键词在: stylish loft studio in prime broadway location...
+2025-07-28 21:16:07 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-02 转换为 'Available Now'
+2025-07-28 21:16:07 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17623578 for URL: https://www.domain.com.au/4121-185-211-broadway-ultimo-nsw-2007-17623578
+2025-07-28 21:16:09 - domain_crawler_v2 - INFO - 处理第3/20个房源: https://www.domain.com.au/level-3-185-broadway-ultimo-nsw-2007-17560504
+2025-07-28 21:16:09 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/level-3-185-broadway-ultimo-nsw-2007-17560504
+2025-07-28 21:16:10 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/level-3-185-broadway-ultimo-nsw-2007-17560504: https://api.snug.com/v1/partner/handoff/team/16559/listing/1P6457/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Flevel-3-185-broadway-ultimo-nsw-2007-17560504&add_unitnum=Level%203&add_streetnum=185&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:16:10 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-06-30 转换为 'Available Now'
+2025-07-28 21:16:10 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17560504 for URL: https://www.domain.com.au/level-3-185-broadway-ultimo-nsw-2007-17560504
+2025-07-28 21:16:11 - domain_crawler_v2 - INFO - 处理第4/20个房源: https://www.domain.com.au/25b-288-wattle-street-ultimo-nsw-2007-17683993
+2025-07-28 21:16:11 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/25b-288-wattle-street-ultimo-nsw-2007-17683993
+2025-07-28 21:16:12 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/25b-288-wattle-street-ultimo-nsw-2007-17683993: https://api.snug.com/v1/partner/handoff/team/5576/listing/6712884/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F25b-288-wattle-street-ultimo-nsw-2007-17683993&add_unitnum=25B&add_streetnum=288&add_streetname=Wattle&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:16:12 - domain_crawler_v2 - DEBUG - 检测到Studio关键词在: studio apartment for rent...
+2025-07-28 21:16:12 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-24 转换为 'Available Now'
+2025-07-28 21:16:12 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17683993 for URL: https://www.domain.com.au/25b-288-wattle-street-ultimo-nsw-2007-17683993
+2025-07-28 21:16:14 - domain_crawler_v2 - INFO - 处理第5/20个房源: https://www.domain.com.au/1101-185-211-broadway-ultimo-nsw-2007-17176601
+2025-07-28 21:16:14 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1101-185-211-broadway-ultimo-nsw-2007-17176601
+2025-07-28 21:16:14 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1101-185-211-broadway-ultimo-nsw-2007-17176601: https://api.snug.com/v1/partner/handoff/team/31662/listing/f3594b3d-c6f0-496c-9983-9c2db097e856/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F1101-185-211-broadway-ultimo-nsw-2007-17176601&add_unitnum=1101&add_streetnum=185-211&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:16:14 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-03-03 转换为 'Available Now'
+2025-07-28 21:16:14 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17176601 for URL: https://www.domain.com.au/1101-185-211-broadway-ultimo-nsw-2007-17176601
+2025-07-28 21:16:16 - domain_crawler_v2 - INFO - 处理第6/20个房源: https://www.domain.com.au/210-62-mountain-street-ultimo-nsw-2007-17678419
+2025-07-28 21:16:16 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/210-62-mountain-street-ultimo-nsw-2007-17678419
+2025-07-28 21:16:17 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/210-62-mountain-street-ultimo-nsw-2007-17678419: https://www.2apply.com.au/domain/15365/17678419?address=210%2F62%20Mountain%20Street%2C%20Ultimo&type=rental&times=%5B%5D
+2025-07-28 21:16:17 - domain_crawler_v2 - DEBUG - 检测到Studio关键词在: studio...
+2025-07-28 21:16:17 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17678419 for URL: https://www.domain.com.au/210-62-mountain-street-ultimo-nsw-2007-17678419
+2025-07-28 21:16:19 - domain_crawler_v2 - INFO - 处理第7/20个房源: https://www.domain.com.au/308-28-wattle-lane-ultimo-nsw-2007-17368105
+2025-07-28 21:16:19 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/308-28-wattle-lane-ultimo-nsw-2007-17368105
+2025-07-28 21:16:19 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/308-28-wattle-lane-ultimo-nsw-2007-17368105 NOT found via any XPaths.
+2025-07-28 21:16:19 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-25 转换为 'Available Now'
+2025-07-28 21:16:19 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17368105 for URL: https://www.domain.com.au/308-28-wattle-lane-ultimo-nsw-2007-17368105
+2025-07-28 21:16:21 - domain_crawler_v2 - INFO - 处理第8/20个房源: https://www.domain.com.au/2058-185-broadway-ultimo-nsw-2007-17658780
+2025-07-28 21:16:21 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/2058-185-broadway-ultimo-nsw-2007-17658780
+2025-07-28 21:16:21 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/2058-185-broadway-ultimo-nsw-2007-17658780: https://api.snug.com/v1/partner/handoff/team/31666/listing/1P1248/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F2058-185-broadway-ultimo-nsw-2007-17658780&add_unitnum=2058&add_streetnum=185&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:16:21 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-09 转换为 'Available Now'
+2025-07-28 21:16:21 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17658780 for URL: https://www.domain.com.au/2058-185-broadway-ultimo-nsw-2007-17658780
+2025-07-28 21:16:23 - domain_crawler_v2 - INFO - 处理第9/20个房源: https://www.domain.com.au/1040-211-broadway-ultimo-nsw-2007-17599970
+2025-07-28 21:16:23 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1040-211-broadway-ultimo-nsw-2007-17599970
+2025-07-28 21:16:23 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/1040-211-broadway-ultimo-nsw-2007-17599970 NOT found via any XPaths.
+2025-07-28 21:16:23 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17599970 for URL: https://www.domain.com.au/1040-211-broadway-ultimo-nsw-2007-17599970
+2025-07-28 21:16:24 - domain_crawler_v2 - INFO - 处理第10/20个房源: https://www.domain.com.au/3104-185-broadway-ultimo-nsw-2007-17571251
+2025-07-28 21:16:24 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/3104-185-broadway-ultimo-nsw-2007-17571251
+2025-07-28 21:16:25 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/3104-185-broadway-ultimo-nsw-2007-17571251: https://api.snug.com/v1/partner/handoff/team/16559/listing/1P5176/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F3104-185-broadway-ultimo-nsw-2007-17571251&add_unitnum=3104&add_streetnum=185&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:16:25 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-05 转换为 'Available Now'
+2025-07-28 21:16:25 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17571251 for URL: https://www.domain.com.au/3104-185-broadway-ultimo-nsw-2007-17571251
+2025-07-28 21:16:26 - domain_crawler_v2 - INFO - 处理第11/20个房源: https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-16481923
+2025-07-28 21:16:26 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-16481923
+2025-07-28 21:16:27 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-16481923: https://api.snug.com/v1/partner/handoff/team/31662/listing/2a3e5d42-6369-4ada-a566-7c16b221f622/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F185-211-broadway-ultimo-nsw-2007-16481923&add_streetnum=185-211&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:16:27 - domain_crawler_v2 - DEBUG - 过期入住日期 2024-08-08 转换为 'Available Now'
+2025-07-28 21:16:27 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16481923 for URL: https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-16481923
+2025-07-28 21:16:29 - domain_crawler_v2 - INFO - 处理第12/20个房源: https://www.domain.com.au/1123-185-broadway-ultimo-nsw-2007-17571197
+2025-07-28 21:16:29 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1123-185-broadway-ultimo-nsw-2007-17571197
+2025-07-28 21:16:29 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1123-185-broadway-ultimo-nsw-2007-17571197: https://api.snug.com/v1/partner/handoff/team/16559/listing/1P6476/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F1123-185-broadway-ultimo-nsw-2007-17571197&add_unitnum=1123&add_streetnum=185&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:16:29 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-09 转换为 'Available Now'
+2025-07-28 21:16:29 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17571197 for URL: https://www.domain.com.au/1123-185-broadway-ultimo-nsw-2007-17571197
+2025-07-28 21:16:30 - domain_crawler_v2 - INFO - 处理第13/20个房源: https://www.domain.com.au/4036-185-211-broadway-ultimo-nsw-2007-16874534
+2025-07-28 21:16:30 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/4036-185-211-broadway-ultimo-nsw-2007-16874534
+2025-07-28 21:16:30 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/4036-185-211-broadway-ultimo-nsw-2007-16874534: https://api.snug.com/v1/partner/handoff/team/24630/listing/2a50e03c-dc19-4b1e-9ffc-f09f0b3771b0/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F4036-185-211-broadway-ultimo-nsw-2007-16874534&add_unitnum=4036&add_streetnum=185-211&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:16:30 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-16 转换为 'Available Now'
+2025-07-28 21:16:30 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16874534 for URL: https://www.domain.com.au/4036-185-211-broadway-ultimo-nsw-2007-16874534
+2025-07-28 21:16:32 - domain_crawler_v2 - INFO - 处理第14/20个房源: https://www.domain.com.au/3082-185-broadway-ultimo-nsw-2007-17659452
+2025-07-28 21:16:32 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/3082-185-broadway-ultimo-nsw-2007-17659452
+2025-07-28 21:16:33 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/3082-185-broadway-ultimo-nsw-2007-17659452: https://api.snug.com/v1/partner/handoff/team/16559/listing/1P6555/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F3082-185-broadway-ultimo-nsw-2007-17659452&add_unitnum=3082&add_streetnum=185&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:16:33 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-08 转换为 'Available Now'
+2025-07-28 21:16:33 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17659452 for URL: https://www.domain.com.au/3082-185-broadway-ultimo-nsw-2007-17659452
+2025-07-28 21:16:34 - domain_crawler_v2 - INFO - 处理第15/20个房源: https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-17555511
+2025-07-28 21:16:34 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-17555511
+2025-07-28 21:16:34 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-17555511: https://api.snug.com/v1/partner/handoff/team/31177/listing/5309dbae-3f26-41be-931b-91c4a945fa3b/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F185-211-broadway-ultimo-nsw-2007-17555511&add_streetnum=185-211&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:16:34 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-05-05 转换为 'Available Now'
+2025-07-28 21:16:34 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17555511 for URL: https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-17555511
+2025-07-28 21:16:36 - domain_crawler_v2 - INFO - 处理第16/20个房源: https://www.domain.com.au/48b-288-wattle-street-ultimo-nsw-2007-17649794
+2025-07-28 21:16:36 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/48b-288-wattle-street-ultimo-nsw-2007-17649794
+2025-07-28 21:16:36 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/48b-288-wattle-street-ultimo-nsw-2007-17649794: https://api.snug.com/v1/partner/handoff/team/5576/listing/6662436/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F48b-288-wattle-street-ultimo-nsw-2007-17649794&add_unitnum=48B&add_streetnum=288&add_streetname=WATTLE&add_streettype=STREET&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:16:36 - domain_crawler_v2 - DEBUG - 检测到Studio关键词在: studio apartment for rent  48b/288 wattle st, ulti...
+2025-07-28 21:16:36 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-02 转换为 'Available Now'
+2025-07-28 21:16:36 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17649794 for URL: https://www.domain.com.au/48b-288-wattle-street-ultimo-nsw-2007-17649794
+2025-07-28 21:16:38 - domain_crawler_v2 - INFO - 处理第17/20个房源: https://www.domain.com.au/4077-185-broadway-ultimo-nsw-2007-17672111
+2025-07-28 21:16:38 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/4077-185-broadway-ultimo-nsw-2007-17672111
+2025-07-28 21:16:38 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/4077-185-broadway-ultimo-nsw-2007-17672111: https://api.snug.com/v1/partner/handoff/team/16559/listing/1P6580/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F4077-185-broadway-ultimo-nsw-2007-17672111&add_unitnum=4077&add_streetnum=185&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:16:38 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-24 转换为 'Available Now'
+2025-07-28 21:16:38 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17672111 for URL: https://www.domain.com.au/4077-185-broadway-ultimo-nsw-2007-17672111
+2025-07-28 21:16:40 - domain_crawler_v2 - INFO - 处理第18/20个房源: https://www.domain.com.au/1115-185-broadway-ultimo-nsw-2007-17677748
+2025-07-28 21:16:40 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1115-185-broadway-ultimo-nsw-2007-17677748
+2025-07-28 21:16:40 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1115-185-broadway-ultimo-nsw-2007-17677748: https://api.snug.com/v1/partner/handoff/team/16559/listing/1P6583/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F1115-185-broadway-ultimo-nsw-2007-17677748&add_unitnum=1115&add_streetnum=185&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:16:40 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-21 转换为 'Available Now'
+2025-07-28 21:16:40 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17677748 for URL: https://www.domain.com.au/1115-185-broadway-ultimo-nsw-2007-17677748
+2025-07-28 21:16:42 - domain_crawler_v2 - INFO - 处理第19/20个房源: https://www.domain.com.au/336-69-71-jones-street-ultimo-nsw-2007-17675527
+2025-07-28 21:16:42 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/336-69-71-jones-street-ultimo-nsw-2007-17675527
+2025-07-28 21:16:42 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/336-69-71-jones-street-ultimo-nsw-2007-17675527: https://api.snug.com/v1/partner/handoff/team/32809/listing/1P0224/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F336-69-71-jones-street-ultimo-nsw-2007-17675527&add_unitnum=336&add_streetnum=69-71&add_streetname=Jones&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:16:42 - domain_crawler_v2 - DEBUG - 检测到Studio关键词在: studio...
+2025-07-28 21:16:42 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-19 转换为 'Available Now'
+2025-07-28 21:16:42 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17675527 for URL: https://www.domain.com.au/336-69-71-jones-street-ultimo-nsw-2007-17675527
+2025-07-28 21:16:43 - domain_crawler_v2 - INFO - 处理第20/20个房源: https://www.domain.com.au/106-62-mountain-st-ultimo-nsw-2007-17661967
+2025-07-28 21:16:43 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/106-62-mountain-st-ultimo-nsw-2007-17661967
+2025-07-28 21:16:43 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/106-62-mountain-st-ultimo-nsw-2007-17661967: https://www.2apply.com.au/domain/15365/17661967?address=106%2F62%20Mountain%20St%2C%20Ultimo&type=rental&times=%5B%5D
+2025-07-28 21:16:43 - domain_crawler_v2 - DEBUG - 检测到Studio关键词在: studio...
+2025-07-28 21:16:43 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-16 转换为 'Available Now'
+2025-07-28 21:16:43 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17661967 for URL: https://www.domain.com.au/106-62-mountain-st-ultimo-nsw-2007-17661967
+2025-07-28 21:16:45 - domain_crawler_v2 - INFO - 本页成功处理20/20个房源
+2025-07-28 21:16:45 - domain_crawler_v2 - DEBUG - 保存进度到 progress.json: URL=https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc, 页码=2
+2025-07-28 21:16:45 - domain_crawler_v2 - INFO - 完成第1页处理
+2025-07-28 21:16:47 - domain_crawler_v2 - INFO - 正在抓取第2页: https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc&page=2
+2025-07-28 21:16:47 - domain_crawler_v2 - INFO - 第2页找到20个房源
+2025-07-28 21:16:47 - domain_crawler_v2 - INFO - 处理第1/20个房源: https://www.domain.com.au/28-288-wattle-street-ultimo-nsw-2007-17680977
+2025-07-28 21:16:47 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/28-288-wattle-street-ultimo-nsw-2007-17680977
+2025-07-28 21:16:49 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/28-288-wattle-street-ultimo-nsw-2007-17680977 NOT found via any XPaths.
+2025-07-28 21:16:49 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-22 转换为 'Available Now'
+2025-07-28 21:16:49 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17680977 for URL: https://www.domain.com.au/28-288-wattle-street-ultimo-nsw-2007-17680977
+2025-07-28 21:16:51 - domain_crawler_v2 - INFO - 处理第2/20个房源: https://www.domain.com.au/16-20-smail-street-ultimo-nsw-2007-17681791
+2025-07-28 21:16:51 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/16-20-smail-street-ultimo-nsw-2007-17681791
+2025-07-28 21:16:51 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/16-20-smail-street-ultimo-nsw-2007-17681791: https://www.2apply.com.au/domain/3685/17681791?address=16-20%20Smail%20Street%2C%20Ultimo&type=rental&times=%5B%5D
+2025-07-28 21:16:51 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-01 转换为 'Available Now'
+2025-07-28 21:16:51 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17681791 for URL: https://www.domain.com.au/16-20-smail-street-ultimo-nsw-2007-17681791
+2025-07-28 21:16:52 - domain_crawler_v2 - INFO - 处理第3/20个房源: https://www.domain.com.au/1004-58-mountain-street-ultimo-nsw-2007-17668462
+2025-07-28 21:16:52 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1004-58-mountain-street-ultimo-nsw-2007-17668462
+2025-07-28 21:16:53 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1004-58-mountain-street-ultimo-nsw-2007-17668462: https://api.snug.com/v1/partner/handoff/team/16559/listing/1P6572/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F1004-58-mountain-street-ultimo-nsw-2007-17668462&add_unitnum=1004&add_streetnum=58&add_streetname=Mountain&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:16:53 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17668462 for URL: https://www.domain.com.au/1004-58-mountain-street-ultimo-nsw-2007-17668462
+2025-07-28 21:16:55 - domain_crawler_v2 - INFO - 处理第4/20个房源: https://www.domain.com.au/b706-444-harris-street-ultimo-nsw-2007-14023631
+2025-07-28 21:16:55 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/b706-444-harris-street-ultimo-nsw-2007-14023631
+2025-07-28 21:16:55 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/b706-444-harris-street-ultimo-nsw-2007-14023631 NOT found via any XPaths.
+2025-07-28 21:16:55 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-19 转换为 'Available Now'
+2025-07-28 21:16:55 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=14023631 for URL: https://www.domain.com.au/b706-444-harris-street-ultimo-nsw-2007-14023631
+2025-07-28 21:16:57 - domain_crawler_v2 - INFO - 处理第5/20个房源: https://www.domain.com.au/209-478-wattle-street-ultimo-nsw-2007-14144117
+2025-07-28 21:16:57 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/209-478-wattle-street-ultimo-nsw-2007-14144117
+2025-07-28 21:16:58 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/209-478-wattle-street-ultimo-nsw-2007-14144117 NOT found via any XPaths.
+2025-07-28 21:16:58 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-15 转换为 'Available Now'
+2025-07-28 21:16:58 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=14144117 for URL: https://www.domain.com.au/209-478-wattle-street-ultimo-nsw-2007-14144117
+2025-07-28 21:16:59 - domain_crawler_v2 - INFO - 处理第6/20个房源: https://www.domain.com.au/411-28-wattle-lane-ultimo-nsw-2007-15701961
+2025-07-28 21:16:59 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/411-28-wattle-lane-ultimo-nsw-2007-15701961
+2025-07-28 21:16:59 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/411-28-wattle-lane-ultimo-nsw-2007-15701961 NOT found via any XPaths.
+2025-07-28 21:16:59 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=15701961 for URL: https://www.domain.com.au/411-28-wattle-lane-ultimo-nsw-2007-15701961
+2025-07-28 21:17:01 - domain_crawler_v2 - INFO - 处理第7/20个房源: https://www.domain.com.au/12-35-53-mckee-street-ultimo-nsw-2007-17682479
+2025-07-28 21:17:01 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/12-35-53-mckee-street-ultimo-nsw-2007-17682479
+2025-07-28 21:17:01 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/12-35-53-mckee-street-ultimo-nsw-2007-17682479 NOT found via any XPaths.
+2025-07-28 21:17:01 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17682479 for URL: https://www.domain.com.au/12-35-53-mckee-street-ultimo-nsw-2007-17682479
+2025-07-28 21:17:02 - domain_crawler_v2 - INFO - 处理第8/20个房源: https://www.domain.com.au/1b-308-310-wattle-street-ultimo-nsw-2007-17479834
+2025-07-28 21:17:02 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1b-308-310-wattle-street-ultimo-nsw-2007-17479834
+2025-07-28 21:17:03 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1b-308-310-wattle-street-ultimo-nsw-2007-17479834: https://www.2apply.com.au/domain/35203/17479834?address=1B%2F308-310%20Wattle%20Street%2C%20Ultimo&type=rental&times=%5B%5D
+2025-07-28 21:17:03 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-12 转换为 'Available Now'
+2025-07-28 21:17:03 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17479834 for URL: https://www.domain.com.au/1b-308-310-wattle-street-ultimo-nsw-2007-17479834
+2025-07-28 21:17:05 - domain_crawler_v2 - INFO - 处理第9/20个房源: https://www.domain.com.au/11-smail-street-ultimo-nsw-2007-17623018
+2025-07-28 21:17:05 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/11-smail-street-ultimo-nsw-2007-17623018
+2025-07-28 21:17:05 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/11-smail-street-ultimo-nsw-2007-17623018 NOT found via any XPaths.
+2025-07-28 21:17:05 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17623018 for URL: https://www.domain.com.au/11-smail-street-ultimo-nsw-2007-17623018
+2025-07-28 21:17:07 - domain_crawler_v2 - INFO - 处理第10/20个房源: https://www.domain.com.au/level-g-bg02-521-harris-street-ultimo-nsw-2007-15478373
+2025-07-28 21:17:07 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/level-g-bg02-521-harris-street-ultimo-nsw-2007-15478373
+2025-07-28 21:17:07 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/level-g-bg02-521-harris-street-ultimo-nsw-2007-15478373: https://api.snug.com/v1/partner/handoff/team/27866/listing/1P0207/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Flevel-g-bg02-521-harris-street-ultimo-nsw-2007-15478373&add_unitnum=Level%20G%2C%20BG02&add_streetnum=521&add_streetname=Harris&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:17:07 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-06-20 转换为 'Available Now'
+2025-07-28 21:17:07 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=15478373 for URL: https://www.domain.com.au/level-g-bg02-521-harris-street-ultimo-nsw-2007-15478373
+2025-07-28 21:17:08 - domain_crawler_v2 - INFO - 处理第11/20个房源: https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-17266652
+2025-07-28 21:17:08 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-17266652
+2025-07-28 21:17:08 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-17266652 NOT found via any XPaths.
+2025-07-28 21:17:08 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17266652 for URL: https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-17266652
+2025-07-28 21:17:09 - domain_crawler_v2 - INFO - 处理第12/20个房源: https://www.domain.com.au/112-349-355-bulwara-road-ultimo-nsw-2007-17677472
+2025-07-28 21:17:09 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/112-349-355-bulwara-road-ultimo-nsw-2007-17677472
+2025-07-28 21:17:10 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/112-349-355-bulwara-road-ultimo-nsw-2007-17677472 NOT found via any XPaths.
+2025-07-28 21:17:10 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-06-02 转换为 'Available Now'
+2025-07-28 21:17:10 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17677472 for URL: https://www.domain.com.au/112-349-355-bulwara-road-ultimo-nsw-2007-17677472
+2025-07-28 21:17:12 - domain_crawler_v2 - INFO - 处理第13/20个房源: https://www.domain.com.au/2140-185-broadway-ultimo-nsw-2007-17665022
+2025-07-28 21:17:12 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/2140-185-broadway-ultimo-nsw-2007-17665022
+2025-07-28 21:17:12 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/2140-185-broadway-ultimo-nsw-2007-17665022: https://api.snug.com/v1/partner/handoff/team/16559/listing/1P6567/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F2140-185-broadway-ultimo-nsw-2007-17665022&add_unitnum=2140&add_streetnum=185&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:17:12 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17665022 for URL: https://www.domain.com.au/2140-185-broadway-ultimo-nsw-2007-17665022
+2025-07-28 21:17:13 - domain_crawler_v2 - INFO - 处理第14/20个房源: https://www.domain.com.au/707-517-harris-street-ultimo-nsw-2007-17683103
+2025-07-28 21:17:13 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/707-517-harris-street-ultimo-nsw-2007-17683103
+2025-07-28 21:17:14 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/707-517-harris-street-ultimo-nsw-2007-17683103: https://api.snug.com/v1/partner/handoff/team/27866/listing/1P0245/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F707-517-harris-street-ultimo-nsw-2007-17683103&add_unitnum=707&add_streetnum=517&add_streetname=Harris&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:17:14 - domain_crawler_v2 - DEBUG - 检测到Studio关键词在: step into style and convenience with this immacula...
+2025-07-28 21:17:14 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-05-03 转换为 'Available Now'
+2025-07-28 21:17:14 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17683103 for URL: https://www.domain.com.au/707-517-harris-street-ultimo-nsw-2007-17683103
+2025-07-28 21:17:16 - domain_crawler_v2 - INFO - 处理第15/20个房源: https://www.domain.com.au/level-5-732-harris-street-ultimo-nsw-2007-10552132
+2025-07-28 21:17:16 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/level-5-732-harris-street-ultimo-nsw-2007-10552132
+2025-07-28 21:17:16 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/level-5-732-harris-street-ultimo-nsw-2007-10552132 NOT found via any XPaths.
+2025-07-28 21:17:16 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-14 转换为 'Available Now'
+2025-07-28 21:17:16 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=10552132 for URL: https://www.domain.com.au/level-5-732-harris-street-ultimo-nsw-2007-10552132
+2025-07-28 21:17:17 - domain_crawler_v2 - INFO - 处理第16/20个房源: https://www.domain.com.au/402-28-wattle-lane-ultimo-nsw-2007-17161686
+2025-07-28 21:17:17 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/402-28-wattle-lane-ultimo-nsw-2007-17161686
+2025-07-28 21:17:17 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/402-28-wattle-lane-ultimo-nsw-2007-17161686 NOT found via any XPaths.
+2025-07-28 21:17:17 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17161686 for URL: https://www.domain.com.au/402-28-wattle-lane-ultimo-nsw-2007-17161686
+2025-07-28 21:17:19 - domain_crawler_v2 - INFO - 处理第17/20个房源: https://www.domain.com.au/1008-185-211-broadway-ultimo-nsw-2007-16688048
+2025-07-28 21:17:19 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1008-185-211-broadway-ultimo-nsw-2007-16688048
+2025-07-28 21:17:19 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1008-185-211-broadway-ultimo-nsw-2007-16688048: https://www.2apply.com.au/domain/20095/16688048?address=1008%2F185-211%20Broadway%2C%20Ultimo&type=rental&times=%5B%5D
+2025-07-28 21:17:19 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16688048 for URL: https://www.domain.com.au/1008-185-211-broadway-ultimo-nsw-2007-16688048
+2025-07-28 21:17:21 - domain_crawler_v2 - INFO - 处理第18/20个房源: https://www.domain.com.au/48-61-65-macarthur-street-ultimo-nsw-2007-17677443
+2025-07-28 21:17:21 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/48-61-65-macarthur-street-ultimo-nsw-2007-17677443
+2025-07-28 21:17:22 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/48-61-65-macarthur-street-ultimo-nsw-2007-17677443 NOT found via any XPaths.
+2025-07-28 21:17:22 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17677443 for URL: https://www.domain.com.au/48-61-65-macarthur-street-ultimo-nsw-2007-17677443
+2025-07-28 21:17:23 - domain_crawler_v2 - INFO - 处理第19/20个房源: https://www.domain.com.au/level-g-02-521-harris-street-ultimo-nsw-2007-17632069
+2025-07-28 21:17:23 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/level-g-02-521-harris-street-ultimo-nsw-2007-17632069
+2025-07-28 21:17:24 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/level-g-02-521-harris-street-ultimo-nsw-2007-17632069: https://api.snug.com/v1/partner/handoff/team/27866/listing/1P0214/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Flevel-g-02-521-harris-street-ultimo-nsw-2007-17632069&add_unitnum=Level%20G%2C%2002&add_streetnum=521&add_streetname=Harris&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:17:24 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-06-20 转换为 'Available Now'
+2025-07-28 21:17:24 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17632069 for URL: https://www.domain.com.au/level-g-02-521-harris-street-ultimo-nsw-2007-17632069
+2025-07-28 21:17:26 - domain_crawler_v2 - INFO - 处理第20/20个房源: https://www.domain.com.au/6-397-harris-st-ultimo-nsw-2007-17617940
+2025-07-28 21:17:26 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/6-397-harris-st-ultimo-nsw-2007-17617940
+2025-07-28 21:17:26 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/6-397-harris-st-ultimo-nsw-2007-17617940 NOT found via any XPaths.
+2025-07-28 21:17:26 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-06-12 转换为 'Available Now'
+2025-07-28 21:17:26 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17617940 for URL: https://www.domain.com.au/6-397-harris-st-ultimo-nsw-2007-17617940
+2025-07-28 21:17:27 - domain_crawler_v2 - INFO - 本页成功处理20/20个房源
+2025-07-28 21:17:27 - domain_crawler_v2 - DEBUG - 保存进度到 progress.json: URL=https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc, 页码=3
+2025-07-28 21:17:27 - domain_crawler_v2 - INFO - 完成第2页处理
+2025-07-28 21:17:30 - domain_crawler_v2 - INFO - 正在抓取第3页: https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc&page=3
+2025-07-28 21:17:30 - domain_crawler_v2 - INFO - 第3页找到20个房源
+2025-07-28 21:17:30 - domain_crawler_v2 - INFO - 处理第1/20个房源: https://www.domain.com.au/m205-70-72-mountain-street-ultimo-nsw-2007-17627311
+2025-07-28 21:17:30 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/m205-70-72-mountain-street-ultimo-nsw-2007-17627311
+2025-07-28 21:17:32 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/m205-70-72-mountain-street-ultimo-nsw-2007-17627311: https://api.snug.com/v1/partner/handoff/team/29293/listing/2700014/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Fm205-70-72-mountain-street-ultimo-nsw-2007-17627311&add_unitnum=M205&add_streetnum=70-72&add_streetname=Mountain&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:17:32 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-06-22 转换为 'Available Now'
+2025-07-28 21:17:32 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17627311 for URL: https://www.domain.com.au/m205-70-72-mountain-street-ultimo-nsw-2007-17627311
+2025-07-28 21:17:33 - domain_crawler_v2 - INFO - 处理第2/20个房源: https://www.domain.com.au/13-35-mckee-street-ultimo-nsw-2007-17671482
+2025-07-28 21:17:33 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/13-35-mckee-street-ultimo-nsw-2007-17671482
+2025-07-28 21:17:33 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/13-35-mckee-street-ultimo-nsw-2007-17671482: https://api.snug.com/v1/partner/handoff/team/20438/listing/1P1109/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F13-35-mckee-street-ultimo-nsw-2007-17671482&add_unitnum=13&add_streetnum=35&add_streetname=McKee&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:17:33 - domain_crawler_v2 - DEBUG - 过期入住日期 2022-06-06 转换为 'Available Now'
+2025-07-28 21:17:33 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17671482 for URL: https://www.domain.com.au/13-35-mckee-street-ultimo-nsw-2007-17671482
+2025-07-28 21:17:35 - domain_crawler_v2 - INFO - 处理第3/20个房源: https://www.domain.com.au/60-333-bulwara-road-ultimo-nsw-2007-17633094
+2025-07-28 21:17:35 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/60-333-bulwara-road-ultimo-nsw-2007-17633094
+2025-07-28 21:17:35 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/60-333-bulwara-road-ultimo-nsw-2007-17633094: https://api.snug.com/v1/partner/handoff/team/17474/listing/1P0156/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F60-333-bulwara-road-ultimo-nsw-2007-17633094&add_unitnum=60&add_streetnum=333&add_streetname=Bulwara&add_streettype=Road&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:17:35 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-06 转换为 'Available Now'
+2025-07-28 21:17:35 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17633094 for URL: https://www.domain.com.au/60-333-bulwara-road-ultimo-nsw-2007-17633094
+2025-07-28 21:17:37 - domain_crawler_v2 - INFO - 处理第4/20个房源: https://www.domain.com.au/8-288-wattle-street-ultimo-nsw-2007-17302539
+2025-07-28 21:17:37 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/8-288-wattle-street-ultimo-nsw-2007-17302539
+2025-07-28 21:17:37 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/8-288-wattle-street-ultimo-nsw-2007-17302539: https://api.snug.com/v1/partner/handoff/team/5576/listing/6080233/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F8-288-wattle-street-ultimo-nsw-2007-17302539&add_unitnum=8&add_streetnum=288&add_streetname=Wattle&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:17:37 - domain_crawler_v2 - DEBUG - 过期入住日期 2024-12-04 转换为 'Available Now'
+2025-07-28 21:17:37 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17302539 for URL: https://www.domain.com.au/8-288-wattle-street-ultimo-nsw-2007-17302539
+2025-07-28 21:17:39 - domain_crawler_v2 - INFO - 处理第5/20个房源: https://www.domain.com.au/b1003-89-bay-street-ultimo-nsw-2007-17676572
+2025-07-28 21:17:39 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/b1003-89-bay-street-ultimo-nsw-2007-17676572
+2025-07-28 21:17:39 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/b1003-89-bay-street-ultimo-nsw-2007-17676572 NOT found via any XPaths.
+2025-07-28 21:17:39 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17676572 for URL: https://www.domain.com.au/b1003-89-bay-street-ultimo-nsw-2007-17676572
+2025-07-28 21:17:41 - domain_crawler_v2 - INFO - 处理第6/20个房源: https://www.domain.com.au/71-288-wattle-st-ultimo-nsw-2007-17622955
+2025-07-28 21:17:41 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/71-288-wattle-st-ultimo-nsw-2007-17622955
+2025-07-28 21:17:41 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/71-288-wattle-st-ultimo-nsw-2007-17622955: https://api.snug.com/v1/partner/handoff/team/5576/listing/6622229/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F71-288-wattle-st-ultimo-nsw-2007-17622955&add_unitnum=71&add_streetnum=288&add_streetname=WATTLE&add_streettype=ST&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:17:41 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-06-16 转换为 'Available Now'
+2025-07-28 21:17:41 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17622955 for URL: https://www.domain.com.au/71-288-wattle-st-ultimo-nsw-2007-17622955
+2025-07-28 21:17:42 - domain_crawler_v2 - INFO - 处理第7/20个房源: https://www.domain.com.au/909-62-mountain-street-ultimo-nsw-2007-17687272
+2025-07-28 21:17:42 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/909-62-mountain-street-ultimo-nsw-2007-17687272
+2025-07-28 21:17:43 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/909-62-mountain-street-ultimo-nsw-2007-17687272 NOT found via any XPaths.
+2025-07-28 21:17:43 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-28 转换为 'Available Now'
+2025-07-28 21:17:43 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17687272 for URL: https://www.domain.com.au/909-62-mountain-street-ultimo-nsw-2007-17687272
+2025-07-28 21:17:44 - domain_crawler_v2 - INFO - 处理第8/20个房源: https://www.domain.com.au/637-99-jones-street-ultimo-nsw-2007-17676383
+2025-07-28 21:17:44 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/637-99-jones-street-ultimo-nsw-2007-17676383
+2025-07-28 21:17:44 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/637-99-jones-street-ultimo-nsw-2007-17676383 NOT found via any XPaths.
+2025-07-28 21:17:44 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17676383 for URL: https://www.domain.com.au/637-99-jones-street-ultimo-nsw-2007-17676383
+2025-07-28 21:17:45 - domain_crawler_v2 - INFO - 处理第9/20个房源: https://www.domain.com.au/113-349-bulwara-road-ultimo-nsw-2007-17604834
+2025-07-28 21:17:45 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/113-349-bulwara-road-ultimo-nsw-2007-17604834
+2025-07-28 21:17:46 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/113-349-bulwara-road-ultimo-nsw-2007-17604834 NOT found via any XPaths.
+2025-07-28 21:17:46 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-06-30 转换为 'Available Now'
+2025-07-28 21:17:46 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17604834 for URL: https://www.domain.com.au/113-349-bulwara-road-ultimo-nsw-2007-17604834
+2025-07-28 21:17:47 - domain_crawler_v2 - INFO - 处理第10/20个房源: https://www.domain.com.au/310-521-harris-street-ultimo-nsw-2007-17632095
+2025-07-28 21:17:47 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/310-521-harris-street-ultimo-nsw-2007-17632095
+2025-07-28 21:17:47 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/310-521-harris-street-ultimo-nsw-2007-17632095: https://api.snug.com/v1/partner/handoff/team/27866/listing/1P0216/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F310-521-harris-street-ultimo-nsw-2007-17632095&add_unitnum=310&add_streetnum=521&add_streetname=Harris&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:17:47 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-06-20 转换为 'Available Now'
+2025-07-28 21:17:47 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17632095 for URL: https://www.domain.com.au/310-521-harris-street-ultimo-nsw-2007-17632095
+2025-07-28 21:17:48 - domain_crawler_v2 - INFO - 处理第11/20个房源: https://www.domain.com.au/179-392-jones-street-ultimo-nsw-2007-17654149
+2025-07-28 21:17:48 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/179-392-jones-street-ultimo-nsw-2007-17654149
+2025-07-28 21:17:49 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/179-392-jones-street-ultimo-nsw-2007-17654149: https://api.snug.com/v1/partner/handoff/team/36143/listing/R3940232/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F179-392-jones-street-ultimo-nsw-2007-17654149&add_unitnum=179&add_streetnum=392&add_streetname=Jones&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:17:49 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-07 转换为 'Available Now'
+2025-07-28 21:17:49 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17654149 for URL: https://www.domain.com.au/179-392-jones-street-ultimo-nsw-2007-17654149
+2025-07-28 21:17:51 - domain_crawler_v2 - INFO - 处理第12/20个房源: https://www.domain.com.au/96-288-wattle-street-ultimo-nsw-2007-17682803
+2025-07-28 21:17:51 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/96-288-wattle-street-ultimo-nsw-2007-17682803
+2025-07-28 21:17:51 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/96-288-wattle-street-ultimo-nsw-2007-17682803: https://api.snug.com/v1/partner/handoff/team/5576/listing/6710961/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F96-288-wattle-street-ultimo-nsw-2007-17682803&add_unitnum=96&add_streetnum=288&add_streetname=WATTLE&add_streettype=STREET&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:17:51 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-23 转换为 'Available Now'
+2025-07-28 21:17:51 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17682803 for URL: https://www.domain.com.au/96-288-wattle-street-ultimo-nsw-2007-17682803
+2025-07-28 21:17:52 - domain_crawler_v2 - INFO - 处理第13/20个房源: https://www.domain.com.au/244-71-jones-street-ultimo-nsw-2007-17643334
+2025-07-28 21:17:52 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/244-71-jones-street-ultimo-nsw-2007-17643334
+2025-07-28 21:17:53 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/244-71-jones-street-ultimo-nsw-2007-17643334 NOT found via any XPaths.
+2025-07-28 21:17:53 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-01 转换为 'Available Now'
+2025-07-28 21:17:53 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17643334 for URL: https://www.domain.com.au/244-71-jones-street-ultimo-nsw-2007-17643334
+2025-07-28 21:17:54 - domain_crawler_v2 - INFO - 处理第14/20个房源: https://www.domain.com.au/425-99-jones-street-ultimo-nsw-2007-16015648
+2025-07-28 21:17:54 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/425-99-jones-street-ultimo-nsw-2007-16015648
+2025-07-28 21:17:54 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/425-99-jones-street-ultimo-nsw-2007-16015648: https://api.snug.com/v1/partner/handoff/team/36143/listing/R2822392/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F425-99-jones-street-ultimo-nsw-2007-16015648&add_unitnum=425&add_streetnum=99&add_streetname=Jones&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:17:54 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-23 转换为 'Available Now'
+2025-07-28 21:17:54 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16015648 for URL: https://www.domain.com.au/425-99-jones-street-ultimo-nsw-2007-16015648
+2025-07-28 21:17:56 - domain_crawler_v2 - INFO - 处理第15/20个房源: https://www.domain.com.au/802-78-mountain-street-ultimo-nsw-2007-17687281
+2025-07-28 21:17:56 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/802-78-mountain-street-ultimo-nsw-2007-17687281
+2025-07-28 21:17:59 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/802-78-mountain-street-ultimo-nsw-2007-17687281 NOT found via any XPaths.
+2025-07-28 21:17:59 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-28 转换为 'Available Now'
+2025-07-28 21:17:59 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17687281 for URL: https://www.domain.com.au/802-78-mountain-street-ultimo-nsw-2007-17687281
+2025-07-28 21:18:00 - domain_crawler_v2 - INFO - 处理第16/20个房源: https://www.domain.com.au/cg01-276-bulwara-road-ultimo-nsw-2007-16896369
+2025-07-28 21:18:00 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/cg01-276-bulwara-road-ultimo-nsw-2007-16896369
+2025-07-28 21:18:00 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/cg01-276-bulwara-road-ultimo-nsw-2007-16896369: https://api.snug.com/v1/partner/handoff/team/27682/listing/5312462/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Fcg01-276-bulwara-road-ultimo-nsw-2007-16896369&add_unitnum=CG01&add_streetnum=276&add_streetname=Bulwara&add_streettype=road&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:18:00 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16896369 for URL: https://www.domain.com.au/cg01-276-bulwara-road-ultimo-nsw-2007-16896369
+2025-07-28 21:18:02 - domain_crawler_v2 - INFO - 处理第17/20个房源: https://www.domain.com.au/310-280-bulwara-road-ultimo-nsw-2007-17645626
+2025-07-28 21:18:02 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/310-280-bulwara-road-ultimo-nsw-2007-17645626
+2025-07-28 21:18:02 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/310-280-bulwara-road-ultimo-nsw-2007-17645626: https://api.snug.com/v1/partner/handoff/team/27866/listing/1P0217/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F310-280-bulwara-road-ultimo-nsw-2007-17645626&add_unitnum=310&add_streetnum=280&add_streetname=Bulwara&add_streettype=Road&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:18:02 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-06-20 转换为 'Available Now'
+2025-07-28 21:18:02 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17645626 for URL: https://www.domain.com.au/310-280-bulwara-road-ultimo-nsw-2007-17645626
+2025-07-28 21:18:03 - domain_crawler_v2 - INFO - 处理第18/20个房源: https://www.domain.com.au/185-broadway-ultimo-nsw-2007-17368508
+2025-07-28 21:18:03 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/185-broadway-ultimo-nsw-2007-17368508
+2025-07-28 21:18:03 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/185-broadway-ultimo-nsw-2007-17368508: https://www.2apply.com.au/domain/27499/17368508?address=185%20Broadway%2C%20Ultimo&type=rental&times=%5B%5D
+2025-07-28 21:18:03 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-02 转换为 'Available Now'
+2025-07-28 21:18:03 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17368508 for URL: https://www.domain.com.au/185-broadway-ultimo-nsw-2007-17368508
+2025-07-28 21:18:05 - domain_crawler_v2 - INFO - 处理第19/20个房源: https://www.domain.com.au/93-267-bulwara-road-ultimo-nsw-2007-17688348
+2025-07-28 21:18:05 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/93-267-bulwara-road-ultimo-nsw-2007-17688348
+2025-07-28 21:18:05 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/93-267-bulwara-road-ultimo-nsw-2007-17688348: https://api.snug.com/v1/partner/handoff/team/16559/listing/1P6591/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F93-267-bulwara-road-ultimo-nsw-2007-17688348&add_unitnum=93&add_streetnum=267&add_streetname=Bulwara&add_streettype=Road&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:18:05 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17688348 for URL: https://www.domain.com.au/93-267-bulwara-road-ultimo-nsw-2007-17688348
+2025-07-28 21:18:06 - domain_crawler_v2 - INFO - 处理第20/20个房源: https://www.domain.com.au/l5-646-harris-street-ultimo-nsw-2007-17667068
+2025-07-28 21:18:06 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/l5-646-harris-street-ultimo-nsw-2007-17667068
+2025-07-28 21:18:06 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/l5-646-harris-street-ultimo-nsw-2007-17667068: https://api.snug.com/v1/partner/handoff/team/20751/listing/R2-4655794/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Fl5-646-harris-street-ultimo-nsw-2007-17667068&add_unitnum=L5&add_streetnum=646&add_streetname=HARRIS&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:18:06 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17667068 for URL: https://www.domain.com.au/l5-646-harris-street-ultimo-nsw-2007-17667068
+2025-07-28 21:18:08 - domain_crawler_v2 - INFO - 本页成功处理20/20个房源
+2025-07-28 21:18:08 - domain_crawler_v2 - DEBUG - 保存进度到 progress.json: URL=https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc, 页码=4
+2025-07-28 21:18:08 - domain_crawler_v2 - INFO - 完成第3页处理
+2025-07-28 21:18:12 - domain_crawler_v2 - INFO - 正在抓取第4页: https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc&page=4
+2025-07-28 21:18:12 - domain_crawler_v2 - INFO - 第4页找到3个房源
+2025-07-28 21:18:12 - domain_crawler_v2 - INFO - 处理第1/3个房源: https://www.domain.com.au/ng06-521-harris-street-ultimo-nsw-2007-15366899
+2025-07-28 21:18:12 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/ng06-521-harris-street-ultimo-nsw-2007-15366899
+2025-07-28 21:18:13 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/ng06-521-harris-street-ultimo-nsw-2007-15366899: https://api.snug.com/v1/partner/handoff/team/27866/listing/1P0215/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Fng06-521-harris-street-ultimo-nsw-2007-15366899&add_unitnum=NG06&add_streetnum=521&add_streetname=Harris&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:18:13 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-06-20 转换为 'Available Now'
+2025-07-28 21:18:13 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=15366899 for URL: https://www.domain.com.au/ng06-521-harris-street-ultimo-nsw-2007-15366899
+2025-07-28 21:18:15 - domain_crawler_v2 - INFO - 处理第2/3个房源: https://www.domain.com.au/293-71-jones-street-ultimo-nsw-2007-17649798
+2025-07-28 21:18:15 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/293-71-jones-street-ultimo-nsw-2007-17649798
+2025-07-28 21:18:16 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/293-71-jones-street-ultimo-nsw-2007-17649798: https://api.snug.com/v1/partner/handoff/team/5576/listing/6662440/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F293-71-jones-street-ultimo-nsw-2007-17649798&add_unitnum=293&add_streetnum=71&add_streetname=Jones&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:18:16 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-07-02 转换为 'Available Now'
+2025-07-28 21:18:16 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17649798 for URL: https://www.domain.com.au/293-71-jones-street-ultimo-nsw-2007-17649798
+2025-07-28 21:18:17 - domain_crawler_v2 - INFO - 处理第3/3个房源: https://www.domain.com.au/a203-517-harris-street-ultimo-nsw-2007-17654801
+2025-07-28 21:18:17 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/a203-517-harris-street-ultimo-nsw-2007-17654801
+2025-07-28 21:18:18 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/a203-517-harris-street-ultimo-nsw-2007-17654801: https://api.snug.com/v1/partner/handoff/team/27866/listing/1P0229/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Fa203-517-harris-street-ultimo-nsw-2007-17654801&add_unitnum=A203&add_streetnum=517&add_streetname=Harris&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-28 21:18:18 - domain_crawler_v2 - DEBUG - 过期入住日期 2025-06-21 转换为 'Available Now'
+2025-07-28 21:18:18 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17654801 for URL: https://www.domain.com.au/a203-517-harris-street-ultimo-nsw-2007-17654801
+2025-07-28 21:18:20 - domain_crawler_v2 - INFO - 本页成功处理3/3个房源
+2025-07-28 21:18:20 - domain_crawler_v2 - DEBUG - 保存进度到 progress.json: URL=https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc, 页码=5
+2025-07-28 21:18:20 - domain_crawler_v2 - INFO - 当前页房源数 (3) < 阈值 (10)，判断为最后一页.
+2025-07-28 21:18:20 - domain_crawler_v2 - INFO - 搜索完成，总共处理了 63 个房源链接
+2025-07-28 21:18:20 - domain_crawler_v2 - INFO - 完成处理URL: https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc，开始保存数据 (区域: Ultimo, 房源数: 63)
+2025-07-28 21:18:20 - domain_crawler_v2 - ERROR - 写入XLSX文件 (unknown_file) 失败: 'str' object has no attribute 'name'
+Traceback (most recent call last):
+  File "C:\Users\nuoai\Desktop\crawler-UTS-UYSD-UNSW\dist\v6_reverted.py", line 514, in flush
+    data_dicts = [item.to_dict() for item in self.buffer]
+                  ~~~~~~~~~~~~^^
+  File "C:\Users\nuoai\Desktop\crawler-UTS-UYSD-UNSW\dist\v6_reverted.py", line 205, in to_dict
+    field_name = f.name
+                 ^^^^^^
+AttributeError: 'str' object has no attribute 'name'
+2025-07-28 21:18:20 - domain_crawler_v2 - WARNING - URL https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc 没有数据保存或保存失败
+2025-07-28 21:18:20 - domain_crawler_v2 - INFO - 所有URL处理完毕，共生成 0 个输出文件
+2025-07-28 21:18:20 - domain_crawler_v2 - INFO - 爬虫任务完成。
+2025-07-28 21:18:20 - domain_crawler_v2 - INFO - 房源信息采集程序 (v2) 结束。

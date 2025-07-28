@@ -1,0 +1,768 @@
+2025-07-27 21:20:11 - domain_crawler_v2 - INFO - 开始运行房源信息采集程序 (v2)...
+2025-07-27 21:20:11 - domain_crawler_v2 - INFO - 未找到或临时URL文件为空，将使用默认URL文件: C:\Users\nuoai\Desktop\crawler-UTS-UYSD-UNSW\dist\config\url.txt
+2025-07-27 21:20:11 - domain_crawler_v2 - INFO - 已删除旧的进度文件: C:\Users\nuoai\Desktop\crawler-UTS-UYSD-UNSW\dist\progress.json (针对默认URL)。
+2025-07-27 21:20:11 - domain_crawler_v2 - INFO - 找到35个URL待处理 (来源: url.txt): ['https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/chippendale-nsw-2008/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/redfern-nsw-2016/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/waterloo-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/mascot-nsw-2020/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/rosebery-nsw-2018/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/camperdown-nsw-2050/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/sydney-nsw-2000/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/haymarket-nsw-2000/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/glebe-nsw-2037/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/forest-lodge-nsw-2037/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/surry-hills-nsw-2010/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/newtown-nsw-2042/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/erskineville-nsw-2043/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/darlington-nsw-2008/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/kensington-nsw-2033/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/randwick-nsw-2031/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/kingsford-nsw-2032/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/eastlakes-nsw-2018/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/eastgardens-nsw-2036/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/maroubra-nsw-2035/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/alexandria-nsw-2015/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/beaconsfield-nsw-2015/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/centennial-park-nsw-2021/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/epping-nsw-2121/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/eastwood-nsw-2122/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/marsfield-nsw-2122/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/macquarie-park-nsw-2113/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/north-ryde-nsw-2113/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/campsie-nsw-2194/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/ashfield-nsw-2131/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/wolli-creek-nsw-2205/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/burwood-nsw-2134/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc', 'https://www.domain.com.au/rent/hurstville-nsw-2220/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc']
+2025-07-27 21:20:11 - domain_crawler_v2 - INFO - 开始处理 (1/35): https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc
+2025-07-27 21:20:11 - domain_crawler_v2 - INFO - Processing as search URL (from url.txt): https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc
+2025-07-27 21:20:11 - domain_crawler_v2 - INFO - 正在抓取第1页: https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc&page=1
+2025-07-27 21:20:12 - domain_crawler_v2 - INFO - 第1页找到20个房源
+2025-07-27 21:20:12 - domain_crawler_v2 - INFO - 处理第1/20个房源: https://www.domain.com.au/337-7-defries-avenue-zetland-nsw-2017-17673331
+2025-07-27 21:20:12 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/337-7-defries-avenue-zetland-nsw-2017-17673331
+2025-07-27 21:20:13 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/337-7-defries-avenue-zetland-nsw-2017-17673331: https://www.2apply.com.au/domain/25406/17673331?address=337%2F7%20Defries%20Avenue%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:20:13 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17673331 for URL: https://www.domain.com.au/337-7-defries-avenue-zetland-nsw-2017-17673331
+2025-07-27 21:20:15 - domain_crawler_v2 - INFO - 处理第2/20个房源: https://www.domain.com.au/538-9-victoria-park-parade-zetland-nsw-2017-17676252
+2025-07-27 21:20:15 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/538-9-victoria-park-parade-zetland-nsw-2017-17676252
+2025-07-27 21:20:16 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/538-9-victoria-park-parade-zetland-nsw-2017-17676252 NOT found via any XPaths.
+2025-07-27 21:20:16 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17676252 for URL: https://www.domain.com.au/538-9-victoria-park-parade-zetland-nsw-2017-17676252
+2025-07-27 21:20:17 - domain_crawler_v2 - INFO - 处理第3/20个房源: https://www.domain.com.au/b202-1-5-link-rd-zetland-nsw-2017-15288064
+2025-07-27 21:20:17 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/b202-1-5-link-rd-zetland-nsw-2017-15288064
+2025-07-27 21:20:18 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/b202-1-5-link-rd-zetland-nsw-2017-15288064 NOT found via any XPaths.
+2025-07-27 21:20:18 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=15288064 for URL: https://www.domain.com.au/b202-1-5-link-rd-zetland-nsw-2017-15288064
+2025-07-27 21:20:20 - domain_crawler_v2 - INFO - 处理第4/20个房源: https://www.domain.com.au/1-106-joynton-avenue-zetland-nsw-2017-17657624
+2025-07-27 21:20:20 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1-106-joynton-avenue-zetland-nsw-2017-17657624
+2025-07-27 21:20:21 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1-106-joynton-avenue-zetland-nsw-2017-17657624: https://api.snug.com/v1/partner/handoff/team/5472/listing/1P7876/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F1-106-joynton-avenue-zetland-nsw-2017-17657624&add_unitnum=1&add_streetnum=106&add_streetname=Joynton&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:20:21 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17657624 for URL: https://www.domain.com.au/1-106-joynton-avenue-zetland-nsw-2017-17657624
+2025-07-27 21:20:22 - domain_crawler_v2 - INFO - 处理第5/20个房源: https://www.domain.com.au/1c-14-defries-avenue-zetland-nsw-2017-17320083
+2025-07-27 21:20:22 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1c-14-defries-avenue-zetland-nsw-2017-17320083
+2025-07-27 21:20:23 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1c-14-defries-avenue-zetland-nsw-2017-17320083: https://www.2apply.com.au/domain/35110/17320083?address=1C%2F14%20Defries%20Avenue%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:20:23 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17320083 for URL: https://www.domain.com.au/1c-14-defries-avenue-zetland-nsw-2017-17320083
+2025-07-27 21:20:24 - domain_crawler_v2 - INFO - 处理第6/20个房源: https://www.domain.com.au/403-1-link-road-zetland-nsw-2017-17658236
+2025-07-27 21:20:24 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/403-1-link-road-zetland-nsw-2017-17658236
+2025-07-27 21:20:24 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/403-1-link-road-zetland-nsw-2017-17658236 NOT found via any XPaths.
+2025-07-27 21:20:24 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17658236 for URL: https://www.domain.com.au/403-1-link-road-zetland-nsw-2017-17658236
+2025-07-27 21:20:26 - domain_crawler_v2 - INFO - 处理第7/20个房源: https://www.domain.com.au/409-16-rose-valley-way-zetland-nsw-2017-17661515
+2025-07-27 21:20:26 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/409-16-rose-valley-way-zetland-nsw-2017-17661515
+2025-07-27 21:20:26 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/409-16-rose-valley-way-zetland-nsw-2017-17661515: https://api.snug.com/v1/partner/handoff/team/29293/listing/2722361/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F409-16-rose-valley-way-zetland-nsw-2017-17661515&add_unitnum=409&add_streetnum=16&add_streetname=Rose%20Valley&add_streettype=Way&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:20:26 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17661515 for URL: https://www.domain.com.au/409-16-rose-valley-way-zetland-nsw-2017-17661515
+2025-07-27 21:20:27 - domain_crawler_v2 - INFO - 处理第8/20个房源: https://www.domain.com.au/109-13-joynton-avenue-zetland-nsw-2017-17673691
+2025-07-27 21:20:27 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/109-13-joynton-avenue-zetland-nsw-2017-17673691
+2025-07-27 21:20:28 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/109-13-joynton-avenue-zetland-nsw-2017-17673691: https://api.snug.com/v1/partner/handoff/team/20407/listing/1P3446/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F109-13-joynton-avenue-zetland-nsw-2017-17673691&add_unitnum=109&add_streetnum=13&add_streetname=Joynton&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:20:28 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17673691 for URL: https://www.domain.com.au/109-13-joynton-avenue-zetland-nsw-2017-17673691
+2025-07-27 21:20:30 - domain_crawler_v2 - INFO - 处理第9/20个房源: https://www.domain.com.au/11201-8-kingsborough-way-zetland-nsw-2017-17536312
+2025-07-27 21:20:30 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/11201-8-kingsborough-way-zetland-nsw-2017-17536312
+2025-07-27 21:20:30 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/11201-8-kingsborough-way-zetland-nsw-2017-17536312: https://api.snug.com/v1/partner/handoff/team/29293/listing/2664910/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F11201-8-kingsborough-way-zetland-nsw-2017-17536312&add_unitnum=11201&add_streetnum=8&add_streetname=Kingsborough&add_streettype=Way&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:20:30 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17536312 for URL: https://www.domain.com.au/11201-8-kingsborough-way-zetland-nsw-2017-17536312
+2025-07-27 21:20:32 - domain_crawler_v2 - INFO - 处理第10/20个房源: https://www.domain.com.au/2-3-victoria-park-parade-zetland-nsw-2017-17614273
+2025-07-27 21:20:32 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/2-3-victoria-park-parade-zetland-nsw-2017-17614273
+2025-07-27 21:20:32 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/2-3-victoria-park-parade-zetland-nsw-2017-17614273 NOT found via any XPaths.
+2025-07-27 21:20:32 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17614273 for URL: https://www.domain.com.au/2-3-victoria-park-parade-zetland-nsw-2017-17614273
+2025-07-27 21:20:33 - domain_crawler_v2 - INFO - 处理第11/20个房源: https://www.domain.com.au/1-10-16-epsom-road-zetland-nsw-2017-17639685
+2025-07-27 21:20:33 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1-10-16-epsom-road-zetland-nsw-2017-17639685
+2025-07-27 21:20:34 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/1-10-16-epsom-road-zetland-nsw-2017-17639685 NOT found via any XPaths.
+2025-07-27 21:20:34 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17639685 for URL: https://www.domain.com.au/1-10-16-epsom-road-zetland-nsw-2017-17639685
+2025-07-27 21:20:35 - domain_crawler_v2 - INFO - 处理第12/20个房源: https://www.domain.com.au/197-12-peters-street-zetland-nsw-2017-17647121
+2025-07-27 21:20:35 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/197-12-peters-street-zetland-nsw-2017-17647121
+2025-07-27 21:20:35 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/197-12-peters-street-zetland-nsw-2017-17647121 NOT found via any XPaths.
+2025-07-27 21:20:35 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17647121 for URL: https://www.domain.com.au/197-12-peters-street-zetland-nsw-2017-17647121
+2025-07-27 21:20:36 - domain_crawler_v2 - INFO - 处理第13/20个房源: https://www.domain.com.au/707-15-gadigal-ave-zetland-nsw-2017-10586084
+2025-07-27 21:20:36 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/707-15-gadigal-ave-zetland-nsw-2017-10586084
+2025-07-27 21:20:37 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/707-15-gadigal-ave-zetland-nsw-2017-10586084: https://api.snug.com/v1/partner/handoff/team/7242/listing/10586084/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F707-15-gadigal-ave-zetland-nsw-2017-10586084&add_unitnum=707&add_streetnum=15&add_streetname=Gadigal&add_streettype=ave&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:20:37 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=10586084 for URL: https://www.domain.com.au/707-15-gadigal-ave-zetland-nsw-2017-10586084
+2025-07-27 21:20:39 - domain_crawler_v2 - INFO - 处理第14/20个房源: https://www.domain.com.au/1b-3-naulty-place-zetland-nsw-2017-9431523
+2025-07-27 21:20:39 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1b-3-naulty-place-zetland-nsw-2017-9431523
+2025-07-27 21:20:39 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1b-3-naulty-place-zetland-nsw-2017-9431523: https://www.2apply.com.au/domain/35110/9431523?address=1B%2F3%20Naulty%20Place%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:20:39 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=9431523 for URL: https://www.domain.com.au/1b-3-naulty-place-zetland-nsw-2017-9431523
+2025-07-27 21:20:40 - domain_crawler_v2 - INFO - 处理第15/20个房源: https://www.domain.com.au/846-10-victoria-park-parade-zetland-nsw-2017-17634449
+2025-07-27 21:20:40 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/846-10-victoria-park-parade-zetland-nsw-2017-17634449
+2025-07-27 21:20:40 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/846-10-victoria-park-parade-zetland-nsw-2017-17634449 NOT found via any XPaths.
+2025-07-27 21:20:40 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17634449 for URL: https://www.domain.com.au/846-10-victoria-park-parade-zetland-nsw-2017-17634449
+2025-07-27 21:20:41 - domain_crawler_v2 - INFO - 处理第16/20个房源: https://www.domain.com.au/480-10-peters-street-zetland-nsw-2017-17647152
+2025-07-27 21:20:41 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/480-10-peters-street-zetland-nsw-2017-17647152
+2025-07-27 21:20:42 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/480-10-peters-street-zetland-nsw-2017-17647152 NOT found via any XPaths.
+2025-07-27 21:20:42 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17647152 for URL: https://www.domain.com.au/480-10-peters-street-zetland-nsw-2017-17647152
+2025-07-27 21:20:43 - domain_crawler_v2 - INFO - 处理第17/20个房源: https://www.domain.com.au/703-1-link-road-zetland-nsw-2017-17655812
+2025-07-27 21:20:43 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/703-1-link-road-zetland-nsw-2017-17655812
+2025-07-27 21:20:44 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/703-1-link-road-zetland-nsw-2017-17655812 NOT found via any XPaths.
+2025-07-27 21:20:44 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17655812 for URL: https://www.domain.com.au/703-1-link-road-zetland-nsw-2017-17655812
+2025-07-27 21:20:45 - domain_crawler_v2 - INFO - 处理第18/20个房源: https://www.domain.com.au/g05-18-paul-street-zetland-nsw-2017-17614717
+2025-07-27 21:20:45 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/g05-18-paul-street-zetland-nsw-2017-17614717
+2025-07-27 21:20:45 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/g05-18-paul-street-zetland-nsw-2017-17614717 NOT found via any XPaths.
+2025-07-27 21:20:45 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17614717 for URL: https://www.domain.com.au/g05-18-paul-street-zetland-nsw-2017-17614717
+2025-07-27 21:20:47 - domain_crawler_v2 - INFO - 处理第19/20个房源: https://www.domain.com.au/511-2-defries-avenue-zetland-nsw-2017-17678007
+2025-07-27 21:20:47 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/511-2-defries-avenue-zetland-nsw-2017-17678007
+2025-07-27 21:20:48 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/511-2-defries-avenue-zetland-nsw-2017-17678007: https://api.snug.com/v1/partner/handoff/team/31666/listing/1P1261/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F511-2-defries-avenue-zetland-nsw-2017-17678007&add_unitnum=511&add_streetnum=2&add_streetname=Defries&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:20:48 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17678007 for URL: https://www.domain.com.au/511-2-defries-avenue-zetland-nsw-2017-17678007
+2025-07-27 21:20:49 - domain_crawler_v2 - INFO - 处理第20/20个房源: https://www.domain.com.au/7-11-grandstand-parade-zetland-nsw-2017-16691487
+2025-07-27 21:20:49 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/7-11-grandstand-parade-zetland-nsw-2017-16691487
+2025-07-27 21:20:49 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/7-11-grandstand-parade-zetland-nsw-2017-16691487 NOT found via any XPaths.
+2025-07-27 21:20:49 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16691487 for URL: https://www.domain.com.au/7-11-grandstand-parade-zetland-nsw-2017-16691487
+2025-07-27 21:20:51 - domain_crawler_v2 - INFO - 本页成功处理20/20个房源
+2025-07-27 21:20:51 - domain_crawler_v2 - DEBUG - 保存进度到 progress.json: URL=https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc, 页码=2
+2025-07-27 21:20:51 - domain_crawler_v2 - INFO - 完成第1页处理
+2025-07-27 21:20:53 - domain_crawler_v2 - INFO - 正在抓取第2页: https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc&page=2
+2025-07-27 21:20:53 - domain_crawler_v2 - INFO - 第2页找到20个房源
+2025-07-27 21:20:53 - domain_crawler_v2 - INFO - 处理第1/20个房源: https://www.domain.com.au/76-6a-defries-avenue-zetland-nsw-2017-17617003
+2025-07-27 21:20:53 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/76-6a-defries-avenue-zetland-nsw-2017-17617003
+2025-07-27 21:20:54 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/76-6a-defries-avenue-zetland-nsw-2017-17617003 NOT found via any XPaths.
+2025-07-27 21:20:54 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17617003 for URL: https://www.domain.com.au/76-6a-defries-avenue-zetland-nsw-2017-17617003
+2025-07-27 21:20:55 - domain_crawler_v2 - INFO - 处理第2/20个房源: https://www.domain.com.au/682-10-peters-street-zetland-nsw-2017-17686976
+2025-07-27 21:20:55 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/682-10-peters-street-zetland-nsw-2017-17686976
+2025-07-27 21:20:56 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/682-10-peters-street-zetland-nsw-2017-17686976 NOT found via any XPaths.
+2025-07-27 21:20:56 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17686976 for URL: https://www.domain.com.au/682-10-peters-street-zetland-nsw-2017-17686976
+2025-07-27 21:20:57 - domain_crawler_v2 - INFO - 处理第3/20个房源: https://www.domain.com.au/303-136-epsom-road-zetland-nsw-2017-17681158
+2025-07-27 21:20:57 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/303-136-epsom-road-zetland-nsw-2017-17681158
+2025-07-27 21:20:58 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/303-136-epsom-road-zetland-nsw-2017-17681158: https://api.snug.com/v1/partner/handoff/team/32424/listing/R2519143/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F303-136-epsom-road-zetland-nsw-2017-17681158&add_unitnum=303&add_streetnum=136&add_streetname=Epsom&add_streettype=Road&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:20:58 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17681158 for URL: https://www.domain.com.au/303-136-epsom-road-zetland-nsw-2017-17681158
+2025-07-27 21:20:59 - domain_crawler_v2 - INFO - 处理第4/20个房源: https://www.domain.com.au/level-4-12-victoria-park-parade-zetland-nsw-2017-10662348
+2025-07-27 21:20:59 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/level-4-12-victoria-park-parade-zetland-nsw-2017-10662348
+2025-07-27 21:21:00 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/level-4-12-victoria-park-parade-zetland-nsw-2017-10662348 NOT found via any XPaths.
+2025-07-27 21:21:00 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=10662348 for URL: https://www.domain.com.au/level-4-12-victoria-park-parade-zetland-nsw-2017-10662348
+2025-07-27 21:21:01 - domain_crawler_v2 - INFO - 处理第5/20个房源: https://www.domain.com.au/615-19-grandstand-parade-zetland-nsw-2017-17677587
+2025-07-27 21:21:01 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/615-19-grandstand-parade-zetland-nsw-2017-17677587
+2025-07-27 21:21:01 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/615-19-grandstand-parade-zetland-nsw-2017-17677587: https://api.snug.com/v1/partner/handoff/team/17412/listing/1P2242/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F615-19-grandstand-parade-zetland-nsw-2017-17677587&add_unitnum=615&add_streetnum=19&add_streetname=Grandstand&add_streettype=Parade&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:21:01 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17677587 for URL: https://www.domain.com.au/615-19-grandstand-parade-zetland-nsw-2017-17677587
+2025-07-27 21:21:02 - domain_crawler_v2 - INFO - 处理第6/20个房源: https://www.domain.com.au/314-1-george-julius-avenue-zetland-nsw-2017-17680264
+2025-07-27 21:21:02 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/314-1-george-julius-avenue-zetland-nsw-2017-17680264
+2025-07-27 21:21:02 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/314-1-george-julius-avenue-zetland-nsw-2017-17680264 NOT found via any XPaths.
+2025-07-27 21:21:02 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17680264 for URL: https://www.domain.com.au/314-1-george-julius-avenue-zetland-nsw-2017-17680264
+2025-07-27 21:21:04 - domain_crawler_v2 - INFO - 处理第7/20个房源: https://www.domain.com.au/817-1-hutchinson-walk-zetland-nsw-2017-16030831
+2025-07-27 21:21:04 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/817-1-hutchinson-walk-zetland-nsw-2017-16030831
+2025-07-27 21:21:04 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/817-1-hutchinson-walk-zetland-nsw-2017-16030831: https://api.snug.com/v1/partner/handoff/team/33408/listing/c05cd877-a359-4996-bcc4-1539b5af29af/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F817-1-hutchinson-walk-zetland-nsw-2017-16030831&add_unitnum=817&add_streetnum=1&add_streetname=Hutchinson&add_streettype=Walk&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:21:04 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16030831 for URL: https://www.domain.com.au/817-1-hutchinson-walk-zetland-nsw-2017-16030831
+2025-07-27 21:21:06 - domain_crawler_v2 - INFO - 处理第8/20个房源: https://www.domain.com.au/1b-116-joynton-ave-zetland-nsw-2017-17337669
+2025-07-27 21:21:06 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1b-116-joynton-ave-zetland-nsw-2017-17337669
+2025-07-27 21:21:06 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1b-116-joynton-ave-zetland-nsw-2017-17337669: https://www.2apply.com.au/domain/35203/17337669?address=1B%2F116%20Joynton%20Ave%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:21:06 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17337669 for URL: https://www.domain.com.au/1b-116-joynton-ave-zetland-nsw-2017-17337669
+2025-07-27 21:21:08 - domain_crawler_v2 - INFO - 处理第9/20个房源: https://www.domain.com.au/c607-12-paul-street-zetland-nsw-2017-17655024
+2025-07-27 21:21:08 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/c607-12-paul-street-zetland-nsw-2017-17655024
+2025-07-27 21:21:08 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/c607-12-paul-street-zetland-nsw-2017-17655024: https://api.snug.com/v1/partner/handoff/team/28270/listing/R2-4637902/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Fc607-12-paul-street-zetland-nsw-2017-17655024&add_unitnum=C607&add_streetnum=12&add_streetname=Paul&add_streettype=Street&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:21:08 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17655024 for URL: https://www.domain.com.au/c607-12-paul-street-zetland-nsw-2017-17655024
+2025-07-27 21:21:10 - domain_crawler_v2 - INFO - 处理第10/20个房源: https://www.domain.com.au/650-2c-defries-avenue-zetland-nsw-2017-17570917
+2025-07-27 21:21:10 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/650-2c-defries-avenue-zetland-nsw-2017-17570917
+2025-07-27 21:21:10 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/650-2c-defries-avenue-zetland-nsw-2017-17570917 NOT found via any XPaths.
+2025-07-27 21:21:10 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17570917 for URL: https://www.domain.com.au/650-2c-defries-avenue-zetland-nsw-2017-17570917
+2025-07-27 21:21:12 - domain_crawler_v2 - INFO - 处理第11/20个房源: https://www.domain.com.au/1b-4-ascot-ave-zetland-nsw-2017-17382838
+2025-07-27 21:21:12 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1b-4-ascot-ave-zetland-nsw-2017-17382838
+2025-07-27 21:21:13 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1b-4-ascot-ave-zetland-nsw-2017-17382838: https://www.2apply.com.au/domain/35203/17382838?address=1B%2F4%20Ascot%20Ave%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:21:13 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17382838 for URL: https://www.domain.com.au/1b-4-ascot-ave-zetland-nsw-2017-17382838
+2025-07-27 21:21:15 - domain_crawler_v2 - INFO - 处理第12/20个房源: https://www.domain.com.au/2-b-118-joynton-ave-zetland-nsw-2017-17571398
+2025-07-27 21:21:15 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/2-b-118-joynton-ave-zetland-nsw-2017-17571398
+2025-07-27 21:21:15 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/2-b-118-joynton-ave-zetland-nsw-2017-17571398: https://www.2apply.com.au/domain/35203/17571398?address=2.B%2F118%20Joynton%20Ave%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:21:15 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17571398 for URL: https://www.domain.com.au/2-b-118-joynton-ave-zetland-nsw-2017-17571398
+2025-07-27 21:21:17 - domain_crawler_v2 - INFO - 处理第13/20个房源: https://www.domain.com.au/1b-5-hutchinson-walk-zetland-nsw-2017-17599041
+2025-07-27 21:21:17 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1b-5-hutchinson-walk-zetland-nsw-2017-17599041
+2025-07-27 21:21:17 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1b-5-hutchinson-walk-zetland-nsw-2017-17599041: https://www.2apply.com.au/domain/35203/17599041?address=1B%2F5%20Hutchinson%20Walk%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:21:17 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17599041 for URL: https://www.domain.com.au/1b-5-hutchinson-walk-zetland-nsw-2017-17599041
+2025-07-27 21:21:19 - domain_crawler_v2 - INFO - 处理第14/20个房源: https://www.domain.com.au/118-6b-defries-avenue-zetland-nsw-2017-17602910
+2025-07-27 21:21:19 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/118-6b-defries-avenue-zetland-nsw-2017-17602910
+2025-07-27 21:21:20 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/118-6b-defries-avenue-zetland-nsw-2017-17602910 NOT found via any XPaths.
+2025-07-27 21:21:20 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17602910 for URL: https://www.domain.com.au/118-6b-defries-avenue-zetland-nsw-2017-17602910
+2025-07-27 21:21:21 - domain_crawler_v2 - INFO - 处理第15/20个房源: https://www.domain.com.au/42-3-defries-avenue-zetland-nsw-2017-17017839
+2025-07-27 21:21:21 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/42-3-defries-avenue-zetland-nsw-2017-17017839
+2025-07-27 21:21:21 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/42-3-defries-avenue-zetland-nsw-2017-17017839: https://api.snug.com/v1/partner/handoff/team/16491/listing/b17200e4-febe-425e-a8b9-ed99788a9396/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F42-3-defries-avenue-zetland-nsw-2017-17017839&add_unitnum=42&add_streetnum=3&add_streetname=Defries&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:21:21 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17017839 for URL: https://www.domain.com.au/42-3-defries-avenue-zetland-nsw-2017-17017839
+2025-07-27 21:21:23 - domain_crawler_v2 - INFO - 处理第16/20个房源: https://www.domain.com.au/1707-15-gadigal-avenue-zetland-nsw-2017-16782695
+2025-07-27 21:21:23 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1707-15-gadigal-avenue-zetland-nsw-2017-16782695
+2025-07-27 21:21:26 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1707-15-gadigal-avenue-zetland-nsw-2017-16782695: https://api.snug.com/v1/partner/handoff/team/33453/listing/0572e014-8539-4c4d-949f-1f775ffe827c/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F1707-15-gadigal-avenue-zetland-nsw-2017-16782695&add_unitnum=1707&add_streetnum=15&add_streetname=Gadigal&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:21:26 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16782695 for URL: https://www.domain.com.au/1707-15-gadigal-avenue-zetland-nsw-2017-16782695
+2025-07-27 21:21:27 - domain_crawler_v2 - INFO - 处理第17/20个房源: https://www.domain.com.au/701-13-joynton-avenue-zetland-nsw-2017-17671119
+2025-07-27 21:21:27 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/701-13-joynton-avenue-zetland-nsw-2017-17671119
+2025-07-27 21:21:28 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/701-13-joynton-avenue-zetland-nsw-2017-17671119 NOT found via any XPaths.
+2025-07-27 21:21:28 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17671119 for URL: https://www.domain.com.au/701-13-joynton-avenue-zetland-nsw-2017-17671119
+2025-07-27 21:21:28 - domain_crawler_v2 - INFO - 处理第18/20个房源: https://www.domain.com.au/333-11-victoria-park-parade-zetland-nsw-2017-17627653
+2025-07-27 21:21:28 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/333-11-victoria-park-parade-zetland-nsw-2017-17627653
+2025-07-27 21:21:29 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/333-11-victoria-park-parade-zetland-nsw-2017-17627653 NOT found via any XPaths.
+2025-07-27 21:21:29 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17627653 for URL: https://www.domain.com.au/333-11-victoria-park-parade-zetland-nsw-2017-17627653
+2025-07-27 21:21:31 - domain_crawler_v2 - INFO - 处理第19/20个房源: https://www.domain.com.au/1b-33-george-julius-avenue-zetland-nsw-2017-17065623
+2025-07-27 21:21:31 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1b-33-george-julius-avenue-zetland-nsw-2017-17065623
+2025-07-27 21:21:31 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1b-33-george-julius-avenue-zetland-nsw-2017-17065623: https://www.2apply.com.au/domain/35203/17065623?address=1b%2F33%20George%20Julius%20Avenue%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:21:31 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17065623 for URL: https://www.domain.com.au/1b-33-george-julius-avenue-zetland-nsw-2017-17065623
+2025-07-27 21:21:33 - domain_crawler_v2 - INFO - 处理第20/20个房源: https://www.domain.com.au/102-25-geddes-avenue-zetland-nsw-2017-17650166
+2025-07-27 21:21:33 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/102-25-geddes-avenue-zetland-nsw-2017-17650166
+2025-07-27 21:21:34 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/102-25-geddes-avenue-zetland-nsw-2017-17650166: https://api.snug.com/v1/partner/handoff/team/29293/listing/2716939/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F102-25-geddes-avenue-zetland-nsw-2017-17650166&add_unitnum=102&add_streetnum=25&add_streetname=Geddes&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:21:34 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17650166 for URL: https://www.domain.com.au/102-25-geddes-avenue-zetland-nsw-2017-17650166
+2025-07-27 21:21:35 - domain_crawler_v2 - INFO - 本页成功处理20/20个房源
+2025-07-27 21:21:35 - domain_crawler_v2 - DEBUG - 保存进度到 progress.json: URL=https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc, 页码=3
+2025-07-27 21:21:35 - domain_crawler_v2 - INFO - 完成第2页处理
+2025-07-27 21:21:38 - domain_crawler_v2 - INFO - 正在抓取第3页: https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc&page=3
+2025-07-27 21:21:38 - domain_crawler_v2 - INFO - 第3页找到20个房源
+2025-07-27 21:21:38 - domain_crawler_v2 - INFO - 处理第1/20个房源: https://www.domain.com.au/wechat-krl119-l1-28-gadigal-avenue-zetland-nsw-2017-17675547
+2025-07-27 21:21:38 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/wechat-krl119-l1-28-gadigal-avenue-zetland-nsw-2017-17675547
+2025-07-27 21:21:40 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/wechat-krl119-l1-28-gadigal-avenue-zetland-nsw-2017-17675547 NOT found via any XPaths.
+2025-07-27 21:21:40 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17675547 for URL: https://www.domain.com.au/wechat-krl119-l1-28-gadigal-avenue-zetland-nsw-2017-17675547
+2025-07-27 21:21:42 - domain_crawler_v2 - INFO - 处理第2/20个房源: https://www.domain.com.au/1717-1-grandstand-parade-zetland-nsw-2017-17651675
+2025-07-27 21:21:42 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1717-1-grandstand-parade-zetland-nsw-2017-17651675
+2025-07-27 21:21:42 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/1717-1-grandstand-parade-zetland-nsw-2017-17651675 NOT found via any XPaths.
+2025-07-27 21:21:42 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17651675 for URL: https://www.domain.com.au/1717-1-grandstand-parade-zetland-nsw-2017-17651675
+2025-07-27 21:21:43 - domain_crawler_v2 - INFO - 处理第3/20个房源: https://www.domain.com.au/25-4-hutchinson-walk-zetland-nsw-2017-17637105
+2025-07-27 21:21:43 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/25-4-hutchinson-walk-zetland-nsw-2017-17637105
+2025-07-27 21:21:44 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/25-4-hutchinson-walk-zetland-nsw-2017-17637105 NOT found via any XPaths.
+2025-07-27 21:21:44 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17637105 for URL: https://www.domain.com.au/25-4-hutchinson-walk-zetland-nsw-2017-17637105
+2025-07-27 21:21:45 - domain_crawler_v2 - INFO - 处理第4/20个房源: https://www.domain.com.au/1106-301-botany-road-zetland-nsw-2017-17662672
+2025-07-27 21:21:45 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1106-301-botany-road-zetland-nsw-2017-17662672
+2025-07-27 21:21:45 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1106-301-botany-road-zetland-nsw-2017-17662672: https://api.snug.com/v1/partner/handoff/team/29293/listing/2722694/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F1106-301-botany-road-zetland-nsw-2017-17662672&add_unitnum=1106&add_streetnum=301&add_streetname=Botany&add_streettype=Road&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:21:45 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17662672 for URL: https://www.domain.com.au/1106-301-botany-road-zetland-nsw-2017-17662672
+2025-07-27 21:21:47 - domain_crawler_v2 - INFO - 处理第5/20个房源: https://www.domain.com.au/208-17-joynton-avenue-zetland-nsw-2017-17600798
+2025-07-27 21:21:47 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/208-17-joynton-avenue-zetland-nsw-2017-17600798
+2025-07-27 21:21:48 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/208-17-joynton-avenue-zetland-nsw-2017-17600798: https://api.snug.com/v1/partner/handoff/team/3675/listing/1P2638/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F208-17-joynton-avenue-zetland-nsw-2017-17600798&add_unitnum=208&add_streetnum=17&add_streetname=Joynton&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:21:48 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17600798 for URL: https://www.domain.com.au/208-17-joynton-avenue-zetland-nsw-2017-17600798
+2025-07-27 21:21:49 - domain_crawler_v2 - INFO - 处理第6/20个房源: https://www.domain.com.au/22-13-grandstand-parade-zetland-nsw-2017-17625040
+2025-07-27 21:21:49 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/22-13-grandstand-parade-zetland-nsw-2017-17625040
+2025-07-27 21:21:50 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/22-13-grandstand-parade-zetland-nsw-2017-17625040 NOT found via any XPaths.
+2025-07-27 21:21:50 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17625040 for URL: https://www.domain.com.au/22-13-grandstand-parade-zetland-nsw-2017-17625040
+2025-07-27 21:21:51 - domain_crawler_v2 - INFO - 处理第7/20个房源: https://www.domain.com.au/617-17-joynton-avenue-zetland-nsw-2017-17666487
+2025-07-27 21:21:51 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/617-17-joynton-avenue-zetland-nsw-2017-17666487
+2025-07-27 21:21:51 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/617-17-joynton-avenue-zetland-nsw-2017-17666487 NOT found via any XPaths.
+2025-07-27 21:21:51 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17666487 for URL: https://www.domain.com.au/617-17-joynton-avenue-zetland-nsw-2017-17666487
+2025-07-27 21:21:53 - domain_crawler_v2 - INFO - 处理第8/20个房源: https://www.domain.com.au/2803-98-joynton-avenue-zetland-nsw-2017-17669352
+2025-07-27 21:21:53 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/2803-98-joynton-avenue-zetland-nsw-2017-17669352
+2025-07-27 21:21:53 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/2803-98-joynton-avenue-zetland-nsw-2017-17669352 NOT found via any XPaths.
+2025-07-27 21:21:53 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17669352 for URL: https://www.domain.com.au/2803-98-joynton-avenue-zetland-nsw-2017-17669352
+2025-07-27 21:21:55 - domain_crawler_v2 - INFO - 处理第9/20个房源: https://www.domain.com.au/108-6-paul-street-zetland-nsw-2017-13668723
+2025-07-27 21:21:55 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/108-6-paul-street-zetland-nsw-2017-13668723
+2025-07-27 21:21:56 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/108-6-paul-street-zetland-nsw-2017-13668723: https://www.2apply.com.au/domain/11861/13668723?address=108%2F6%20Paul%20Street%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:21:56 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=13668723 for URL: https://www.domain.com.au/108-6-paul-street-zetland-nsw-2017-13668723
+2025-07-27 21:21:57 - domain_crawler_v2 - INFO - 处理第10/20个房源: https://www.domain.com.au/27-3-wolseley-grove-zetland-nsw-2017-17668437
+2025-07-27 21:21:57 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/27-3-wolseley-grove-zetland-nsw-2017-17668437
+2025-07-27 21:21:58 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/27-3-wolseley-grove-zetland-nsw-2017-17668437 NOT found via any XPaths.
+2025-07-27 21:21:58 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17668437 for URL: https://www.domain.com.au/27-3-wolseley-grove-zetland-nsw-2017-17668437
+2025-07-27 21:22:00 - domain_crawler_v2 - INFO - 处理第11/20个房源: https://www.domain.com.au/203-12-paul-street-zetland-nsw-2017-17668398
+2025-07-27 21:22:00 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/203-12-paul-street-zetland-nsw-2017-17668398
+2025-07-27 21:22:00 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/203-12-paul-street-zetland-nsw-2017-17668398 NOT found via any XPaths.
+2025-07-27 21:22:00 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17668398 for URL: https://www.domain.com.au/203-12-paul-street-zetland-nsw-2017-17668398
+2025-07-27 21:22:02 - domain_crawler_v2 - INFO - 处理第12/20个房源: https://www.domain.com.au/622-5-o-dea-avenue-zetland-nsw-2017-17678846
+2025-07-27 21:22:02 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/622-5-o-dea-avenue-zetland-nsw-2017-17678846
+2025-07-27 21:22:02 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/622-5-o-dea-avenue-zetland-nsw-2017-17678846 NOT found via any XPaths.
+2025-07-27 21:22:02 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17678846 for URL: https://www.domain.com.au/622-5-o-dea-avenue-zetland-nsw-2017-17678846
+2025-07-27 21:22:04 - domain_crawler_v2 - INFO - 处理第13/20个房源: https://www.domain.com.au/34-6a-defries-avenue-zetland-nsw-2017-17605762
+2025-07-27 21:22:04 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/34-6a-defries-avenue-zetland-nsw-2017-17605762
+2025-07-27 21:22:04 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/34-6a-defries-avenue-zetland-nsw-2017-17605762 NOT found via any XPaths.
+2025-07-27 21:22:04 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17605762 for URL: https://www.domain.com.au/34-6a-defries-avenue-zetland-nsw-2017-17605762
+2025-07-27 21:22:06 - domain_crawler_v2 - INFO - 处理第14/20个房源: https://www.domain.com.au/8-kingsborough-way-zetland-nsw-2017-17616979
+2025-07-27 21:22:06 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/8-kingsborough-way-zetland-nsw-2017-17616979
+2025-07-27 21:22:06 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/8-kingsborough-way-zetland-nsw-2017-17616979 NOT found via any XPaths.
+2025-07-27 21:22:06 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17616979 for URL: https://www.domain.com.au/8-kingsborough-way-zetland-nsw-2017-17616979
+2025-07-27 21:22:08 - domain_crawler_v2 - INFO - 处理第15/20个房源: https://www.domain.com.au/42-30-gadigal-avenue-zetland-nsw-2017-17648819
+2025-07-27 21:22:08 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/42-30-gadigal-avenue-zetland-nsw-2017-17648819
+2025-07-27 21:22:09 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/42-30-gadigal-avenue-zetland-nsw-2017-17648819 NOT found via any XPaths.
+2025-07-27 21:22:09 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17648819 for URL: https://www.domain.com.au/42-30-gadigal-avenue-zetland-nsw-2017-17648819
+2025-07-27 21:22:10 - domain_crawler_v2 - INFO - 处理第16/20个房源: https://www.domain.com.au/907-301-botany-road-zetland-nsw-2017-17664747
+2025-07-27 21:22:10 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/907-301-botany-road-zetland-nsw-2017-17664747
+2025-07-27 21:22:10 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/907-301-botany-road-zetland-nsw-2017-17664747: https://api.snug.com/v1/partner/handoff/team/28270/listing/R2-4650186/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F907-301-botany-road-zetland-nsw-2017-17664747&add_unitnum=907&add_streetnum=301&add_streetname=Botany&add_streettype=Road&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:22:10 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17664747 for URL: https://www.domain.com.au/907-301-botany-road-zetland-nsw-2017-17664747
+2025-07-27 21:22:11 - domain_crawler_v2 - INFO - 处理第17/20个房源: https://www.domain.com.au/2ba-3-naulty-place-zetland-nsw-2017-17604662
+2025-07-27 21:22:11 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/2ba-3-naulty-place-zetland-nsw-2017-17604662
+2025-07-27 21:22:11 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/2ba-3-naulty-place-zetland-nsw-2017-17604662: https://www.2apply.com.au/domain/35110/17604662?address=2BA%203%20Naulty%20Place%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:22:11 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17604662 for URL: https://www.domain.com.au/2ba-3-naulty-place-zetland-nsw-2017-17604662
+2025-07-27 21:22:13 - domain_crawler_v2 - INFO - 处理第18/20个房源: https://www.domain.com.au/828-2-kirby-walk-zetland-nsw-2017-17675566
+2025-07-27 21:22:13 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/828-2-kirby-walk-zetland-nsw-2017-17675566
+2025-07-27 21:22:13 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/828-2-kirby-walk-zetland-nsw-2017-17675566: https://api.snug.com/v1/partner/handoff/team/36128/listing/6700923/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F828-2-kirby-walk-zetland-nsw-2017-17675566&add_unitnum=828&add_streetnum=2&add_streetname=Kirby&add_streettype=Walk&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:22:13 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17675566 for URL: https://www.domain.com.au/828-2-kirby-walk-zetland-nsw-2017-17675566
+2025-07-27 21:22:15 - domain_crawler_v2 - INFO - 处理第19/20个房源: https://www.domain.com.au/3509-2-wolseley-grove-zetland-nsw-2017-17633047
+2025-07-27 21:22:15 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/3509-2-wolseley-grove-zetland-nsw-2017-17633047
+2025-07-27 21:22:15 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/3509-2-wolseley-grove-zetland-nsw-2017-17633047 NOT found via any XPaths.
+2025-07-27 21:22:15 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17633047 for URL: https://www.domain.com.au/3509-2-wolseley-grove-zetland-nsw-2017-17633047
+2025-07-27 21:22:17 - domain_crawler_v2 - INFO - 处理第20/20个房源: https://www.domain.com.au/44-30-gadigal-avenue-zetland-nsw-2017-17657746
+2025-07-27 21:22:17 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/44-30-gadigal-avenue-zetland-nsw-2017-17657746
+2025-07-27 21:22:17 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/44-30-gadigal-avenue-zetland-nsw-2017-17657746 NOT found via any XPaths.
+2025-07-27 21:22:17 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17657746 for URL: https://www.domain.com.au/44-30-gadigal-avenue-zetland-nsw-2017-17657746
+2025-07-27 21:22:18 - domain_crawler_v2 - INFO - 本页成功处理20/20个房源
+2025-07-27 21:22:18 - domain_crawler_v2 - DEBUG - 保存进度到 progress.json: URL=https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc, 页码=4
+2025-07-27 21:22:18 - domain_crawler_v2 - INFO - 完成第3页处理
+2025-07-27 21:22:21 - domain_crawler_v2 - INFO - 正在抓取第4页: https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc&page=4
+2025-07-27 21:22:21 - domain_crawler_v2 - INFO - 第4页找到20个房源
+2025-07-27 21:22:21 - domain_crawler_v2 - INFO - 处理第1/20个房源: https://www.domain.com.au/141-12-victoria-park-parade-zetland-nsw-2017-17685674
+2025-07-27 21:22:21 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/141-12-victoria-park-parade-zetland-nsw-2017-17685674
+2025-07-27 21:22:23 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/141-12-victoria-park-parade-zetland-nsw-2017-17685674 NOT found via any XPaths.
+2025-07-27 21:22:23 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17685674 for URL: https://www.domain.com.au/141-12-victoria-park-parade-zetland-nsw-2017-17685674
+2025-07-27 21:22:25 - domain_crawler_v2 - INFO - 处理第2/20个房源: https://www.domain.com.au/wechat-krl119-l3-18-morris-st-zetland-nsw-2017-17096949
+2025-07-27 21:22:25 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/wechat-krl119-l3-18-morris-st-zetland-nsw-2017-17096949
+2025-07-27 21:22:25 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/wechat-krl119-l3-18-morris-st-zetland-nsw-2017-17096949 NOT found via any XPaths.
+2025-07-27 21:22:25 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17096949 for URL: https://www.domain.com.au/wechat-krl119-l3-18-morris-st-zetland-nsw-2017-17096949
+2025-07-27 21:22:26 - domain_crawler_v2 - INFO - 处理第3/20个房源: https://www.domain.com.au/740-12-victoria-park-parade-zetland-nsw-2017-16358197
+2025-07-27 21:22:26 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/740-12-victoria-park-parade-zetland-nsw-2017-16358197
+2025-07-27 21:22:27 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/740-12-victoria-park-parade-zetland-nsw-2017-16358197: https://www.2apply.com.au/domain/19183/16358197?address=740%2F12%20Victoria%20Park%20Parade%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:22:27 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16358197 for URL: https://www.domain.com.au/740-12-victoria-park-parade-zetland-nsw-2017-16358197
+2025-07-27 21:22:28 - domain_crawler_v2 - INFO - 处理第4/20个房源: https://www.domain.com.au/812-5-o-dea-avenue-zetland-nsw-2017-17676565
+2025-07-27 21:22:28 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/812-5-o-dea-avenue-zetland-nsw-2017-17676565
+2025-07-27 21:22:29 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/812-5-o-dea-avenue-zetland-nsw-2017-17676565 NOT found via any XPaths.
+2025-07-27 21:22:29 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17676565 for URL: https://www.domain.com.au/812-5-o-dea-avenue-zetland-nsw-2017-17676565
+2025-07-27 21:22:30 - domain_crawler_v2 - INFO - 处理第5/20个房源: https://www.domain.com.au/301-1-lamond-lane-zetland-nsw-2017-11155847
+2025-07-27 21:22:30 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/301-1-lamond-lane-zetland-nsw-2017-11155847
+2025-07-27 21:22:31 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/301-1-lamond-lane-zetland-nsw-2017-11155847 NOT found via any XPaths.
+2025-07-27 21:22:31 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=11155847 for URL: https://www.domain.com.au/301-1-lamond-lane-zetland-nsw-2017-11155847
+2025-07-27 21:22:33 - domain_crawler_v2 - INFO - 处理第6/20个房源: https://www.domain.com.au/626-2b-defries-avenue-zetland-nsw-2017-17685055
+2025-07-27 21:22:33 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/626-2b-defries-avenue-zetland-nsw-2017-17685055
+2025-07-27 21:22:33 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/626-2b-defries-avenue-zetland-nsw-2017-17685055 NOT found via any XPaths.
+2025-07-27 21:22:33 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17685055 for URL: https://www.domain.com.au/626-2b-defries-avenue-zetland-nsw-2017-17685055
+2025-07-27 21:22:34 - domain_crawler_v2 - INFO - 处理第7/20个房源: https://www.domain.com.au/74-2-levy-walk-zetland-nsw-2017-17653446
+2025-07-27 21:22:34 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/74-2-levy-walk-zetland-nsw-2017-17653446
+2025-07-27 21:22:35 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/74-2-levy-walk-zetland-nsw-2017-17653446 NOT found via any XPaths.
+2025-07-27 21:22:35 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17653446 for URL: https://www.domain.com.au/74-2-levy-walk-zetland-nsw-2017-17653446
+2025-07-27 21:22:35 - domain_crawler_v2 - INFO - 处理第8/20个房源: https://www.domain.com.au/424-5-defries-avenue-zetland-nsw-2017-15658404
+2025-07-27 21:22:35 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/424-5-defries-avenue-zetland-nsw-2017-15658404
+2025-07-27 21:22:36 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/424-5-defries-avenue-zetland-nsw-2017-15658404: https://api.snug.com/v1/partner/handoff/team/33408/listing/42c5b3fc-9221-47ec-80b0-038e8816d89e/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F424-5-defries-avenue-zetland-nsw-2017-15658404&add_unitnum=424&add_streetnum=5&add_streetname=Defries&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:22:36 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=15658404 for URL: https://www.domain.com.au/424-5-defries-avenue-zetland-nsw-2017-15658404
+2025-07-27 21:22:37 - domain_crawler_v2 - INFO - 处理第9/20个房源: https://www.domain.com.au/106-6-paul-street-zetland-nsw-2017-17601529
+2025-07-27 21:22:37 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/106-6-paul-street-zetland-nsw-2017-17601529
+2025-07-27 21:22:38 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/106-6-paul-street-zetland-nsw-2017-17601529: https://api.snug.com/v1/partner/handoff/team/28270/listing/R2-4583687/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F106-6-paul-street-zetland-nsw-2017-17601529&add_unitnum=106&add_streetnum=6&add_streetname=Paul&add_streettype=Street&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:22:38 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17601529 for URL: https://www.domain.com.au/106-6-paul-street-zetland-nsw-2017-17601529
+2025-07-27 21:22:39 - domain_crawler_v2 - INFO - 处理第10/20个房源: https://www.domain.com.au/409-5-o-dea-avenue-zetland-nsw-2017-17665785
+2025-07-27 21:22:39 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/409-5-o-dea-avenue-zetland-nsw-2017-17665785
+2025-07-27 21:22:39 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/409-5-o-dea-avenue-zetland-nsw-2017-17665785: https://api.snug.com/v1/partner/handoff/team/35423/listing/R3945056/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F409-5-o-dea-avenue-zetland-nsw-2017-17665785&add_unitnum=409&add_streetnum=5&add_streetname=O%27Dea&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:22:39 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17665785 for URL: https://www.domain.com.au/409-5-o-dea-avenue-zetland-nsw-2017-17665785
+2025-07-27 21:22:41 - domain_crawler_v2 - INFO - 处理第11/20个房源: https://www.domain.com.au/63-2-hutchinson-walk-zetland-nsw-2017-17657226
+2025-07-27 21:22:41 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/63-2-hutchinson-walk-zetland-nsw-2017-17657226
+2025-07-27 21:22:41 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/63-2-hutchinson-walk-zetland-nsw-2017-17657226: https://www.2apply.com.au/domain/3845/17657226?address=63%2F2%20Hutchinson%20Walk%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:22:41 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17657226 for URL: https://www.domain.com.au/63-2-hutchinson-walk-zetland-nsw-2017-17657226
+2025-07-27 21:22:43 - domain_crawler_v2 - INFO - 处理第12/20个房源: https://www.domain.com.au/232-11-victoria-park-parade-zetland-nsw-2017-15888557
+2025-07-27 21:22:43 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/232-11-victoria-park-parade-zetland-nsw-2017-15888557
+2025-07-27 21:22:43 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/232-11-victoria-park-parade-zetland-nsw-2017-15888557: https://www.2apply.com.au/domain/19183/15888557?address=232%2F11%20Victoria%20Park%20Parade%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:22:43 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=15888557 for URL: https://www.domain.com.au/232-11-victoria-park-parade-zetland-nsw-2017-15888557
+2025-07-27 21:22:44 - domain_crawler_v2 - INFO - 处理第13/20个房源: https://www.domain.com.au/1102-10-zetland-ave-zetland-nsw-2017-17665858
+2025-07-27 21:22:44 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1102-10-zetland-ave-zetland-nsw-2017-17665858
+2025-07-27 21:22:45 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/1102-10-zetland-ave-zetland-nsw-2017-17665858 NOT found via any XPaths.
+2025-07-27 21:22:45 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17665858 for URL: https://www.domain.com.au/1102-10-zetland-ave-zetland-nsw-2017-17665858
+2025-07-27 21:22:47 - domain_crawler_v2 - INFO - 处理第14/20个房源: https://www.domain.com.au/2c-92-epsom-road-zetland-nsw-2017-17517495
+2025-07-27 21:22:47 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/2c-92-epsom-road-zetland-nsw-2017-17517495
+2025-07-27 21:22:47 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/2c-92-epsom-road-zetland-nsw-2017-17517495: https://www.2apply.com.au/domain/35203/17517495?address=2C%2F92%20Epsom%20Road%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:22:47 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17517495 for URL: https://www.domain.com.au/2c-92-epsom-road-zetland-nsw-2017-17517495
+2025-07-27 21:22:49 - domain_crawler_v2 - INFO - 处理第15/20个房源: https://www.domain.com.au/696-12-peters-street-zetland-nsw-2017-17686686
+2025-07-27 21:22:49 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/696-12-peters-street-zetland-nsw-2017-17686686
+2025-07-27 21:22:50 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/696-12-peters-street-zetland-nsw-2017-17686686 NOT found via any XPaths.
+2025-07-27 21:22:50 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17686686 for URL: https://www.domain.com.au/696-12-peters-street-zetland-nsw-2017-17686686
+2025-07-27 21:22:51 - domain_crawler_v2 - INFO - 处理第16/20个房源: https://www.domain.com.au/944-12-victoria-park-parade-zetland-nsw-2017-17682943
+2025-07-27 21:22:51 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/944-12-victoria-park-parade-zetland-nsw-2017-17682943
+2025-07-27 21:22:51 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/944-12-victoria-park-parade-zetland-nsw-2017-17682943: https://api.snug.com/v1/partner/handoff/team/5472/listing/1P7898/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F944-12-victoria-park-parade-zetland-nsw-2017-17682943&add_unitnum=944&add_streetnum=12&add_streetname=Victoria%20Park&add_streettype=Parade&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:22:51 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17682943 for URL: https://www.domain.com.au/944-12-victoria-park-parade-zetland-nsw-2017-17682943
+2025-07-27 21:22:53 - domain_crawler_v2 - INFO - 处理第17/20个房源: https://www.domain.com.au/315-19-grandstand-parade-zetland-nsw-2017-16540867
+2025-07-27 21:22:53 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/315-19-grandstand-parade-zetland-nsw-2017-16540867
+2025-07-27 21:22:53 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/315-19-grandstand-parade-zetland-nsw-2017-16540867 NOT found via any XPaths.
+2025-07-27 21:22:53 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16540867 for URL: https://www.domain.com.au/315-19-grandstand-parade-zetland-nsw-2017-16540867
+2025-07-27 21:22:55 - domain_crawler_v2 - INFO - 处理第18/20个房源: https://www.domain.com.au/1403-3-george-julius-avenue-zetland-nsw-2017-17627702
+2025-07-27 21:22:55 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1403-3-george-julius-avenue-zetland-nsw-2017-17627702
+2025-07-27 21:22:56 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/1403-3-george-julius-avenue-zetland-nsw-2017-17627702 NOT found via any XPaths.
+2025-07-27 21:22:56 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17627702 for URL: https://www.domain.com.au/1403-3-george-julius-avenue-zetland-nsw-2017-17627702
+2025-07-27 21:22:57 - domain_crawler_v2 - INFO - 处理第19/20个房源: https://www.domain.com.au/101-3-george-julius-avenue-zetland-nsw-2017-17679678
+2025-07-27 21:22:57 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/101-3-george-julius-avenue-zetland-nsw-2017-17679678
+2025-07-27 21:22:58 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/101-3-george-julius-avenue-zetland-nsw-2017-17679678 NOT found via any XPaths.
+2025-07-27 21:22:58 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17679678 for URL: https://www.domain.com.au/101-3-george-julius-avenue-zetland-nsw-2017-17679678
+2025-07-27 21:22:59 - domain_crawler_v2 - INFO - 处理第20/20个房源: https://www.domain.com.au/307-13-joynton-avenue-zetland-nsw-2017-15904945
+2025-07-27 21:22:59 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/307-13-joynton-avenue-zetland-nsw-2017-15904945
+2025-07-27 21:23:00 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/307-13-joynton-avenue-zetland-nsw-2017-15904945: https://www.2apply.com.au/domain/19183/15904945?address=307%2F13%20Joynton%20Avenue%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:23:00 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=15904945 for URL: https://www.domain.com.au/307-13-joynton-avenue-zetland-nsw-2017-15904945
+2025-07-27 21:23:01 - domain_crawler_v2 - INFO - 本页成功处理20/20个房源
+2025-07-27 21:23:01 - domain_crawler_v2 - DEBUG - 保存进度到 progress.json: URL=https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc, 页码=5
+2025-07-27 21:23:01 - domain_crawler_v2 - INFO - 完成第4页处理
+2025-07-27 21:23:04 - domain_crawler_v2 - INFO - 正在抓取第5页: https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc&page=5
+2025-07-27 21:23:04 - domain_crawler_v2 - INFO - 第5页找到20个房源
+2025-07-27 21:23:04 - domain_crawler_v2 - INFO - 处理第1/20个房源: https://www.domain.com.au/209-1-george-julius-avenue-zetland-nsw-2017-17679441
+2025-07-27 21:23:04 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/209-1-george-julius-avenue-zetland-nsw-2017-17679441
+2025-07-27 21:23:06 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/209-1-george-julius-avenue-zetland-nsw-2017-17679441 NOT found via any XPaths.
+2025-07-27 21:23:06 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17679441 for URL: https://www.domain.com.au/209-1-george-julius-avenue-zetland-nsw-2017-17679441
+2025-07-27 21:23:07 - domain_crawler_v2 - INFO - 处理第2/20个房源: https://www.domain.com.au/307-17-joynton-avenue-zetland-nsw-2017-16102814
+2025-07-27 21:23:07 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/307-17-joynton-avenue-zetland-nsw-2017-16102814
+2025-07-27 21:23:07 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/307-17-joynton-avenue-zetland-nsw-2017-16102814: https://api.snug.com/v1/partner/handoff/team/27069/listing/R2905473/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F307-17-joynton-avenue-zetland-nsw-2017-16102814&add_unitnum=307&add_streetnum=17&add_streetname=Joynton&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:23:07 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16102814 for URL: https://www.domain.com.au/307-17-joynton-avenue-zetland-nsw-2017-16102814
+2025-07-27 21:23:09 - domain_crawler_v2 - INFO - 处理第3/20个房源: https://www.domain.com.au/unit-233-20-george-julies-avenue-zetland-nsw-2017-17094752
+2025-07-27 21:23:09 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/unit-233-20-george-julies-avenue-zetland-nsw-2017-17094752
+2025-07-27 21:23:12 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/unit-233-20-george-julies-avenue-zetland-nsw-2017-17094752 NOT found via any XPaths.
+2025-07-27 21:23:12 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17094752 for URL: https://www.domain.com.au/unit-233-20-george-julies-avenue-zetland-nsw-2017-17094752
+2025-07-27 21:23:14 - domain_crawler_v2 - INFO - 处理第4/20个房源: https://www.domain.com.au/2210-6-kingsborough-way-zetland-nsw-2017-17081060
+2025-07-27 21:23:14 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/2210-6-kingsborough-way-zetland-nsw-2017-17081060
+2025-07-27 21:23:14 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/2210-6-kingsborough-way-zetland-nsw-2017-17081060 NOT found via any XPaths.
+2025-07-27 21:23:14 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17081060 for URL: https://www.domain.com.au/2210-6-kingsborough-way-zetland-nsw-2017-17081060
+2025-07-27 21:23:15 - domain_crawler_v2 - INFO - 处理第5/20个房源: https://www.domain.com.au/a106-110-epsom-road-zetland-nsw-2017-17365688
+2025-07-27 21:23:15 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/a106-110-epsom-road-zetland-nsw-2017-17365688
+2025-07-27 21:23:16 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/a106-110-epsom-road-zetland-nsw-2017-17365688: https://api.snug.com/v1/partner/handoff/team/35142/listing/6189374/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Fa106-110-epsom-road-zetland-nsw-2017-17365688&add_unitnum=A106&add_streetnum=110&add_streetname=Epsom&add_streettype=Road&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:23:16 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17365688 for URL: https://www.domain.com.au/a106-110-epsom-road-zetland-nsw-2017-17365688
+2025-07-27 21:23:17 - domain_crawler_v2 - INFO - 处理第6/20个房源: https://www.domain.com.au/501-132-epsom-road-zetland-nsw-2017-17651347
+2025-07-27 21:23:17 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/501-132-epsom-road-zetland-nsw-2017-17651347
+2025-07-27 21:23:18 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/501-132-epsom-road-zetland-nsw-2017-17651347 NOT found via any XPaths.
+2025-07-27 21:23:18 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17651347 for URL: https://www.domain.com.au/501-132-epsom-road-zetland-nsw-2017-17651347
+2025-07-27 21:23:19 - domain_crawler_v2 - INFO - 处理第7/20个房源: https://www.domain.com.au/942-12-victoria-park-parade-zetland-nsw-2017-17607401
+2025-07-27 21:23:19 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/942-12-victoria-park-parade-zetland-nsw-2017-17607401
+2025-07-27 21:23:19 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/942-12-victoria-park-parade-zetland-nsw-2017-17607401 NOT found via any XPaths.
+2025-07-27 21:23:19 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17607401 for URL: https://www.domain.com.au/942-12-victoria-park-parade-zetland-nsw-2017-17607401
+2025-07-27 21:23:21 - domain_crawler_v2 - INFO - 处理第8/20个房源: https://www.domain.com.au/327-7-joynton-avenue-zetland-nsw-2017-17655371
+2025-07-27 21:23:21 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/327-7-joynton-avenue-zetland-nsw-2017-17655371
+2025-07-27 21:23:22 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/327-7-joynton-avenue-zetland-nsw-2017-17655371: https://www.2apply.com.au/domain/35203/17655371?address=327%2F7%20JOYNTON%20AVENUE%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:23:22 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17655371 for URL: https://www.domain.com.au/327-7-joynton-avenue-zetland-nsw-2017-17655371
+2025-07-27 21:23:23 - domain_crawler_v2 - INFO - 处理第9/20个房源: https://www.domain.com.au/533-8-victoria-park-parade-zetland-nsw-2017-17681408
+2025-07-27 21:23:23 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/533-8-victoria-park-parade-zetland-nsw-2017-17681408
+2025-07-27 21:23:24 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/533-8-victoria-park-parade-zetland-nsw-2017-17681408: https://api.snug.com/v1/partner/handoff/team/4649/listing/2728694/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F533-8-victoria-park-parade-zetland-nsw-2017-17681408&add_unitnum=533&add_streetnum=8&add_streetname=Victoria%20Park&add_streettype=Parade&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:23:24 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17681408 for URL: https://www.domain.com.au/533-8-victoria-park-parade-zetland-nsw-2017-17681408
+2025-07-27 21:23:25 - domain_crawler_v2 - INFO - 处理第10/20个房源: https://www.domain.com.au/6-ebsworth-street-zetland-nsw-2017-17677570
+2025-07-27 21:23:25 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/6-ebsworth-street-zetland-nsw-2017-17677570
+2025-07-27 21:23:26 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/6-ebsworth-street-zetland-nsw-2017-17677570: https://api.snug.com/v1/partner/handoff/team/32220/listing/R2-4664638/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F6-ebsworth-street-zetland-nsw-2017-17677570&add_streetnum=6&add_streetname=Ebsworth&add_streettype=Street&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:23:26 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17677570 for URL: https://www.domain.com.au/6-ebsworth-street-zetland-nsw-2017-17677570
+2025-07-27 21:23:28 - domain_crawler_v2 - INFO - 处理第11/20个房源: https://www.domain.com.au/wechat-krl119-l2-5-odea-ave-zetland-nsw-2017-17643283
+2025-07-27 21:23:28 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/wechat-krl119-l2-5-odea-ave-zetland-nsw-2017-17643283
+2025-07-27 21:23:28 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/wechat-krl119-l2-5-odea-ave-zetland-nsw-2017-17643283 NOT found via any XPaths.
+2025-07-27 21:23:28 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17643283 for URL: https://www.domain.com.au/wechat-krl119-l2-5-odea-ave-zetland-nsw-2017-17643283
+2025-07-27 21:23:29 - domain_crawler_v2 - INFO - 处理第12/20个房源: https://www.domain.com.au/202-25-geddes-avenue-zetland-nsw-2017-17648812
+2025-07-27 21:23:29 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/202-25-geddes-avenue-zetland-nsw-2017-17648812
+2025-07-27 21:23:29 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/202-25-geddes-avenue-zetland-nsw-2017-17648812: https://api.snug.com/v1/partner/handoff/team/36128/listing/6660344/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F202-25-geddes-avenue-zetland-nsw-2017-17648812&add_unitnum=202&add_streetnum=25&add_streetname=Geddes&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:23:29 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17648812 for URL: https://www.domain.com.au/202-25-geddes-avenue-zetland-nsw-2017-17648812
+2025-07-27 21:23:31 - domain_crawler_v2 - INFO - 处理第13/20个房源: https://www.domain.com.au/818-17-joynton-ave-zetland-nsw-2017-15164065
+2025-07-27 21:23:31 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/818-17-joynton-ave-zetland-nsw-2017-15164065
+2025-07-27 21:23:31 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/818-17-joynton-ave-zetland-nsw-2017-15164065 NOT found via any XPaths.
+2025-07-27 21:23:31 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=15164065 for URL: https://www.domain.com.au/818-17-joynton-ave-zetland-nsw-2017-15164065
+2025-07-27 21:23:33 - domain_crawler_v2 - INFO - 处理第14/20个房源: https://www.domain.com.au/803-2-defries-avenue-zetland-nsw-2017-17664739
+2025-07-27 21:23:33 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/803-2-defries-avenue-zetland-nsw-2017-17664739
+2025-07-27 21:23:33 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/803-2-defries-avenue-zetland-nsw-2017-17664739 NOT found via any XPaths.
+2025-07-27 21:23:33 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17664739 for URL: https://www.domain.com.au/803-2-defries-avenue-zetland-nsw-2017-17664739
+2025-07-27 21:23:35 - domain_crawler_v2 - INFO - 处理第15/20个房源: https://www.domain.com.au/1502-3-george-julius-avenue-zetland-nsw-2017-17663502
+2025-07-27 21:23:35 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1502-3-george-julius-avenue-zetland-nsw-2017-17663502
+2025-07-27 21:23:35 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1502-3-george-julius-avenue-zetland-nsw-2017-17663502: https://api.snug.com/v1/partner/handoff/team/29293/listing/2722866/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F1502-3-george-julius-avenue-zetland-nsw-2017-17663502&add_unitnum=1502&add_streetnum=3&add_streetname=George%20Julius&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:23:35 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17663502 for URL: https://www.domain.com.au/1502-3-george-julius-avenue-zetland-nsw-2017-17663502
+2025-07-27 21:23:36 - domain_crawler_v2 - INFO - 处理第16/20个房源: https://www.domain.com.au/320-17-grandstand-parade-zetland-nsw-2017-17597053
+2025-07-27 21:23:36 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/320-17-grandstand-parade-zetland-nsw-2017-17597053
+2025-07-27 21:23:37 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/320-17-grandstand-parade-zetland-nsw-2017-17597053 NOT found via any XPaths.
+2025-07-27 21:23:37 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17597053 for URL: https://www.domain.com.au/320-17-grandstand-parade-zetland-nsw-2017-17597053
+2025-07-27 21:23:38 - domain_crawler_v2 - INFO - 处理第17/20个房源: https://www.domain.com.au/b643-7-letitia-st-zetland-nsw-2017-17153177
+2025-07-27 21:23:38 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/b643-7-letitia-st-zetland-nsw-2017-17153177
+2025-07-27 21:23:39 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/b643-7-letitia-st-zetland-nsw-2017-17153177 NOT found via any XPaths.
+2025-07-27 21:23:39 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17153177 for URL: https://www.domain.com.au/b643-7-letitia-st-zetland-nsw-2017-17153177
+2025-07-27 21:23:40 - domain_crawler_v2 - INFO - 处理第18/20个房源: https://www.domain.com.au/974-2-cooper-place-zetland-nsw-2017-17678689
+2025-07-27 21:23:40 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/974-2-cooper-place-zetland-nsw-2017-17678689
+2025-07-27 21:23:41 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/974-2-cooper-place-zetland-nsw-2017-17678689: https://api.snug.com/v1/partner/handoff/team/17118/listing/R3950545/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F974-2-cooper-place-zetland-nsw-2017-17678689&add_unitnum=974&add_streetnum=2&add_streetname=Cooper&add_streettype=Place&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:23:41 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17678689 for URL: https://www.domain.com.au/974-2-cooper-place-zetland-nsw-2017-17678689
+2025-07-27 21:23:43 - domain_crawler_v2 - INFO - 处理第19/20个房源: https://www.domain.com.au/110-13-joynton-avenue-zetland-nsw-2017-17666317
+2025-07-27 21:23:43 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/110-13-joynton-avenue-zetland-nsw-2017-17666317
+2025-07-27 21:23:43 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/110-13-joynton-avenue-zetland-nsw-2017-17666317 NOT found via any XPaths.
+2025-07-27 21:23:43 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17666317 for URL: https://www.domain.com.au/110-13-joynton-avenue-zetland-nsw-2017-17666317
+2025-07-27 21:23:45 - domain_crawler_v2 - INFO - 处理第20/20个房源: https://www.domain.com.au/613-13-joynton-avenue-zetland-nsw-2017-16469428
+2025-07-27 21:23:45 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/613-13-joynton-avenue-zetland-nsw-2017-16469428
+2025-07-27 21:23:45 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/613-13-joynton-avenue-zetland-nsw-2017-16469428 NOT found via any XPaths.
+2025-07-27 21:23:45 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16469428 for URL: https://www.domain.com.au/613-13-joynton-avenue-zetland-nsw-2017-16469428
+2025-07-27 21:23:47 - domain_crawler_v2 - INFO - 本页成功处理20/20个房源
+2025-07-27 21:23:47 - domain_crawler_v2 - DEBUG - 保存进度到 progress.json: URL=https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc, 页码=6
+2025-07-27 21:23:47 - domain_crawler_v2 - INFO - 执行内存回收
+2025-07-27 21:23:47 - domain_crawler_v2 - INFO - 完成第5页处理
+2025-07-27 21:23:49 - domain_crawler_v2 - INFO - 正在抓取第6页: https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc&page=6
+2025-07-27 21:23:50 - domain_crawler_v2 - INFO - 第6页找到20个房源
+2025-07-27 21:23:50 - domain_crawler_v2 - INFO - 处理第1/20个房源: https://www.domain.com.au/3508-5-gadigal-avenue-zetland-nsw-2017-16584937
+2025-07-27 21:23:50 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/3508-5-gadigal-avenue-zetland-nsw-2017-16584937
+2025-07-27 21:23:51 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/3508-5-gadigal-avenue-zetland-nsw-2017-16584937: https://api.snug.com/v1/partner/handoff/team/33408/listing/eb7a02be-c432-439d-b33e-3e54cb9421f7/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F3508-5-gadigal-avenue-zetland-nsw-2017-16584937&add_unitnum=3508&add_streetnum=5&add_streetname=Gadigal&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:23:51 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16584937 for URL: https://www.domain.com.au/3508-5-gadigal-avenue-zetland-nsw-2017-16584937
+2025-07-27 21:23:53 - domain_crawler_v2 - INFO - 处理第2/20个房源: https://www.domain.com.au/1526-8-kingsborough-way-zetland-nsw-2017-17675684
+2025-07-27 21:23:53 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1526-8-kingsborough-way-zetland-nsw-2017-17675684
+2025-07-27 21:23:53 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/1526-8-kingsborough-way-zetland-nsw-2017-17675684 NOT found via any XPaths.
+2025-07-27 21:23:53 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17675684 for URL: https://www.domain.com.au/1526-8-kingsborough-way-zetland-nsw-2017-17675684
+2025-07-27 21:23:55 - domain_crawler_v2 - INFO - 处理第3/20个房源: https://www.domain.com.au/2c-96-epsom-rd-zetland-nsw-2017-17193186
+2025-07-27 21:23:55 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/2c-96-epsom-rd-zetland-nsw-2017-17193186
+2025-07-27 21:23:55 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/2c-96-epsom-rd-zetland-nsw-2017-17193186: https://www.2apply.com.au/domain/35203/17193186?address=2C%2096%20Epsom%20Rd%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:23:55 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17193186 for URL: https://www.domain.com.au/2c-96-epsom-rd-zetland-nsw-2017-17193186
+2025-07-27 21:23:56 - domain_crawler_v2 - INFO - 处理第4/20个房源: https://www.domain.com.au/2703-6-kingsborough-way-zetland-nsw-2017-16530320
+2025-07-27 21:23:56 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/2703-6-kingsborough-way-zetland-nsw-2017-16530320
+2025-07-27 21:23:57 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/2703-6-kingsborough-way-zetland-nsw-2017-16530320: https://api.snug.com/v1/partner/handoff/team/27069/listing/R3121607/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F2703-6-kingsborough-way-zetland-nsw-2017-16530320&add_unitnum=2703&add_streetnum=6&add_streetname=Kingsborough&add_streettype=Way&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:23:57 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16530320 for URL: https://www.domain.com.au/2703-6-kingsborough-way-zetland-nsw-2017-16530320
+2025-07-27 21:23:58 - domain_crawler_v2 - INFO - 处理第5/20个房源: https://www.domain.com.au/2413-6-kingsborough-way-zetland-nsw-2017-17655045
+2025-07-27 21:23:58 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/2413-6-kingsborough-way-zetland-nsw-2017-17655045
+2025-07-27 21:23:58 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/2413-6-kingsborough-way-zetland-nsw-2017-17655045: https://api.snug.com/v1/partner/handoff/team/28270/listing/R2-4637916/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F2413-6-kingsborough-way-zetland-nsw-2017-17655045&add_unitnum=2413&add_streetnum=6&add_streetname=Kingsborough&add_streettype=Way&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:23:58 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17655045 for URL: https://www.domain.com.au/2413-6-kingsborough-way-zetland-nsw-2017-17655045
+2025-07-27 21:24:00 - domain_crawler_v2 - INFO - 处理第6/20个房源: https://www.domain.com.au/c709-12-paul-street-zetland-nsw-2017-17679862
+2025-07-27 21:24:00 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/c709-12-paul-street-zetland-nsw-2017-17679862
+2025-07-27 21:24:01 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/c709-12-paul-street-zetland-nsw-2017-17679862 NOT found via any XPaths.
+2025-07-27 21:24:01 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17679862 for URL: https://www.domain.com.au/c709-12-paul-street-zetland-nsw-2017-17679862
+2025-07-27 21:24:02 - domain_crawler_v2 - INFO - 处理第7/20个房源: https://www.domain.com.au/412-5-o-dea-ave-zetland-nsw-2017-17685671
+2025-07-27 21:24:02 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/412-5-o-dea-ave-zetland-nsw-2017-17685671
+2025-07-27 21:24:03 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/412-5-o-dea-ave-zetland-nsw-2017-17685671: https://api.snug.com/v1/partner/handoff/team/17118/listing/R3953028/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F412-5-o-dea-ave-zetland-nsw-2017-17685671&add_unitnum=412&add_streetnum=5&add_streetname=O%27Dea&add_streettype=Ave&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:24:03 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17685671 for URL: https://www.domain.com.au/412-5-o-dea-ave-zetland-nsw-2017-17685671
+2025-07-27 21:24:04 - domain_crawler_v2 - INFO - 处理第8/20个房源: https://www.domain.com.au/2c-33-george-julius-ave-zetland-nsw-2017-17149776
+2025-07-27 21:24:04 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/2c-33-george-julius-ave-zetland-nsw-2017-17149776
+2025-07-27 21:24:05 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/2c-33-george-julius-ave-zetland-nsw-2017-17149776: https://www.2apply.com.au/domain/35203/17149776?address=2C%2F33%20George%20Julius%20Ave%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:24:05 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17149776 for URL: https://www.domain.com.au/2c-33-george-julius-ave-zetland-nsw-2017-17149776
+2025-07-27 21:24:06 - domain_crawler_v2 - INFO - 处理第9/20个房源: https://www.domain.com.au/910-110-epsom-road-zetland-nsw-2017-17668811
+2025-07-27 21:24:06 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/910-110-epsom-road-zetland-nsw-2017-17668811
+2025-07-27 21:24:06 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/910-110-epsom-road-zetland-nsw-2017-17668811 NOT found via any XPaths.
+2025-07-27 21:24:06 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17668811 for URL: https://www.domain.com.au/910-110-epsom-road-zetland-nsw-2017-17668811
+2025-07-27 21:24:08 - domain_crawler_v2 - INFO - 处理第10/20个房源: https://www.domain.com.au/506-20-gadigal-avenue-zetland-nsw-2017-17687149
+2025-07-27 21:24:08 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/506-20-gadigal-avenue-zetland-nsw-2017-17687149
+2025-07-27 21:24:08 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/506-20-gadigal-avenue-zetland-nsw-2017-17687149: https://api.snug.com/v1/partner/handoff/team/28270/listing/R2-4671154/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F506-20-gadigal-avenue-zetland-nsw-2017-17687149&add_unitnum=506&add_streetnum=20&add_streetname=Gadigal&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:24:08 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17687149 for URL: https://www.domain.com.au/506-20-gadigal-avenue-zetland-nsw-2017-17687149
+2025-07-27 21:24:10 - domain_crawler_v2 - INFO - 处理第11/20个房源: https://www.domain.com.au/5-joynton-ave-zetland-nsw-2017-17617932
+2025-07-27 21:24:10 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/5-joynton-ave-zetland-nsw-2017-17617932
+2025-07-27 21:24:10 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/5-joynton-ave-zetland-nsw-2017-17617932 NOT found via any XPaths.
+2025-07-27 21:24:10 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17617932 for URL: https://www.domain.com.au/5-joynton-ave-zetland-nsw-2017-17617932
+2025-07-27 21:24:12 - domain_crawler_v2 - INFO - 处理第12/20个房源: https://www.domain.com.au/1102-8-kingsborough-way-zetland-nsw-2017-17683263
+2025-07-27 21:24:12 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1102-8-kingsborough-way-zetland-nsw-2017-17683263
+2025-07-27 21:24:12 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1102-8-kingsborough-way-zetland-nsw-2017-17683263: https://www.2apply.com.au/domain/19183/17683263?address=1102%2F8%20Kingsborough%20Way%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:24:12 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17683263 for URL: https://www.domain.com.au/1102-8-kingsborough-way-zetland-nsw-2017-17683263
+2025-07-27 21:24:13 - domain_crawler_v2 - INFO - 处理第13/20个房源: https://www.domain.com.au/a713-301-303-botany-road-zetland-nsw-2017-17669231
+2025-07-27 21:24:13 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/a713-301-303-botany-road-zetland-nsw-2017-17669231
+2025-07-27 21:24:13 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/a713-301-303-botany-road-zetland-nsw-2017-17669231 NOT found via any XPaths.
+2025-07-27 21:24:13 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17669231 for URL: https://www.domain.com.au/a713-301-303-botany-road-zetland-nsw-2017-17669231
+2025-07-27 21:24:16 - domain_crawler_v2 - INFO - 处理第14/20个房源: https://www.domain.com.au/1205-5-joynton-avenue-zetland-nsw-2017-17672287
+2025-07-27 21:24:16 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1205-5-joynton-avenue-zetland-nsw-2017-17672287
+2025-07-27 21:24:16 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1205-5-joynton-avenue-zetland-nsw-2017-17672287: https://api.snug.com/v1/partner/handoff/team/12027/listing/6693489/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F1205-5-joynton-avenue-zetland-nsw-2017-17672287&add_unitnum=1205&add_streetnum=5&add_streetname=JOYNTON&add_streettype=AVENUE&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:24:16 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17672287 for URL: https://www.domain.com.au/1205-5-joynton-avenue-zetland-nsw-2017-17672287
+2025-07-27 21:24:18 - domain_crawler_v2 - INFO - 处理第15/20个房源: https://www.domain.com.au/821-17-joynton-avenue-zetland-nsw-2017-17683514
+2025-07-27 21:24:18 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/821-17-joynton-avenue-zetland-nsw-2017-17683514
+2025-07-27 21:24:18 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/821-17-joynton-avenue-zetland-nsw-2017-17683514: https://api.snug.com/v1/partner/handoff/team/28976/listing/1P2580/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F821-17-joynton-avenue-zetland-nsw-2017-17683514&add_unitnum=821&add_streetnum=17&add_streetname=Joynton&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:24:18 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17683514 for URL: https://www.domain.com.au/821-17-joynton-avenue-zetland-nsw-2017-17683514
+2025-07-27 21:24:20 - domain_crawler_v2 - INFO - 处理第16/20个房源: https://www.domain.com.au/level-9-1905-8-kingsborough-way-zetland-nsw-2017-17373171
+2025-07-27 21:24:20 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/level-9-1905-8-kingsborough-way-zetland-nsw-2017-17373171
+2025-07-27 21:24:20 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/level-9-1905-8-kingsborough-way-zetland-nsw-2017-17373171: https://api.snug.com/v1/partner/handoff/team/34682/listing/1P0478/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Flevel-9-1905-8-kingsborough-way-zetland-nsw-2017-17373171&add_unitnum=Level%209%2C%201905&add_streetnum=8&add_streetname=Kingsborough&add_streettype=Way&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:24:20 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17373171 for URL: https://www.domain.com.au/level-9-1905-8-kingsborough-way-zetland-nsw-2017-17373171
+2025-07-27 21:24:22 - domain_crawler_v2 - INFO - 处理第17/20个房源: https://www.domain.com.au/1501-3-george-julius-avenue-zetland-nsw-2017-17641913
+2025-07-27 21:24:22 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1501-3-george-julius-avenue-zetland-nsw-2017-17641913
+2025-07-27 21:24:23 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/1501-3-george-julius-avenue-zetland-nsw-2017-17641913 NOT found via any XPaths.
+2025-07-27 21:24:23 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17641913 for URL: https://www.domain.com.au/1501-3-george-julius-avenue-zetland-nsw-2017-17641913
+2025-07-27 21:24:24 - domain_crawler_v2 - INFO - 处理第18/20个房源: https://www.domain.com.au/711-12-paul-street-zetland-nsw-2017-17669809
+2025-07-27 21:24:24 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/711-12-paul-street-zetland-nsw-2017-17669809
+2025-07-27 21:24:24 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/711-12-paul-street-zetland-nsw-2017-17669809: https://api.snug.com/v1/partner/handoff/team/20407/listing/1P3444/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F711-12-paul-street-zetland-nsw-2017-17669809&add_unitnum=711&add_streetnum=12&add_streetname=Paul&add_streettype=Street&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:24:24 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17669809 for URL: https://www.domain.com.au/711-12-paul-street-zetland-nsw-2017-17669809
+2025-07-27 21:24:26 - domain_crawler_v2 - INFO - 处理第19/20个房源: https://www.domain.com.au/a706-25-geddes-avenue-zetland-nsw-2017-15973973
+2025-07-27 21:24:26 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/a706-25-geddes-avenue-zetland-nsw-2017-15973973
+2025-07-27 21:24:26 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/a706-25-geddes-avenue-zetland-nsw-2017-15973973: https://api.snug.com/v1/partner/handoff/team/33408/listing/dac8133a-8515-4924-ad1c-6c56b3f34c8c/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Fa706-25-geddes-avenue-zetland-nsw-2017-15973973&add_unitnum=A706&add_streetnum=25&add_streetname=Geddes&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:24:26 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=15973973 for URL: https://www.domain.com.au/a706-25-geddes-avenue-zetland-nsw-2017-15973973
+2025-07-27 21:24:28 - domain_crawler_v2 - INFO - 处理第20/20个房源: https://www.domain.com.au/405-6-paul-street-zetland-nsw-2017-16584847
+2025-07-27 21:24:28 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/405-6-paul-street-zetland-nsw-2017-16584847
+2025-07-27 21:24:29 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/405-6-paul-street-zetland-nsw-2017-16584847 NOT found via any XPaths.
+2025-07-27 21:24:29 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16584847 for URL: https://www.domain.com.au/405-6-paul-street-zetland-nsw-2017-16584847
+2025-07-27 21:24:30 - domain_crawler_v2 - INFO - 本页成功处理20/20个房源
+2025-07-27 21:24:30 - domain_crawler_v2 - DEBUG - 保存进度到 progress.json: URL=https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc, 页码=7
+2025-07-27 21:24:30 - domain_crawler_v2 - INFO - 完成第6页处理
+2025-07-27 21:24:33 - domain_crawler_v2 - INFO - 正在抓取第7页: https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc&page=7
+2025-07-27 21:24:34 - domain_crawler_v2 - INFO - 第7页找到20个房源
+2025-07-27 21:24:34 - domain_crawler_v2 - INFO - 处理第1/20个房源: https://www.domain.com.au/1702-6-ebsworth-street-zetland-nsw-2017-17203214
+2025-07-27 21:24:34 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1702-6-ebsworth-street-zetland-nsw-2017-17203214
+2025-07-27 21:24:35 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1702-6-ebsworth-street-zetland-nsw-2017-17203214: https://api.snug.com/v1/partner/handoff/team/4649/listing/1P6651/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F1702-6-ebsworth-street-zetland-nsw-2017-17203214&add_unitnum=1702&add_streetnum=6&add_streetname=Ebsworth&add_streettype=Street&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:24:35 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17203214 for URL: https://www.domain.com.au/1702-6-ebsworth-street-zetland-nsw-2017-17203214
+2025-07-27 21:24:37 - domain_crawler_v2 - INFO - 处理第2/20个房源: https://www.domain.com.au/19-grandstand-pde-zetland-nsw-2017-17617057
+2025-07-27 21:24:37 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/19-grandstand-pde-zetland-nsw-2017-17617057
+2025-07-27 21:24:37 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/19-grandstand-pde-zetland-nsw-2017-17617057 NOT found via any XPaths.
+2025-07-27 21:24:37 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17617057 for URL: https://www.domain.com.au/19-grandstand-pde-zetland-nsw-2017-17617057
+2025-07-27 21:24:39 - domain_crawler_v2 - INFO - 处理第3/20个房源: https://www.domain.com.au/618-20-gadigal-avenue-zetland-nsw-2017-17587204
+2025-07-27 21:24:39 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/618-20-gadigal-avenue-zetland-nsw-2017-17587204
+2025-07-27 21:24:39 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/618-20-gadigal-avenue-zetland-nsw-2017-17587204 NOT found via any XPaths.
+2025-07-27 21:24:39 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17587204 for URL: https://www.domain.com.au/618-20-gadigal-avenue-zetland-nsw-2017-17587204
+2025-07-27 21:24:41 - domain_crawler_v2 - INFO - 处理第4/20个房源: https://www.domain.com.au/905-1-link-road-zetland-nsw-2017-17606069
+2025-07-27 21:24:41 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/905-1-link-road-zetland-nsw-2017-17606069
+2025-07-27 21:24:41 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/905-1-link-road-zetland-nsw-2017-17606069 NOT found via any XPaths.
+2025-07-27 21:24:41 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17606069 for URL: https://www.domain.com.au/905-1-link-road-zetland-nsw-2017-17606069
+2025-07-27 21:24:43 - domain_crawler_v2 - INFO - 处理第5/20个房源: https://www.domain.com.au/a2306-2-6-ebsworth-street-zetland-nsw-2017-17669905
+2025-07-27 21:24:43 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/a2306-2-6-ebsworth-street-zetland-nsw-2017-17669905
+2025-07-27 21:24:43 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/a2306-2-6-ebsworth-street-zetland-nsw-2017-17669905: https://api.snug.com/v1/partner/handoff/team/5472/listing/1P7889/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Fa2306-2-6-ebsworth-street-zetland-nsw-2017-17669905&add_unitnum=A2306&add_streetnum=2-6&add_streetname=Ebsworth&add_streettype=Street&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:24:43 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17669905 for URL: https://www.domain.com.au/a2306-2-6-ebsworth-street-zetland-nsw-2017-17669905
+2025-07-27 21:24:45 - domain_crawler_v2 - INFO - 处理第6/20个房源: https://www.domain.com.au/633-11-victoria-park-parade-zetland-nsw-2017-17637327
+2025-07-27 21:24:45 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/633-11-victoria-park-parade-zetland-nsw-2017-17637327
+2025-07-27 21:24:46 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/633-11-victoria-park-parade-zetland-nsw-2017-17637327: https://api.snug.com/v1/partner/handoff/team/28270/listing/R2-4615182/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F633-11-victoria-park-parade-zetland-nsw-2017-17637327&add_unitnum=633&add_streetnum=11&add_streetname=Victoria%20Park&add_streettype=Parade&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:24:46 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17637327 for URL: https://www.domain.com.au/633-11-victoria-park-parade-zetland-nsw-2017-17637327
+2025-07-27 21:24:47 - domain_crawler_v2 - INFO - 处理第7/20个房源: https://www.domain.com.au/1702-6-ebsworth-street-zetland-nsw-2017-17496100
+2025-07-27 21:24:47 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1702-6-ebsworth-street-zetland-nsw-2017-17496100
+2025-07-27 21:24:47 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1702-6-ebsworth-street-zetland-nsw-2017-17496100: https://api.snug.com/v1/partner/handoff/team/4649/listing/2625974/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F1702-6-ebsworth-street-zetland-nsw-2017-17496100&add_unitnum=1702&add_streetnum=6&add_streetname=Ebsworth&add_streettype=Street&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:24:47 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17496100 for URL: https://www.domain.com.au/1702-6-ebsworth-street-zetland-nsw-2017-17496100
+2025-07-27 21:24:48 - domain_crawler_v2 - INFO - 处理第8/20个房源: https://www.domain.com.au/b603-28-ebsworth-st-zetland-nsw-2017-17674032
+2025-07-27 21:24:48 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/b603-28-ebsworth-st-zetland-nsw-2017-17674032
+2025-07-27 21:24:49 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/b603-28-ebsworth-st-zetland-nsw-2017-17674032 NOT found via any XPaths.
+2025-07-27 21:24:49 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17674032 for URL: https://www.domain.com.au/b603-28-ebsworth-st-zetland-nsw-2017-17674032
+2025-07-27 21:24:50 - domain_crawler_v2 - INFO - 处理第9/20个房源: https://www.domain.com.au/3c-14-defries-avenue-zetland-nsw-2017-17324755
+2025-07-27 21:24:50 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/3c-14-defries-avenue-zetland-nsw-2017-17324755
+2025-07-27 21:24:50 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/3c-14-defries-avenue-zetland-nsw-2017-17324755: https://www.2apply.com.au/domain/35110/17324755?address=3C%2F14%20Defries%20Avenue%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:24:50 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17324755 for URL: https://www.domain.com.au/3c-14-defries-avenue-zetland-nsw-2017-17324755
+2025-07-27 21:24:51 - domain_crawler_v2 - INFO - 处理第10/20个房源: https://www.domain.com.au/501-6-paul-street-zetland-nsw-2017-17675364
+2025-07-27 21:24:51 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/501-6-paul-street-zetland-nsw-2017-17675364
+2025-07-27 21:24:52 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/501-6-paul-street-zetland-nsw-2017-17675364 NOT found via any XPaths.
+2025-07-27 21:24:52 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17675364 for URL: https://www.domain.com.au/501-6-paul-street-zetland-nsw-2017-17675364
+2025-07-27 21:24:53 - domain_crawler_v2 - INFO - 处理第11/20个房源: https://www.domain.com.au/3b-2-ascot-ave-zetland-nsw-2017-17103063
+2025-07-27 21:24:53 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/3b-2-ascot-ave-zetland-nsw-2017-17103063
+2025-07-27 21:24:54 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/3b-2-ascot-ave-zetland-nsw-2017-17103063: https://www.2apply.com.au/domain/35203/17103063?address=3B%2F2%20Ascot%20Ave%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:24:54 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17103063 for URL: https://www.domain.com.au/3b-2-ascot-ave-zetland-nsw-2017-17103063
+2025-07-27 21:24:55 - domain_crawler_v2 - INFO - 处理第12/20个房源: https://www.domain.com.au/c105-15-joynton-avenue-zetland-nsw-2017-17668548
+2025-07-27 21:24:55 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/c105-15-joynton-avenue-zetland-nsw-2017-17668548
+2025-07-27 21:24:55 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/c105-15-joynton-avenue-zetland-nsw-2017-17668548 NOT found via any XPaths.
+2025-07-27 21:24:55 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17668548 for URL: https://www.domain.com.au/c105-15-joynton-avenue-zetland-nsw-2017-17668548
+2025-07-27 21:24:58 - domain_crawler_v2 - INFO - 处理第13/20个房源: https://www.domain.com.au/492-10-peters-street-zetland-nsw-2017-17680846
+2025-07-27 21:24:58 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/492-10-peters-street-zetland-nsw-2017-17680846
+2025-07-27 21:24:58 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/492-10-peters-street-zetland-nsw-2017-17680846 NOT found via any XPaths.
+2025-07-27 21:24:58 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17680846 for URL: https://www.domain.com.au/492-10-peters-street-zetland-nsw-2017-17680846
+2025-07-27 21:24:59 - domain_crawler_v2 - INFO - 处理第14/20个房源: https://www.domain.com.au/10-sonny-leonard-st-zetland-nsw-2017-17617093
+2025-07-27 21:24:59 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/10-sonny-leonard-st-zetland-nsw-2017-17617093
+2025-07-27 21:25:00 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/10-sonny-leonard-st-zetland-nsw-2017-17617093 NOT found via any XPaths.
+2025-07-27 21:25:00 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17617093 for URL: https://www.domain.com.au/10-sonny-leonard-st-zetland-nsw-2017-17617093
+2025-07-27 21:25:02 - domain_crawler_v2 - INFO - 处理第15/20个房源: https://www.domain.com.au/1805-301-botany-road-zetland-nsw-2017-17684166
+2025-07-27 21:25:02 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1805-301-botany-road-zetland-nsw-2017-17684166
+2025-07-27 21:25:02 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/1805-301-botany-road-zetland-nsw-2017-17684166 NOT found via any XPaths.
+2025-07-27 21:25:02 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17684166 for URL: https://www.domain.com.au/1805-301-botany-road-zetland-nsw-2017-17684166
+2025-07-27 21:25:03 - domain_crawler_v2 - INFO - 处理第16/20个房源: https://www.domain.com.au/206-8-rose-valley-way-zetland-nsw-2017-17666112
+2025-07-27 21:25:03 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/206-8-rose-valley-way-zetland-nsw-2017-17666112
+2025-07-27 21:25:04 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/206-8-rose-valley-way-zetland-nsw-2017-17666112 NOT found via any XPaths.
+2025-07-27 21:25:04 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17666112 for URL: https://www.domain.com.au/206-8-rose-valley-way-zetland-nsw-2017-17666112
+2025-07-27 21:25:05 - domain_crawler_v2 - INFO - 处理第17/20个房源: https://www.domain.com.au/503-5-link-road-zetland-nsw-2017-17676094
+2025-07-27 21:25:05 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/503-5-link-road-zetland-nsw-2017-17676094
+2025-07-27 21:25:06 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/503-5-link-road-zetland-nsw-2017-17676094: https://api.snug.com/v1/partner/handoff/team/20407/listing/1P3448/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F503-5-link-road-zetland-nsw-2017-17676094&add_unitnum=503&add_streetnum=5&add_streetname=Link&add_streettype=Road&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:25:06 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17676094 for URL: https://www.domain.com.au/503-5-link-road-zetland-nsw-2017-17676094
+2025-07-27 21:25:07 - domain_crawler_v2 - INFO - 处理第18/20个房源: https://www.domain.com.au/70-22-gadigal-avenue-zetland-nsw-2017-17568366
+2025-07-27 21:25:07 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/70-22-gadigal-avenue-zetland-nsw-2017-17568366
+2025-07-27 21:25:07 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/70-22-gadigal-avenue-zetland-nsw-2017-17568366 NOT found via any XPaths.
+2025-07-27 21:25:07 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17568366 for URL: https://www.domain.com.au/70-22-gadigal-avenue-zetland-nsw-2017-17568366
+2025-07-27 21:25:09 - domain_crawler_v2 - INFO - 处理第19/20个房源: https://www.domain.com.au/804-5-joynton-avenue-zetland-nsw-2017-17610334
+2025-07-27 21:25:09 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/804-5-joynton-avenue-zetland-nsw-2017-17610334
+2025-07-27 21:25:09 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/804-5-joynton-avenue-zetland-nsw-2017-17610334 NOT found via any XPaths.
+2025-07-27 21:25:09 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17610334 for URL: https://www.domain.com.au/804-5-joynton-avenue-zetland-nsw-2017-17610334
+2025-07-27 21:25:11 - domain_crawler_v2 - INFO - 处理第20/20个房源: https://www.domain.com.au/wechat-krl119-l3-2-levy-walk-zetland-nsw-2017-17676679
+2025-07-27 21:25:11 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/wechat-krl119-l3-2-levy-walk-zetland-nsw-2017-17676679
+2025-07-27 21:25:12 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/wechat-krl119-l3-2-levy-walk-zetland-nsw-2017-17676679 NOT found via any XPaths.
+2025-07-27 21:25:12 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17676679 for URL: https://www.domain.com.au/wechat-krl119-l3-2-levy-walk-zetland-nsw-2017-17676679
+2025-07-27 21:25:13 - domain_crawler_v2 - INFO - 本页成功处理20/20个房源
+2025-07-27 21:25:13 - domain_crawler_v2 - DEBUG - 保存进度到 progress.json: URL=https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc, 页码=8
+2025-07-27 21:25:13 - domain_crawler_v2 - INFO - 完成第7页处理
+2025-07-27 21:25:15 - domain_crawler_v2 - INFO - 正在抓取第8页: https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc&page=8
+2025-07-27 21:25:16 - domain_crawler_v2 - INFO - 第8页找到20个房源
+2025-07-27 21:25:16 - domain_crawler_v2 - INFO - 处理第1/20个房源: https://www.domain.com.au/2502-6-ebsworth-street-zetland-nsw-2017-17575228
+2025-07-27 21:25:16 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/2502-6-ebsworth-street-zetland-nsw-2017-17575228
+2025-07-27 21:25:17 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/2502-6-ebsworth-street-zetland-nsw-2017-17575228 NOT found via any XPaths.
+2025-07-27 21:25:17 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17575228 for URL: https://www.domain.com.au/2502-6-ebsworth-street-zetland-nsw-2017-17575228
+2025-07-27 21:25:19 - domain_crawler_v2 - INFO - 处理第2/20个房源: https://www.domain.com.au/level-15-20-gadigal-avenue-zetland-nsw-2017-17587082
+2025-07-27 21:25:19 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/level-15-20-gadigal-avenue-zetland-nsw-2017-17587082
+2025-07-27 21:25:19 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/level-15-20-gadigal-avenue-zetland-nsw-2017-17587082 NOT found via any XPaths.
+2025-07-27 21:25:19 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17587082 for URL: https://www.domain.com.au/level-15-20-gadigal-avenue-zetland-nsw-2017-17587082
+2025-07-27 21:25:21 - domain_crawler_v2 - INFO - 处理第3/20个房源: https://www.domain.com.au/303-botany-road-zetland-nsw-2017-17640845
+2025-07-27 21:25:21 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/303-botany-road-zetland-nsw-2017-17640845
+2025-07-27 21:25:21 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/303-botany-road-zetland-nsw-2017-17640845 NOT found via any XPaths.
+2025-07-27 21:25:21 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17640845 for URL: https://www.domain.com.au/303-botany-road-zetland-nsw-2017-17640845
+2025-07-27 21:25:23 - domain_crawler_v2 - INFO - 处理第4/20个房源: https://www.domain.com.au/502-134-epsom-road-zetland-nsw-2017-16597535
+2025-07-27 21:25:23 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/502-134-epsom-road-zetland-nsw-2017-16597535
+2025-07-27 21:25:23 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/502-134-epsom-road-zetland-nsw-2017-16597535: https://www.2apply.com.au/domain/27171/16597535?address=502%2F134%20Epsom%20Road%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:25:23 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16597535 for URL: https://www.domain.com.au/502-134-epsom-road-zetland-nsw-2017-16597535
+2025-07-27 21:25:24 - domain_crawler_v2 - INFO - 处理第5/20个房源: https://www.domain.com.au/1605-15-gadigal-ave-zetland-nsw-2017-17680704
+2025-07-27 21:25:24 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1605-15-gadigal-ave-zetland-nsw-2017-17680704
+2025-07-27 21:25:24 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/1605-15-gadigal-ave-zetland-nsw-2017-17680704 NOT found via any XPaths.
+2025-07-27 21:25:24 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17680704 for URL: https://www.domain.com.au/1605-15-gadigal-ave-zetland-nsw-2017-17680704
+2025-07-27 21:25:26 - domain_crawler_v2 - INFO - 处理第6/20个房源: https://www.domain.com.au/g02-18-paul-street-zetland-nsw-2017-14297674
+2025-07-27 21:25:26 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/g02-18-paul-street-zetland-nsw-2017-14297674
+2025-07-27 21:25:26 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/g02-18-paul-street-zetland-nsw-2017-14297674: https://api.snug.com/v1/partner/handoff/team/31177/listing/ab41dabe-bf1c-4aa5-8332-467e07c05b45/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Fg02-18-paul-street-zetland-nsw-2017-14297674&add_unitnum=G02&add_streetnum=18&add_streetname=Paul&add_streettype=Street&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:25:26 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=14297674 for URL: https://www.domain.com.au/g02-18-paul-street-zetland-nsw-2017-14297674
+2025-07-27 21:25:28 - domain_crawler_v2 - INFO - 处理第7/20个房源: https://www.domain.com.au/level-5-507-20-gadigal-avenue-zetland-nsw-2017-17677386
+2025-07-27 21:25:28 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/level-5-507-20-gadigal-avenue-zetland-nsw-2017-17677386
+2025-07-27 21:25:28 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/level-5-507-20-gadigal-avenue-zetland-nsw-2017-17677386: https://api.snug.com/v1/partner/handoff/team/28976/listing/1P2575/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Flevel-5-507-20-gadigal-avenue-zetland-nsw-2017-17677386&add_unitnum=Level%205%2C%20507&add_streetnum=20&add_streetname=Gadigal&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:25:28 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17677386 for URL: https://www.domain.com.au/level-5-507-20-gadigal-avenue-zetland-nsw-2017-17677386
+2025-07-27 21:25:29 - domain_crawler_v2 - INFO - 处理第8/20个房源: https://www.domain.com.au/24-mcpherson-lane-zetland-nsw-2017-17634918
+2025-07-27 21:25:29 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/24-mcpherson-lane-zetland-nsw-2017-17634918
+2025-07-27 21:25:29 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/24-mcpherson-lane-zetland-nsw-2017-17634918: https://www.2apply.com.au/domain/15740/17634918?address=24%20McPherson%20Lane%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:25:29 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17634918 for URL: https://www.domain.com.au/24-mcpherson-lane-zetland-nsw-2017-17634918
+2025-07-27 21:25:31 - domain_crawler_v2 - INFO - 处理第9/20个房源: https://www.domain.com.au/1102-301-botany-road-zetland-nsw-2017-17611563
+2025-07-27 21:25:31 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1102-301-botany-road-zetland-nsw-2017-17611563
+2025-07-27 21:25:31 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1102-301-botany-road-zetland-nsw-2017-17611563: https://www.2apply.com.au/domain/19183/17611563?address=1102%2F301%20Botany%20Road%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:25:31 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17611563 for URL: https://www.domain.com.au/1102-301-botany-road-zetland-nsw-2017-17611563
+2025-07-27 21:25:33 - domain_crawler_v2 - INFO - 处理第10/20个房源: https://www.domain.com.au/725-22-george-julius-avenue-zetland-nsw-2017-17664157
+2025-07-27 21:25:33 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/725-22-george-julius-avenue-zetland-nsw-2017-17664157
+2025-07-27 21:25:33 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/725-22-george-julius-avenue-zetland-nsw-2017-17664157 NOT found via any XPaths.
+2025-07-27 21:25:33 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17664157 for URL: https://www.domain.com.au/725-22-george-julius-avenue-zetland-nsw-2017-17664157
+2025-07-27 21:25:34 - domain_crawler_v2 - INFO - 处理第11/20个房源: https://www.domain.com.au/a2306-2-6-ebsworth-street-zetland-nsw-2017-17669905
+2025-07-27 21:25:34 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/a2306-2-6-ebsworth-street-zetland-nsw-2017-17669905
+2025-07-27 21:25:35 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/a2306-2-6-ebsworth-street-zetland-nsw-2017-17669905: https://api.snug.com/v1/partner/handoff/team/5472/listing/1P7889/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Fa2306-2-6-ebsworth-street-zetland-nsw-2017-17669905&add_unitnum=A2306&add_streetnum=2-6&add_streetname=Ebsworth&add_streettype=Street&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:25:35 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17669905 for URL: https://www.domain.com.au/a2306-2-6-ebsworth-street-zetland-nsw-2017-17669905
+2025-07-27 21:25:37 - domain_crawler_v2 - INFO - 处理第12/20个房源: https://www.domain.com.au/ebsworth-st-zetland-nsw-2017-12242946
+2025-07-27 21:25:37 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/ebsworth-st-zetland-nsw-2017-12242946
+2025-07-27 21:25:37 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/ebsworth-st-zetland-nsw-2017-12242946: https://api.snug.com/v1/partner/handoff/team/30819/listing/12242946/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2Febsworth-st-zetland-nsw-2017-12242946&add_streetnum=6&add_streetname=Ebsworth&add_streettype=St&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:25:37 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=12242946 for URL: https://www.domain.com.au/ebsworth-st-zetland-nsw-2017-12242946
+2025-07-27 21:25:39 - domain_crawler_v2 - INFO - 处理第13/20个房源: https://www.domain.com.au/233-9-rose-valley-way-zetland-nsw-2017-17095927
+2025-07-27 21:25:39 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/233-9-rose-valley-way-zetland-nsw-2017-17095927
+2025-07-27 21:25:39 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/233-9-rose-valley-way-zetland-nsw-2017-17095927: https://api.snug.com/v1/partner/handoff/team/27682/listing/5676576/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F233-9-rose-valley-way-zetland-nsw-2017-17095927&add_unitnum=233&add_streetnum=9&add_streetname=Rose%20Valley&add_streettype=Way&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:25:39 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17095927 for URL: https://www.domain.com.au/233-9-rose-valley-way-zetland-nsw-2017-17095927
+2025-07-27 21:25:41 - domain_crawler_v2 - INFO - 处理第14/20个房源: https://www.domain.com.au/819-301-botany-rd-zetland-nsw-2017-13184917
+2025-07-27 21:25:41 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/819-301-botany-rd-zetland-nsw-2017-13184917
+2025-07-27 21:25:41 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/819-301-botany-rd-zetland-nsw-2017-13184917 NOT found via any XPaths.
+2025-07-27 21:25:41 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=13184917 for URL: https://www.domain.com.au/819-301-botany-rd-zetland-nsw-2017-13184917
+2025-07-27 21:25:43 - domain_crawler_v2 - INFO - 处理第15/20个房源: https://www.domain.com.au/829-20-gadigal-avenue-zetland-nsw-2017-17619848
+2025-07-27 21:25:43 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/829-20-gadigal-avenue-zetland-nsw-2017-17619848
+2025-07-27 21:25:43 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/829-20-gadigal-avenue-zetland-nsw-2017-17619848: https://api.snug.com/v1/partner/handoff/team/32809/listing/1P0209/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F829-20-gadigal-avenue-zetland-nsw-2017-17619848&add_unitnum=829&add_streetnum=20&add_streetname=Gadigal&add_streettype=Avenue&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:25:44 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17619848 for URL: https://www.domain.com.au/829-20-gadigal-avenue-zetland-nsw-2017-17619848
+2025-07-27 21:25:45 - domain_crawler_v2 - INFO - 处理第16/20个房源: https://www.domain.com.au/11-30-gadigal-ave-zetland-nsw-2017-17675330
+2025-07-27 21:25:45 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/11-30-gadigal-ave-zetland-nsw-2017-17675330
+2025-07-27 21:25:45 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/11-30-gadigal-ave-zetland-nsw-2017-17675330: https://api.snug.com/v1/partner/handoff/team/17118/listing/R3949379/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F11-30-gadigal-ave-zetland-nsw-2017-17675330&add_unitnum=11&add_streetnum=30&add_streetname=Gadigal&add_streettype=Ave&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:25:45 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17675330 for URL: https://www.domain.com.au/11-30-gadigal-ave-zetland-nsw-2017-17675330
+2025-07-27 21:25:46 - domain_crawler_v2 - INFO - 处理第17/20个房源: https://www.domain.com.au/12-4-grandstand-parade-zetland-nsw-2017-17647734
+2025-07-27 21:25:46 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/12-4-grandstand-parade-zetland-nsw-2017-17647734
+2025-07-27 21:25:47 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/12-4-grandstand-parade-zetland-nsw-2017-17647734: https://www.2apply.com.au/domain/2134/17647734?address=12%2F4%20Grandstand%20Parade%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:25:47 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17647734 for URL: https://www.domain.com.au/12-4-grandstand-parade-zetland-nsw-2017-17647734
+2025-07-27 21:25:49 - domain_crawler_v2 - INFO - 处理第18/20个房源: https://www.domain.com.au/2007-28-zetland-avenue-zetland-nsw-2017-17644683
+2025-07-27 21:25:49 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/2007-28-zetland-avenue-zetland-nsw-2017-17644683
+2025-07-27 21:25:49 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/2007-28-zetland-avenue-zetland-nsw-2017-17644683 NOT found via any XPaths.
+2025-07-27 21:25:49 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17644683 for URL: https://www.domain.com.au/2007-28-zetland-avenue-zetland-nsw-2017-17644683
+2025-07-27 21:25:51 - domain_crawler_v2 - INFO - 处理第19/20个房源: https://www.domain.com.au/11104-8-kingsborough-way-zetland-nsw-2017-17655033
+2025-07-27 21:25:51 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/11104-8-kingsborough-way-zetland-nsw-2017-17655033
+2025-07-27 21:25:51 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/11104-8-kingsborough-way-zetland-nsw-2017-17655033: https://api.snug.com/v1/partner/handoff/team/28270/listing/R2-4637903/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F11104-8-kingsborough-way-zetland-nsw-2017-17655033&add_unitnum=11104&add_streetnum=8&add_streetname=Kingsborough&add_streettype=Way&add_suburb=Zetland&add_state=nsw&add_postcode=2017
+2025-07-27 21:25:51 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17655033 for URL: https://www.domain.com.au/11104-8-kingsborough-way-zetland-nsw-2017-17655033
+2025-07-27 21:25:53 - domain_crawler_v2 - INFO - 处理第20/20个房源: https://www.domain.com.au/701-8-rose-valley-way-zetland-nsw-2017-15936745
+2025-07-27 21:25:53 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/701-8-rose-valley-way-zetland-nsw-2017-15936745
+2025-07-27 21:25:54 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/701-8-rose-valley-way-zetland-nsw-2017-15936745: https://www.2apply.com.au/domain/19183/15936745?address=701%2F8%20Rose%20Valley%20Way%2C%20Zetland&type=rental&times=%5B%5D
+2025-07-27 21:25:54 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=15936745 for URL: https://www.domain.com.au/701-8-rose-valley-way-zetland-nsw-2017-15936745
+2025-07-27 21:25:55 - domain_crawler_v2 - INFO - 本页成功处理20/20个房源
+2025-07-27 21:25:55 - domain_crawler_v2 - DEBUG - 保存进度到 progress.json: URL=https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc, 页码=9
+2025-07-27 21:25:55 - domain_crawler_v2 - INFO - 完成第8页处理
+2025-07-27 21:25:58 - domain_crawler_v2 - INFO - 正在抓取第9页: https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc&page=9
+2025-07-27 21:25:58 - domain_crawler_v2 - INFO - 第9页找到1个房源
+2025-07-27 21:25:58 - domain_crawler_v2 - INFO - 处理第1/1个房源: https://www.domain.com.au/g40-12-fuse-street-zetland-nsw-2017-17672584
+2025-07-27 21:25:58 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/g40-12-fuse-street-zetland-nsw-2017-17672584
+2025-07-27 21:26:00 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/g40-12-fuse-street-zetland-nsw-2017-17672584 NOT found via any XPaths.
+2025-07-27 21:26:00 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17672584 for URL: https://www.domain.com.au/g40-12-fuse-street-zetland-nsw-2017-17672584
+2025-07-27 21:26:02 - domain_crawler_v2 - INFO - 本页成功处理1/1个房源
+2025-07-27 21:26:02 - domain_crawler_v2 - DEBUG - 保存进度到 progress.json: URL=https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc, 页码=10
+2025-07-27 21:26:02 - domain_crawler_v2 - INFO - 当前页房源数 (1) < 阈值 (10)，判断为最后一页.
+2025-07-27 21:26:02 - domain_crawler_v2 - INFO - 搜索完成，总共处理了 161 个房源链接
+2025-07-27 21:26:02 - domain_crawler_v2 - INFO - 完成处理URL: https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc，开始保存数据 (区域: Zetland, 房源数: 161)
+2025-07-27 21:26:02 - domain_crawler_v2 - INFO - 已成功保存 161 条记录到: C:\Users\nuoai\Desktop\crawler-UTS-UYSD-UNSW\dist\output\20250727_212602_Zetland_161properties.xlsx (区域: Zetland, 总房源数: 161)
+2025-07-27 21:26:02 - domain_crawler_v2 - INFO - URL https://www.domain.com.au/rent/zetland-nsw-2017/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc 的数据已保存到: C:\Users\nuoai\Desktop\crawler-UTS-UYSD-UNSW\dist\output\20250727_212602_Zetland_161properties.xlsx
+2025-07-27 21:26:02 - domain_crawler_v2 - INFO - 下一个URL前延迟 4.7 秒...
+2025-07-27 21:26:07 - domain_crawler_v2 - INFO - 开始处理 (2/35): https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc
+2025-07-27 21:26:07 - domain_crawler_v2 - INFO - Processing as search URL (from url.txt): https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc
+2025-07-27 21:26:07 - domain_crawler_v2 - INFO - 正在抓取第1页: https://www.domain.com.au/rent/ultimo-nsw-2007/apartment/?price=300-2500&excludedeposittaken=1&ssubs=0&sort=price-asc&page=1
+2025-07-27 21:26:07 - domain_crawler_v2 - INFO - 第1页找到20个房源
+2025-07-27 21:26:07 - domain_crawler_v2 - INFO - 处理第1/20个房源: https://www.domain.com.au/4077-185-broadway-ultimo-nsw-2007-17672111
+2025-07-27 21:26:07 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/4077-185-broadway-ultimo-nsw-2007-17672111
+2025-07-27 21:26:08 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/4077-185-broadway-ultimo-nsw-2007-17672111: https://api.snug.com/v1/partner/handoff/team/16559/listing/1P6580/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F4077-185-broadway-ultimo-nsw-2007-17672111&add_unitnum=4077&add_streetnum=185&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-27 21:26:08 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17672111 for URL: https://www.domain.com.au/4077-185-broadway-ultimo-nsw-2007-17672111
+2025-07-27 21:26:10 - domain_crawler_v2 - INFO - 处理第2/20个房源: https://www.domain.com.au/7-397-399-harris-street-ultimo-nsw-2007-9743238
+2025-07-27 21:26:10 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/7-397-399-harris-street-ultimo-nsw-2007-9743238
+2025-07-27 21:26:10 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/7-397-399-harris-street-ultimo-nsw-2007-9743238: https://api.snug.com/v1/partner/handoff/team/7242/listing/9743238/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F7-397-399-harris-street-ultimo-nsw-2007-9743238&add_unitnum=7&add_streetnum=397-399&add_streetname=Harris&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-27 21:26:10 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=9743238 for URL: https://www.domain.com.au/7-397-399-harris-street-ultimo-nsw-2007-9743238
+2025-07-27 21:26:11 - domain_crawler_v2 - INFO - 处理第3/20个房源: https://www.domain.com.au/1040-211-broadway-ultimo-nsw-2007-17599970
+2025-07-27 21:26:11 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1040-211-broadway-ultimo-nsw-2007-17599970
+2025-07-27 21:26:12 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/1040-211-broadway-ultimo-nsw-2007-17599970 NOT found via any XPaths.
+2025-07-27 21:26:12 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17599970 for URL: https://www.domain.com.au/1040-211-broadway-ultimo-nsw-2007-17599970
+2025-07-27 21:26:13 - domain_crawler_v2 - INFO - 处理第4/20个房源: https://www.domain.com.au/1123-185-broadway-ultimo-nsw-2007-17571197
+2025-07-27 21:26:13 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/1123-185-broadway-ultimo-nsw-2007-17571197
+2025-07-27 21:26:14 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/1123-185-broadway-ultimo-nsw-2007-17571197: https://api.snug.com/v1/partner/handoff/team/16559/listing/1P6476/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F1123-185-broadway-ultimo-nsw-2007-17571197&add_unitnum=1123&add_streetnum=185&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-27 21:26:14 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17571197 for URL: https://www.domain.com.au/1123-185-broadway-ultimo-nsw-2007-17571197
+2025-07-27 21:26:16 - domain_crawler_v2 - INFO - 处理第5/20个房源: https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-17555511
+2025-07-27 21:26:16 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-17555511
+2025-07-27 21:26:16 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-17555511: https://api.snug.com/v1/partner/handoff/team/31177/listing/5309dbae-3f26-41be-931b-91c4a945fa3b/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F185-211-broadway-ultimo-nsw-2007-17555511&add_streetnum=185-211&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-27 21:26:16 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17555511 for URL: https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-17555511
+2025-07-27 21:26:18 - domain_crawler_v2 - INFO - 处理第6/20个房源: https://www.domain.com.au/32-61-65-macarthur-street-ultimo-nsw-2007-17612208
+2025-07-27 21:26:18 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/32-61-65-macarthur-street-ultimo-nsw-2007-17612208
+2025-07-27 21:26:19 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/32-61-65-macarthur-street-ultimo-nsw-2007-17612208 NOT found via any XPaths.
+2025-07-27 21:26:19 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17612208 for URL: https://www.domain.com.au/32-61-65-macarthur-street-ultimo-nsw-2007-17612208
+2025-07-27 21:26:20 - domain_crawler_v2 - INFO - 处理第7/20个房源: https://www.domain.com.au/106-62-mountain-st-ultimo-nsw-2007-17661967
+2025-07-27 21:26:20 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/106-62-mountain-st-ultimo-nsw-2007-17661967
+2025-07-27 21:26:20 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/106-62-mountain-st-ultimo-nsw-2007-17661967: https://www.2apply.com.au/domain/15365/17661967?address=106%2F62%20Mountain%20St%2C%20Ultimo&type=rental&times=%5B%5D
+2025-07-27 21:26:20 - domain_crawler_v2 - DEBUG - 检测到Studio关键词在: studio...
+2025-07-27 21:26:20 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17661967 for URL: https://www.domain.com.au/106-62-mountain-st-ultimo-nsw-2007-17661967
+2025-07-27 21:26:22 - domain_crawler_v2 - INFO - 处理第8/20个房源: https://www.domain.com.au/308-28-wattle-lane-ultimo-nsw-2007-17368105
+2025-07-27 21:26:22 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/308-28-wattle-lane-ultimo-nsw-2007-17368105
+2025-07-27 21:26:22 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action for https://www.domain.com.au/308-28-wattle-lane-ultimo-nsw-2007-17368105 NOT found via any XPaths.
+2025-07-27 21:26:22 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17368105 for URL: https://www.domain.com.au/308-28-wattle-lane-ultimo-nsw-2007-17368105
+2025-07-27 21:26:23 - domain_crawler_v2 - INFO - 处理第9/20个房源: https://www.domain.com.au/4121-185-211-broadway-ultimo-nsw-2007-17623578
+2025-07-27 21:26:23 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/4121-185-211-broadway-ultimo-nsw-2007-17623578
+2025-07-27 21:26:24 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/4121-185-211-broadway-ultimo-nsw-2007-17623578: https://api.snug.com/v1/partner/handoff/team/12113/listing/c36d3b31-ff49-403e-aca7-9b5445ff2465/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F4121-185-211-broadway-ultimo-nsw-2007-17623578&add_unitnum=4121&add_streetnum=185-211&add_streettype=BROADWAY&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-27 21:26:24 - domain_crawler_v2 - DEBUG - 检测到Studio关键词在: stylish loft studio in prime broadway location...
+2025-07-27 21:26:24 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17623578 for URL: https://www.domain.com.au/4121-185-211-broadway-ultimo-nsw-2007-17623578
+2025-07-27 21:26:24 - domain_crawler_v2 - INFO - 处理第10/20个房源: https://www.domain.com.au/3104-185-broadway-ultimo-nsw-2007-17571251
+2025-07-27 21:26:24 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/3104-185-broadway-ultimo-nsw-2007-17571251
+2025-07-27 21:26:25 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/3104-185-broadway-ultimo-nsw-2007-17571251: https://api.snug.com/v1/partner/handoff/team/16559/listing/1P5176/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F3104-185-broadway-ultimo-nsw-2007-17571251&add_unitnum=3104&add_streetnum=185&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-27 21:26:25 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17571251 for URL: https://www.domain.com.au/3104-185-broadway-ultimo-nsw-2007-17571251
+2025-07-27 21:26:26 - domain_crawler_v2 - INFO - 处理第11/20个房源: https://www.domain.com.au/3082-185-broadway-ultimo-nsw-2007-17659452
+2025-07-27 21:26:26 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/3082-185-broadway-ultimo-nsw-2007-17659452
+2025-07-27 21:26:26 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/3082-185-broadway-ultimo-nsw-2007-17659452: https://api.snug.com/v1/partner/handoff/team/16559/listing/1P6555/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F3082-185-broadway-ultimo-nsw-2007-17659452&add_unitnum=3082&add_streetnum=185&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-27 21:26:26 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17659452 for URL: https://www.domain.com.au/3082-185-broadway-ultimo-nsw-2007-17659452
+2025-07-27 21:26:28 - domain_crawler_v2 - INFO - 处理第12/20个房源: https://www.domain.com.au/25b-288-wattle-street-ultimo-nsw-2007-17683993
+2025-07-27 21:26:28 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/25b-288-wattle-street-ultimo-nsw-2007-17683993
+2025-07-27 21:26:28 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/25b-288-wattle-street-ultimo-nsw-2007-17683993: https://api.snug.com/v1/partner/handoff/team/5576/listing/6712884/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F25b-288-wattle-street-ultimo-nsw-2007-17683993&add_unitnum=25B&add_streetnum=288&add_streetname=Wattle&add_streettype=Street&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-27 21:26:28 - domain_crawler_v2 - DEBUG - 检测到Studio关键词在: studio apartment for rent...
+2025-07-27 21:26:28 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17683993 for URL: https://www.domain.com.au/25b-288-wattle-street-ultimo-nsw-2007-17683993
+2025-07-27 21:26:30 - domain_crawler_v2 - INFO - 处理第13/20个房源: https://www.domain.com.au/48b-288-wattle-street-ultimo-nsw-2007-17649794
+2025-07-27 21:26:30 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/48b-288-wattle-street-ultimo-nsw-2007-17649794
+2025-07-27 21:26:30 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/48b-288-wattle-street-ultimo-nsw-2007-17649794: https://api.snug.com/v1/partner/handoff/team/5576/listing/6662436/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F48b-288-wattle-street-ultimo-nsw-2007-17649794&add_unitnum=48B&add_streetnum=288&add_streetname=WATTLE&add_streettype=STREET&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-27 21:26:30 - domain_crawler_v2 - DEBUG - 检测到Studio关键词在: studio apartment for rent  48b/288 wattle st, ulti...
+2025-07-27 21:26:30 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=17649794 for URL: https://www.domain.com.au/48b-288-wattle-street-ultimo-nsw-2007-17649794
+2025-07-27 21:26:31 - domain_crawler_v2 - INFO - 处理第14/20个房源: https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-16481923
+2025-07-27 21:26:31 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-16481923
+2025-07-27 21:26:31 - domain_crawler_v2 - DEBUG - Enquiry/Apply link/action FOUND for https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-16481923: https://api.snug.com/v1/partner/handoff/team/31662/listing/2a3e5d42-6369-4ada-a566-7c16b221f622/apply?referrer_group=fff58e74-898d-42ba-866a-2fdd80c47972&referrer_id=ca860f04-4ee6-4136-b009-00e6910845e7&referrer_url=https%3A%2F%2Fwww.domain.com.au%2F185-211-broadway-ultimo-nsw-2007-16481923&add_streetnum=185-211&add_streettype=Broadway&add_suburb=Ultimo&add_state=nsw&add_postcode=2007
+2025-07-27 21:26:31 - domain_crawler_v2 - INFO - 成功提取房源信息: ID=16481923 for URL: https://www.domain.com.au/185-211-broadway-ultimo-nsw-2007-16481923
+2025-07-27 21:26:33 - domain_crawler_v2 - INFO - 处理第15/20个房源: https://www.domain.com.au/2058-185-broadway-ultimo-nsw-2007-17658780
+2025-07-27 21:26:33 - domain_crawler_v2 - INFO - 正在抓取详情页: https://www.domain.com.au/2058-185-broadway-ultimo-nsw-2007-17658780
+2025-07-27 21:26:33 - domain_crawler_v2 - INFO - 房源信息采集程序 (v2) 结束。

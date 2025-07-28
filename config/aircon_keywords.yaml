@@ -1,0 +1,100 @@
+# 空调关键词配置文件
+# 匹配顺序: negative -> ducted -> reverse_cycle -> split_system -> general -> other
+
+# 明确表示没有空调的关键词
+negative_keywords:
+  direct_negations:
+    - "no air conditioning"
+    - "no air con"
+    - "no a/c"
+    - "no ac"
+    - "air conditioning not included"
+    - "air-con not included"
+    - "without air conditioning"
+    - "without air con"
+    - "no cooling"
+    - "air-con does not work"
+    - "broken air conditioning"
+    - "faulty air con"
+
+# 管道式空调关键词
+ducted_keywords:
+  ducted_systems:
+    - "ducted air conditioning"
+    - "ducted air con"
+    - "ducted a/c"
+    - "ducted ac"
+    - "ducted system"
+    - "ducted cooling"
+    - "ducted heating and cooling"
+    - "central ducted"
+    - "ducted reverse cycle"
+    - "full ducted"
+    - "zoned ducted"
+    - "ducted throughout"
+
+# 逆循环空调关键词
+reverse_cycle_keywords:
+  reverse_cycle_systems:
+    - "reverse cycle"
+    - "reverse cycle air conditioning"
+    - "reverse cycle air con"
+    - "reverse cycle a/c"
+    - "reverse cycle ac"
+    - "reverse cycle heating"
+    - "reverse cycle cooling"
+    - "r/c air conditioning"
+    - "r/c air con"
+    - "heating and cooling"
+    - "heat pump"
+    - "cooling and heating"
+
+# 分体式空调关键词
+split_system_keywords:
+  split_systems:
+    - "split system"
+    - "split system air conditioning"
+    - "split system air con"
+    - "split system a/c"
+    - "split system ac"
+    - "split air conditioning"
+    - "split air con"
+    - "wall mounted air con"
+    - "wall mounted ac"
+    - "inverter air conditioning"
+    - "inverter air con"
+    - "multi split"
+    - "individual air con"
+
+# 通用空调关键词
+general_keywords:
+  general_terms:
+    - "air conditioning"
+    - "air con"
+    - "air-conditioning"
+    - "air-con"
+    - "a/c"
+    - "ac"
+    - "aircon"
+    - "air conditioner"
+    - "air conditioners"
+    - "cooling system"
+    - "climate control"
+    - "temperature control"
+    - "cooling unit"
+    - "air cooling"
+
+# 其他特殊类型空调关键词
+other_keywords:
+  window_portable:
+    - "window air conditioning"
+    - "window air con"
+    - "window ac"
+    - "portable air conditioning"
+    - "portable air con"
+    - "portable ac"
+    - "mobile air con"
+    - "evaporative cooling"
+    - "evaporative cooler"
+    - "swamp cooler"
+    - "ceiling fans with cooling"
