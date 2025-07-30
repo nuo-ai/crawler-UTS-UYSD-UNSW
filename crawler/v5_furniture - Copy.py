@@ -32,11 +32,12 @@ from lxml import etree # type: ignore
 # =============================================================================
 # 项目路径配置
 # =============================================================================
-PROJECT_ROOT = Path(__file__).parent
+CRAWLER_DIR = Path(__file__).parent
+PROJECT_ROOT = CRAWLER_DIR.parent
 LOG_DIR = PROJECT_ROOT / 'logs'
-CONFIG_DIR = PROJECT_ROOT / 'config'
-OUTPUT_DIR = PROJECT_ROOT / 'output'
-DATA_DIR = OUTPUT_DIR / 'data' # Retained from original, though not explicitly used for CSV output path
+CONFIG_DIR = CRAWLER_DIR / 'config'
+OUTPUT_DIR = CRAWLER_DIR / 'output'
+DATA_DIR = OUTPUT_DIR / 'data'
 
 for d_path in (LOG_DIR, CONFIG_DIR, OUTPUT_DIR, DATA_DIR):
     d_path.mkdir(exist_ok=True)
@@ -173,6 +174,7 @@ class PropertyFeatures:
     has_parking: bool = False; allows_pets: bool = False
     has_security_system: bool = False; has_storage: bool = False
     has_study_room: bool = False; has_garden: bool = False
+    has_gas_cooking: bool = False
     def to_dict(self) -> Dict[str, Union[bool, str]]: return {k: v for k, v in self.__dict__.items() if not k.startswith('_')}
     def merge(self, other: 'PropertyFeatures') -> None:
         # Custom merge logic for the new furnishing_status
@@ -219,7 +221,7 @@ EXPECTED_COLUMNS = [
     'agent_email', 'property_headline', 'property_description',
     'furnishing_status', 'has_air_conditioning', 'air_conditioning_type', 'has_balcony', 'has_dishwasher',
     'has_laundry', 'has_built_in_wardrobe', 'has_gym', 'has_pool', 'has_parking',
-    'allows_pets', 'has_security_system', 'has_storage', 'has_study_room', 'has_garden',
+    'allows_pets', 'has_security_system', 'has_storage', 'has_study_room', 'has_garden', 'has_gas_cooking',
     'latitude', 'longitude', 'images', 'property_features', 'agent_profile_url',
     'agent_logo_url', 'enquiry_form_action', 'image_1', 'image_2', 'image_3', 'image_4'
 ]
@@ -241,7 +243,8 @@ class FeatureExtractor:
             "security": [r"security", r"intercom", r"安保", r"门禁"],
             "storage": [r"storage", r"储物"],
             "study": [r"study", r"home office", r"书房", r"学习区"],
-            "garden": [r"garden", r"yard", r"花园", r"院子"]
+            "garden": [r"garden", r"yard", r"花园", r"院子"],
+            "gas_cooking": [r"gas", r"gas appliances", r"gas cooktop", r"燃气"]
         }
         self.compiled_patterns = {ft: [re.compile(p, re.IGNORECASE) for p in ps] for ft, ps in self.patterns.items()}
 
@@ -786,12 +789,14 @@ class DomainCrawler:
     def save_progress(self, url: str, page: int, progress_file_name: str) -> None: # MODIFIED to accept progress_file_name
         try:
             prog = {"url": url, "page": page, "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+            # Progress file should be in the project root, not crawler dir
             with open(PROJECT_ROOT / progress_file_name, 'w', encoding='utf-8') as f: json.dump(prog, f, indent=2)
             logger.debug(f"保存进度到 {progress_file_name}: URL={url}, 页码={page}")
         except Exception as e: logger.error(f"保存进度到 {progress_file_name} 失败: {e}")
     
     def load_progress(self, progress_file_name: str) -> Optional[dict]: # MODIFIED to accept progress_file_name
         try:
+            # Progress file should be in the project root, not crawler dir
             p_file = PROJECT_ROOT / progress_file_name
             if p_file.exists():
                 with open(p_file, 'r', encoding='utf-8') as f: prog = json.load(f)
@@ -873,7 +878,7 @@ class DomainCrawler:
                 logger.info(f"检测到临时URL文件: {url_cfg_path}，将使用此文件中的URL。")
                 # For temp URLs, we generally don't want to persist progress from previous temp runs.
                 # So, we can delete or ignore 'progress_temp.json'.
-                temp_progress_file = PROJECT_ROOT / "progress_temp.json"
+                temp_progress_file = PROJECT_ROOT / "progress_temp.json" # This path is now correct
                 if temp_progress_file.exists():
                     try: temp_progress_file.unlink()
                     except OSError as e: logger.warning(f"无法删除临时进度文件 {temp_progress_file}: {e}")
@@ -882,7 +887,7 @@ class DomainCrawler:
                 url_cfg_path = default_url_file
                 logger.info(f"未找到或临时URL文件为空，将使用默认URL文件: {url_cfg_path}")
                 # Standard progress file handling for default URLs
-                progress_file = PROJECT_ROOT / 'progress.json'
+                progress_file = PROJECT_ROOT / 'progress.json' # This path is now correct
                 if progress_file.exists():
                     try:
                         progress_file.unlink(); logger.info(f"已删除旧的进度文件: {progress_file} (针对默认URL)。")

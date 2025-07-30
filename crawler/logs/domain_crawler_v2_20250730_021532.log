@@ -1,0 +1,6 @@
+2025-07-30 02:15:32 - domain_crawler_v2 - INFO - Loaded 38 positive, 191 negative, and 36 optional furniture keywords.
+2025-07-30 02:15:32 - domain_crawler_v2 - INFO - Loaded 74 air conditioning keywords.
+2025-07-30 02:15:32 - domain_crawler_v2 - INFO - Starting crawler...
+2025-07-30 02:15:32 - domain_crawler_v2 - INFO - Scraping page 1: https://www.domain.com.au/rent/epping-nsw-2121/&page=1
+2025-07-30 02:15:33 - domain_crawler_v2 - ERROR - Request failed for https://www.domain.com.au/rent/epping-nsw-2121/&page=1: 400 Client Error: Bad Request for url: https://www.domain.com.au/rent/epping-nsw-2121/&page=1/
+2025-07-30 02:15:33 - domain_crawler_v2 - INFO - Crawler finished. Generated files: []
