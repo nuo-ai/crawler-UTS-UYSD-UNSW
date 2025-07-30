@@ -512,9 +512,9 @@ class BatchWriter:
         self.buffer: List[PropertyData] = []; self._lock = threading.Lock()
     def add(self, item: PropertyData) -> None:
         with self._lock: self.buffer.append(item)
-    def flush(self, region: str = "Unknown", total_count: int = 0) -> Optional[str]:
+    def flush(self, region: str = "Unknown", total_count: int = 0, output_format: str = 'xlsx') -> Optional[str]:
         if not self.buffer:
-            logger.info("缓冲区中无数据可刷新至XLSX。")
+            logger.info(f"缓冲区中无数据可刷新至 {output_format.upper()}。")
             return None
         with self._lock:
             try:
@@ -529,15 +529,21 @@ class BatchWriter:
                 
                 timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
                 clean_region = re.sub(r'[^\w\s-]', '', region).replace(' ', '_')
-                output_filename = f"{timestamp}_{clean_region}_{total_count}properties.xlsx"
-                output_file_path = OUTPUT_DIR / output_filename
-                
-                df_final.to_excel(output_file_path, index=False, engine='openpyxl')
+
+                if output_format.lower() == 'csv':
+                    output_filename = f"{timestamp}_{clean_region}_{total_count}properties.csv"
+                    output_file_path = OUTPUT_DIR / output_filename
+                    df_final.to_csv(output_file_path, index=False, encoding='utf-8-sig')
+                else:
+                    output_filename = f"{timestamp}_{clean_region}_{total_count}properties.xlsx"
+                    output_file_path = OUTPUT_DIR / output_filename
+                    df_final.to_excel(output_file_path, index=False, engine='openpyxl')
+
                 logger.info(f"已成功保存 {len(df_final)} 条记录到: {output_file_path} (区域: {region}, 总房源数: {total_count})")
                 self.buffer = []
                 return str(output_file_path)
             except Exception as e:
-                logger.error(f"写入XLSX文件 ({output_filename if 'output_filename' in locals() else 'unknown'}) 失败: {e}", exc_info=True)
+                logger.error(f"写入 {output_format.upper()} 文件 ({output_filename if 'output_filename' in locals() else 'unknown'}) 失败: {e}", exc_info=True)
                 return None
 
 # =============================================================================
@@ -881,7 +887,7 @@ class DomainCrawler:
             if CONFIG['features']['enable_batch_write'] and output_mode in ['single_file', 'hybrid'] and all_properties_buffer:
                 logger.info(f"开始保存所有URL的合并数据...")
                 self.batch_writer.buffer = all_properties_buffer
-                combined_file = self.batch_writer.flush(region=combined_prefix, total_count=len(all_properties_buffer))
+                combined_file = self.batch_writer.flush(region=combined_prefix, total_count=len(all_properties_buffer), output_format='csv')
                 if combined_file:
                     output_files.append(combined_file)
 
