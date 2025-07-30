@@ -118,9 +118,23 @@ def load_aircon_keywords() -> Optional[dict]:
         logger.error(f"Failed to load aircon keywords: {e}. Using fallback keywords.")
         return None
 
+def load_features_config() -> Optional[Dict[str, Any]]:
+    """加载 features_config.yaml 配置文件"""
+    config_path = CONFIG_DIR / 'features_config.yaml'
+    if not config_path.exists():
+        logger.warning(f"Features config file not found: {config_path}. Feature extraction will be limited.")
+        return None
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            return yaml.safe_load(f)
+    except Exception as e:
+        logger.error(f"Failed to load features config: {e}. Feature extraction will be limited.")
+        return None
+
 CONFIG = load_config()
 FURNITURE_KEYWORDS = load_furniture_keywords()
 AIRCON_KEYWORDS = load_aircon_keywords()
+FEATURES_CONFIG = load_features_config()
 
 # =============================================================================
 # 辅助函数 - 从URL提取区域名称
@@ -239,22 +253,36 @@ EXPECTED_COLUMNS = [
 # =============================================================================
 class FeatureExtractor:
     def __init__(self):
-        self.patterns = {
-            "balcony": [r"balcony", r"terrace", "deck", r"阳台"],
-            "dishwasher": [r"dishwasher", r"洗碗机"],
-            "laundry": [r"laundry", r"washer", r"dryer", r"洗衣", r"烘干机"],
-            "built_in_wardrobe": [r"built.{0,3}in", r"wardrobe", r"wardrobes", r"衣柜"],
-            "gym": [r"gym", r"fitness", r"健身"],
-            "pool": [r"pool", r"swimming", r"游泳池"],
-            "parking": [r"parking", r"garage", r"car space", r"停车"],
-            "pets": [r"pets?\s+allow", r"pet.?friendly", r"允许宠物", r"宠物友好"],
-            "security": [r"security", r"intercom", r"安保", r"门禁"],
-            "storage": [r"storage", r"储物"],
-            "study": [r"study", r"home office", r"书房", r"学习区"],
-            "garden": [r"garden", r"yard", r"花园", r"院子"],
-            "gas_cooking": [r"gas", r"gas appliances", r"gas cooktop", r"燃气"]
-        }
-        self.compiled_patterns = {ft: [re.compile(p, re.IGNORECASE) for p in ps] for ft, ps in self.patterns.items()}
+        self.compiled_patterns = {}
+        if FEATURES_CONFIG and 'features' in FEATURES_CONFIG:
+            for feature_config in FEATURES_CONFIG['features']:
+                column_name = feature_config.get('column_name')
+                keywords = feature_config.get('keywords', [])
+                if column_name and keywords:
+                    # 生成一个安全的正则表达式，将特殊字符转义
+                    # 使用 \b 来确保匹配整个单词
+                    patterns = [r'\b' + re.escape(kw) + r'\b' for kw in keywords]
+                    self.compiled_patterns[column_name] = [re.compile(p, re.IGNORECASE) for p in patterns]
+            logger.info(f"成功从 features_config.yaml 加载并编译了 {len(self.compiled_patterns)} 个特征的关键词。")
+        else:
+            logger.warning("features_config.yaml 未找到或格式不正确，将使用旧的硬编码模式。")
+            # Fallback to old hardcoded patterns if config is not available
+            self.patterns = {
+                "balcony": [r"balcony", r"terrace", "deck"],
+                "dishwasher": [r"dishwasher"],
+                "laundry": [r"laundry", r"washer", r"dryer"],
+                "built_in_wardrobe": [r"built.{0,3}in", r"wardrobe", r"wardrobes"],
+                "gym": [r"gym", r"fitness"],
+                "pool": [r"pool", r"swimming"],
+                "parking": [r"parking", r"garage", r"car space"],
+                "pets": [r"pets?\s+allow", r"pet.?friendly"],
+                "security": [r"security", r"intercom"],
+                "storage": [r"storage"],
+                "study": [r"study", r"home office"],
+                "garden": [r"garden", r"yard"],
+                "gas_cooking": [r"gas", r"gas appliances", r"gas cooktop"]
+            }
+            self.compiled_patterns = {f"has_{ft}": [re.compile(p, re.IGNORECASE) for p in ps] for ft, ps in self.patterns.items()}
 
         # Load and process all furniture keywords once during initialization
         self._positive_keywords = set()
@@ -331,11 +359,10 @@ class FeatureExtractor:
         text_blob += " " + " ".join(s_features_set)
 
         # Centralized feature extraction for regex-based patterns
-        for f_name, patterns in self.compiled_patterns.items():
-            a_f_name = "allows_pets" if f_name == "pets" else f"has_{f_name}"
-            if hasattr(features, a_f_name):
+        for feature_name, patterns in self.compiled_patterns.items():
+            if hasattr(features, feature_name):
                 if any(p.search(text_blob) for p in patterns):
-                    setattr(features, a_f_name, True)
+                    setattr(features, feature_name, True)
         
         # Use the new, tri-state furnishing status check
         features.furnishing_status = self._get_furnishing_status(text_blob)

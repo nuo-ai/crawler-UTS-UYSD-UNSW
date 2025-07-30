@@ -1,0 +1,907 @@
+features:
+- column_name: is_furnished
+  keywords:
+  - furnished
+  name: 带家具
+- column_name: has_air_conditioning
+  keywords:
+  - air conditioning
+  - air-conditioner
+  - air con
+  - ducted cooling
+  - split system
+  - reverse cycle
+  name: 空调
+- column_name: has_wardrobes
+  keywords:
+  - wardrobe
+  - built in
+  - walk in robe
+  name: 内置衣柜
+- column_name: has_laundry
+  keywords:
+  - laundry
+  - washer
+  - dryer
+  name: 内部洗衣房
+- column_name: has_dishwasher
+  keywords:
+  - dishwasher
+  name: 洗碗机
+- column_name: has_parking
+  keywords:
+  - parking
+  - garage
+  - car space
+  - carport
+  name: 停车位
+- column_name: has_gas_cooking
+  keywords:
+  - gas
+  - gas appliances
+  - gas cooktop
+  name: 燃气灶
+- column_name: has_heating
+  keywords:
+  - heating
+  - ducted heating
+  name: 暖气
+- column_name: has_intercom
+  keywords:
+  - intercom
+  - security access
+  - security building
+  name: 安保门禁
+- column_name: has_lift
+  keywords:
+  - lift
+  - elevator
+  name: 电梯
+- column_name: has_gym
+  keywords:
+  - gym
+  - fitness
+  name: 健身房
+- column_name: has_pool
+  keywords:
+  - pool
+  - swimming
+  - lap pool
+  name: 游泳池
+- column_name: has_garbage_disposal
+  keywords:
+  - garbage chute
+  - rubbish chute
+  - waste disposal
+  - bin room
+  name: 垃圾处理
+- column_name: has_study
+  keywords:
+  - study
+  - home office
+  name: 书房
+- column_name: has_balcony
+  keywords:
+  - balcony
+  - deck
+  - terrace
+  - patio
+  name: 阳台
+- column_name: has_city_view
+  keywords:
+  - city view
+  - district view
+  - area view
+  - harbour bridge view
+  - opera house view
+  name: 城市景观
+- column_name: has_water_view
+  keywords:
+  - water view
+  - ocean view
+  - river view
+  - harbour view
+  - beach front
+  - water front
+  name: 水景
+- column_name: allows_pets
+  keywords:
+  - pets allowed
+  - pet friendly
+  name: 允许养宠物
+- name: '0'
+  column_name: has_0
+  keywords:
+  - '0'
+- name: 3 Phase Power
+  column_name: has_3_phase_power
+  keywords:
+  - 3 phase power
+- name: Above Ground Pool
+  column_name: has_above_ground_pool
+  keywords:
+  - above ground pool
+- name: Above Ground Spa
+  column_name: has_above_ground_spa
+  keywords:
+  - above ground spa
+- name: Air Conditioning*
+  column_name: has_air_conditioning*
+  keywords:
+  - air conditioning*
+- name: Air Conditioning/Heating
+  column_name: has_air_conditioning/heating
+  keywords:
+  - air conditioning/heating
+- name: Alarm
+  column_name: has_alarm
+  keywords:
+  - alarm
+- name: Alarm System
+  column_name: has_alarm_system
+  keywords:
+  - alarm system
+- name: All Appliances Included
+  column_name: has_all_appliances_included
+  keywords:
+  - all appliances included
+- name: Appliances Included - Washing Machine
+  column_name: has_appliances_included_-_washing_machine
+  keywords:
+  - appliances included - washing machine
+- name: Area Views
+  column_name: has_area_views
+  keywords:
+  - area views
+- name: Balcony / Deck
+  column_name: has_balcony_/_deck
+  keywords:
+  - balcony / deck
+- name: Balcony / Deck*
+  column_name: has_balcony_/_deck*
+  keywords:
+  - balcony / deck*
+- name: Bath
+  column_name: has_bath
+  keywords:
+  - bath
+- name: Bath*
+  column_name: has_bath*
+  keywords:
+  - bath*
+- name: Bathtub
+  column_name: has_bathtub
+  keywords:
+  - bathtub
+- name: Bbq
+  column_name: has_bbq
+  keywords:
+  - bbq
+- name: Broadband
+  column_name: has_broadband
+  keywords:
+  - broadband
+- name: Broadband Connection
+  column_name: has_broadband_connection
+  keywords:
+  - broadband connection
+- name: Broadband Internet Access
+  column_name: has_broadband_internet_access
+  keywords:
+  - broadband internet access
+- name: Broadband Internet Access*
+  column_name: has_broadband_internet_access*
+  keywords:
+  - broadband internet access*
+- name: Broadband Internet Available
+  column_name: has_broadband_internet_available
+  keywords:
+  - broadband internet available
+- name: Building Security
+  column_name: has_building_security
+  keywords:
+  - building security
+- name: Built In Wardrobes
+  column_name: has_built_in_wardrobes
+  keywords:
+  - built in wardrobes
+- name: Built In Wardrobes*
+  column_name: has_built_in_wardrobes*
+  keywords:
+  - built in wardrobes*
+- name: Cable Or Satellite
+  column_name: has_cable_or_satellite
+  keywords:
+  - cable or satellite
+- name: 'Car Accom: None'
+  column_name: has_car_accom:_none
+  keywords:
+  - 'car accom: none'
+- name: 'Car Accom: Single Security Parking'
+  column_name: has_car_accom:_single_security_parking
+  keywords:
+  - 'car accom: single security parking'
+- name: Car Parking - Basement
+  column_name: has_car_parking_-_basement
+  keywords:
+  - car parking - basement
+- name: Car Parking - Surface
+  column_name: has_car_parking_-_surface
+  keywords:
+  - car parking - surface
+- name: Caretaker
+  column_name: has_caretaker
+  keywords:
+  - caretaker
+- name: Carpeted
+  column_name: has_carpeted
+  keywords:
+  - carpeted
+- name: City Views
+  column_name: has_city_views
+  keywords:
+  - city views
+- name: Close To Beach
+  column_name: has_close_to_beach
+  keywords:
+  - close to beach
+- name: Close To Parklands
+  column_name: has_close_to_parklands
+  keywords:
+  - close to parklands
+- name: Close To Pow Hospital And Frenchman 'S Road Bake Bar
+  column_name: has_close_to_pow_hospital_and_frenchman_'s_road_bake_bar
+  keywords:
+  - close to pow hospital and frenchman 's road bake bar
+- name: Close To Schools
+  column_name: has_close_to_schools
+  keywords:
+  - close to schools
+- name: Close To Shops
+  column_name: has_close_to_shops
+  keywords:
+  - close to shops
+- name: Close To Transport
+  column_name: has_close_to_transport
+  keywords:
+  - close to transport
+- name: Coffee Machine
+  column_name: has_coffee_machine
+  keywords:
+  - coffee machine
+- name: Communal Laundry
+  column_name: has_communal_laundry
+  keywords:
+  - communal laundry
+- name: Concierge/Manager
+  column_name: has_concierge/manager
+  keywords:
+  - concierge/manager
+- name: Contemporary
+  column_name: has_contemporary
+  keywords:
+  - contemporary
+- name: Cook Top
+  column_name: has_cook_top
+  keywords:
+  - cook top
+- name: Courtyard
+  column_name: has_courtyard
+  keywords:
+  - courtyard
+- name: Disabled Access
+  column_name: has_disabled_access
+  keywords:
+  - disabled access
+- name: Dishwasher*
+  column_name: has_dishwasher*
+  keywords:
+  - dishwasher*
+- name: District Views
+  column_name: has_district_views
+  keywords:
+  - district views
+- name: Double Carport
+  column_name: has_double_carport
+  keywords:
+  - double carport
+- name: Double Glazed Windows
+  column_name: has_double_glazed_windows
+  keywords:
+  - double glazed windows
+- name: Dre
+  column_name: has_dre
+  keywords:
+  - dre
+- name: Ducted Air Conditioning
+  column_name: has_ducted_air_conditioning
+  keywords:
+  - ducted air conditioning
+- name: Ducted Vacuum System
+  column_name: has_ducted_vacuum_system
+  keywords:
+  - ducted vacuum system
+- name: Electric Heating
+  column_name: has_electric_heating
+  keywords:
+  - electric heating
+- name: Electric Hot Water
+  column_name: has_electric_hot_water
+  keywords:
+  - electric hot water
+- name: Electric Hot Water Service
+  column_name: has_electric_hot_water_service
+  keywords:
+  - electric hot water service
+- name: Electric Hotwater
+  column_name: has_electric_hotwater
+  keywords:
+  - electric hotwater
+- name: 'Energy Eff. Rating: 1.5'
+  column_name: has_energy_eff._rating:_1.5
+  keywords:
+  - 'energy eff. rating: 1.5'
+- name: 'Energy Eff. Rating: 5'
+  column_name: has_energy_eff._rating:_5
+  keywords:
+  - 'energy eff. rating: 5'
+- name: Energy Efficient Appliances
+  column_name: has_energy_efficient_appliances
+  keywords:
+  - energy efficient appliances
+- name: Engineered Timber Flooring
+  column_name: has_engineered_timber_flooring
+  keywords:
+  - engineered timber flooring
+- name: Ensuite
+  column_name: has_ensuite
+  keywords:
+  - ensuite
+- name: Ensuite(S)
+  column_name: has_ensuite(s)
+  keywords:
+  - ensuite(s)
+- name: Entertainment Area
+  column_name: has_entertainment_area
+  keywords:
+  - entertainment area
+- name: Exhaust
+  column_name: has_exhaust
+  keywords:
+  - exhaust
+- name: Existing Fitout
+  column_name: has_existing_fitout
+  keywords:
+  - existing fitout
+- name: Fireplace(S)
+  column_name: has_fireplace(s)
+  keywords:
+  - fireplace(s)
+- name: Floorboards
+  column_name: has_floorboards
+  keywords:
+  - floorboards
+- name: Formal Lounge
+  column_name: has_formal_lounge
+  keywords:
+  - formal lounge
+- name: Fridge
+  column_name: has_fridge
+  keywords:
+  - fridge
+- name: Fully Fenced
+  column_name: has_fully_fenced
+  keywords:
+  - fully fenced
+- name: Furnished*
+  column_name: has_furnished*
+  keywords:
+  - furnished*
+- name: 'Garage Spaces: 1'
+  column_name: has_garage_spaces:_1
+  keywords:
+  - 'garage spaces: 1'
+- name: Garden / Courtyard
+  column_name: has_garden_/_courtyard
+  keywords:
+  - garden / courtyard
+- name: Garden Shed
+  column_name: has_garden_shed
+  keywords:
+  - garden shed
+- name: Gas Cooking
+  column_name: has_gas_cooking
+  keywords:
+  - gas cooking
+- name: Gas Enabled
+  column_name: has_gas_enabled
+  keywords:
+  - gas enabled
+- name: Gas Heating
+  column_name: has_gas_heating
+  keywords:
+  - gas heating
+- name: Gas Hot Water
+  column_name: has_gas_hot_water
+  keywords:
+  - gas hot water
+- name: Gas Hot Water Service
+  column_name: has_gas_hot_water_service
+  keywords:
+  - gas hot water service
+- name: Gas*
+  column_name: has_gas*
+  keywords:
+  - gas*
+- name: Greywater System
+  column_name: has_greywater_system
+  keywords:
+  - greywater system
+- name: Ground Floor
+  column_name: has_ground_floor
+  keywords:
+  - ground floor
+- name: Gym*
+  column_name: has_gym*
+  keywords:
+  - gym*
+- name: Harbour Bridge Views
+  column_name: has_harbour_bridge_views
+  keywords:
+  - harbour bridge views
+- name: Harbour Views
+  column_name: has_harbour_views
+  keywords:
+  - harbour views
+- name: Heating*
+  column_name: has_heating*
+  keywords:
+  - heating*
+- name: High Clearance
+  column_name: has_high_clearance
+  keywords:
+  - high clearance
+- name: Hot Water Service
+  column_name: has_hot_water_service
+  keywords:
+  - hot water service
+- name: In Ground Pool
+  column_name: has_in_ground_pool
+  keywords:
+  - in ground pool
+- name: In-Ground Pool
+  column_name: has_in-ground_pool
+  keywords:
+  - in-ground pool
+- name: In-Ground Spa
+  column_name: has_in-ground_spa
+  keywords:
+  - in-ground spa
+- name: Indoor Spa
+  column_name: has_indoor_spa
+  keywords:
+  - indoor spa
+- name: Inground Pool
+  column_name: has_inground_pool
+  keywords:
+  - inground pool
+- name: Inside Spa
+  column_name: has_inside_spa
+  keywords:
+  - inside spa
+- name: Intercom*
+  column_name: has_intercom*
+  keywords:
+  - intercom*
+- name: Internal Laundry
+  column_name: has_internal_laundry
+  keywords:
+  - internal laundry
+- name: Internal Laundry*
+  column_name: has_internal_laundry*
+  keywords:
+  - internal laundry*
+- name: Investors
+  column_name: has_investors
+  keywords:
+  - investors
+- name: Kettle
+  column_name: has_kettle
+  keywords:
+  - kettle
+- name: Kitchen
+  column_name: has_kitchen
+  keywords:
+  - kitchen
+- name: Kitchenette
+  column_name: has_kitchenette
+  keywords:
+  - kitchenette
+- name: Lift Access
+  column_name: has_lift_access
+  keywords:
+  - lift access
+- name: Lift Installed
+  column_name: has_lift_installed
+  keywords:
+  - lift installed
+- name: Living Area
+  column_name: has_living_area
+  keywords:
+  - living area
+- name: Loading Dock
+  column_name: has_loading_dock
+  keywords:
+  - loading dock
+- name: Loading Dock Access
+  column_name: has_loading_dock_access
+  keywords:
+  - loading dock access
+- name: Media Area
+  column_name: has_media_area
+  keywords:
+  - media area
+- name: Microwave
+  column_name: has_microwave
+  keywords:
+  - microwave
+- name: Modern Bathroom
+  column_name: has_modern_bathroom
+  keywords:
+  - modern bathroom
+- name: Modern Kitchen
+  column_name: has_modern_kitchen
+  keywords:
+  - modern kitchen
+- name: No Pet Allowed
+  column_name: has_no_pet_allowed
+  keywords:
+  - no pet allowed
+- name: North Facing
+  column_name: has_north_facing
+  keywords:
+  - north facing
+- name: Ocean Views
+  column_name: has_ocean_views
+  keywords:
+  - ocean views
+- name: Open And Bright Outlook
+  column_name: has_open_and_bright_outlook
+  keywords:
+  - open and bright outlook
+- name: Open Fire Place
+  column_name: has_open_fire_place
+  keywords:
+  - open fire place
+- name: Open Storage Space Behind Carspace
+  column_name: has_open_storage_space_behind_carspace
+  keywords:
+  - open storage space behind carspace
+- name: Openable Windows
+  column_name: has_openable_windows
+  keywords:
+  - openable windows
+- name: Opera House Views
+  column_name: has_opera_house_views
+  keywords:
+  - opera house views
+- name: Out Door Entertaining Area
+  column_name: has_out_door_entertaining_area
+  keywords:
+  - out door entertaining area
+- name: Outdoor Area
+  column_name: has_outdoor_area
+  keywords:
+  - outdoor area
+- name: Outdoor Entertaining
+  column_name: has_outdoor_entertaining
+  keywords:
+  - outdoor entertaining
+- name: Outdoor Entertaining Area
+  column_name: has_outdoor_entertaining_area
+  keywords:
+  - outdoor entertaining area
+- name: Outdoor Entertainment Area
+  column_name: has_outdoor_entertainment_area
+  keywords:
+  - outdoor entertainment area
+- name: Outdoor Spa
+  column_name: has_outdoor_spa
+  keywords:
+  - outdoor spa
+- name: Outside Spa
+  column_name: has_outside_spa
+  keywords:
+  - outside spa
+- name: Pay Tv Access
+  column_name: has_pay_tv_access
+  keywords:
+  - pay tv access
+- name: Penthouse
+  column_name: has_penthouse
+  keywords:
+  - penthouse
+- name: Pets Allowed*
+  column_name: has_pets_allowed*
+  keywords:
+  - pets allowed*
+- name: Pool Above Ground
+  column_name: has_pool_above_ground
+  keywords:
+  - pool above ground
+- name: 'Pool/Spa Count: 0'
+  column_name: has_pool/spa_count:_0
+  keywords:
+  - 'pool/spa count: 0'
+- name: 'Pool/Spa: Inground Pool'
+  column_name: has_pool/spa:_inground_pool
+  keywords:
+  - 'pool/spa: inground pool'
+- name: Prestige Homes
+  column_name: has_prestige_homes
+  keywords:
+  - prestige homes
+- name: Prestigeous Location
+  column_name: has_prestigeous_location
+  keywords:
+  - prestigeous location
+- name: Private Balconies
+  column_name: has_private_balconies
+  keywords:
+  - private balconies
+- name: Quiet Loca
+  column_name: has_quiet_loca
+  keywords:
+  - quiet loca
+- name: Quiet Location
+  column_name: has_quiet_location
+  keywords:
+  - quiet location
+- name: Rainwater Storage Tank
+  column_name: has_rainwater_storage_tank
+  keywords:
+  - rainwater storage tank
+- name: Remote Control Garage
+  column_name: has_remote_control_garage
+  keywords:
+  - remote control garage
+- name: Remote Garage
+  column_name: has_remote_garage
+  keywords:
+  - remote garage
+- name: Renovated
+  column_name: has_renovated
+  keywords:
+  - renovated
+- name: Reverse Cycle Air Conditioning
+  column_name: has_reverse_cycle_air_conditioning
+  keywords:
+  - reverse cycle air conditioning
+- name: River Views
+  column_name: has_river_views
+  keywords:
+  - river views
+- name: Roller Door Access
+  column_name: has_roller_door_access
+  keywords:
+  - roller door access
+- name: Rumpus Room
+  column_name: has_rumpus_room
+  keywords:
+  - rumpus room
+- name: Safe
+  column_name: has_safe
+  keywords:
+  - safe
+- name: Sauna
+  column_name: has_sauna
+  keywords:
+  - sauna
+- name: Secure Car Space
+  column_name: has_secure_car_space
+  keywords:
+  - secure car space
+- name: Secure Parking
+  column_name: has_secure_parking
+  keywords:
+  - secure parking
+- name: Secure Parking*
+  column_name: has_secure_parking*
+  keywords:
+  - secure parking*
+- name: Security System
+  column_name: has_security_system
+  keywords:
+  - security system
+- name: Separate Dining Room
+  column_name: has_separate_dining_room
+  keywords:
+  - separate dining room
+- name: Shed
+  column_name: has_shed
+  keywords:
+  - shed
+- name: Short Term
+  column_name: has_short_term
+  keywords:
+  - short term
+- name: Single Level
+  column_name: has_single_level
+  keywords:
+  - single level
+- name: Smart Tv
+  column_name: has_smart_tv
+  keywords:
+  - smart tv
+- name: Smokers
+  column_name: has_smokers
+  keywords:
+  - smokers
+- name: Smokers Permitted
+  column_name: has_smokers_permitted
+  keywords:
+  - smokers permitted
+- name: Soft Carpets
+  column_name: has_soft_carpets
+  keywords:
+  - soft carpets
+- name: Solar Hot Water
+  column_name: has_solar_hot_water
+  keywords:
+  - solar hot water
+- name: Solar Panels
+  column_name: has_solar_panels
+  keywords:
+  - solar panels
+- name: Spa
+  column_name: has_spa
+  keywords:
+  - spa
+- name: Split System Ac
+  column_name: has_split_system_ac
+  keywords:
+  - split system ac
+- name: Split System Air Conditioning
+  column_name: has_split_system_air_conditioning
+  keywords:
+  - split system air conditioning
+- name: Split System Heating
+  column_name: has_split_system_heating
+  keywords:
+  - split system heating
+- name: Split-System Air Conditioning
+  column_name: has_split-system_air_conditioning
+  keywords:
+  - split-system air conditioning
+- name: Split-System Heating
+  column_name: has_split-system_heating
+  keywords:
+  - split-system heating
+- name: Stone Benchtops
+  column_name: has_stone_benchtops
+  keywords:
+  - stone benchtops
+- name: Stone Website
+  column_name: has_stone_website
+  keywords:
+  - stone website
+- name: Storage Area
+  column_name: has_storage_area
+  keywords:
+  - storage area
+- name: Study*
+  column_name: has_study*
+  keywords:
+  - study*
+- name: Sunroom
+  column_name: has_sunroom
+  keywords:
+  - sunroom
+- name: Swimming Pool
+  column_name: has_swimming_pool
+  keywords:
+  - swimming pool
+- name: Swimming Pool - Above Ground
+  column_name: has_swimming_pool_-_above_ground
+  keywords:
+  - swimming pool - above ground
+- name: Swimming Pool - In Ground
+  column_name: has_swimming_pool_-_in_ground
+  keywords:
+  - swimming pool - in ground
+- name: Swimming Pool*
+  column_name: has_swimming_pool*
+  keywords:
+  - swimming pool*
+- name: Swimming/Lap Pool
+  column_name: has_swimming/lap_pool
+  keywords:
+  - swimming/lap pool
+- name: Swipe Card
+  column_name: has_swipe_card
+  keywords:
+  - swipe card
+- name: Tennis Court
+  column_name: has_tennis_court
+  keywords:
+  - tennis court
+- name: Toaster
+  column_name: has_toaster
+  keywords:
+  - toaster
+- name: Toilet
+  column_name: has_toilet
+  keywords:
+  - toilet
+- name: Toilet Facilities
+  column_name: has_toilet_facilities
+  keywords:
+  - toilet facilities
+- name: Undercover Parking
+  column_name: has_undercover_parking
+  keywords:
+  - undercover parking
+- name: Unfurnished
+  column_name: has_unfurnished
+  keywords:
+  - unfurnished
+- name: Vacuum System
+  column_name: has_vacuum_system
+  keywords:
+  - vacuum system
+- name: Views
+  column_name: has_views
+  keywords:
+  - views
+- name: Walk To Beach; Walk To Shops; Express Bus
+  column_name: has_walk_to_beach;_walk_to_shops;_express_bus
+  keywords:
+  - walk to beach; walk to shops; express bus
+- name: Walk To Shops. Walk To Train Station. Mascot Central.
+  column_name: has_walk_to_shops._walk_to_train_station._mascot_central.
+  keywords:
+  - walk to shops. walk to train station. mascot central.
+- name: Wall / Ceiling Insulation
+  column_name: has_wall_/_ceiling_insulation
+  keywords:
+  - wall / ceiling insulation
+- name: Water Efficient Appliances
+  column_name: has_water_efficient_appliances
+  keywords:
+  - water efficient appliances
+- name: Water Efficient Fixtures
+  column_name: has_water_efficient_fixtures
+  keywords:
+  - water efficient fixtures
+- name: Water Tank
+  column_name: has_water_tank
+  keywords:
+  - water tank
+- name: Water Views
+  column_name: has_water_views
+  keywords:
+  - water views
+- name: Wifi
+  column_name: has_wifi
+  keywords:
+  - wifi
+- name: Wifi Connection
+  column_name: has_wifi_connection
+  keywords:
+  - wifi connection
+- name: Window Treatments
+  column_name: has_window_treatments
+  keywords:
+  - window treatments
+- name: Winter Garden Balcony
+  column_name: has_winter_garden_balcony
+  keywords:
+  - winter garden balcony
+- name: Within 5Km Of Cbd
+  column_name: has_within_5km_of_cbd
+  keywords:
+  - within 5km of cbd
+- name: Workshop
+  column_name: has_workshop
+  keywords:
+  - workshop
